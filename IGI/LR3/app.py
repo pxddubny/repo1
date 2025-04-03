@@ -6,7 +6,6 @@ from Task3 import task3
 from Task4 import task4
 from Task5 import task5
 
-#task1.print_str("hello")
 
 while(True):
 

@@ -1,7 +1,17 @@
-
 import math
 from prettytable import PrettyTable
 
+def proxy(func):
+    def wrapper(*args, **kwargs):
+        table = PrettyTable()
+        table.field_names = ["x", "n", "F(x)", "Math F(x)", "eps"]
+        result = func(*args, **kwargs)
+        table.add_row([args[0], result[0], result[1], 1/(1-args[0]), args[1]])
+        return table
+    return wrapper
+
+
+@proxy
 def taylor_exp(x,eps):
     i = 1
     sum = 1
@@ -32,9 +42,5 @@ def work():
         except ValueError:
             print("Wrong input.")
         
-    table = PrettyTable()
-    table.field_names = ["x", "n", "F(x)", "Math F(x)", "eps"]
-    result = taylor_exp(x,eps)
-    table.add_row([x, result[0], result[1], 1/(1-x), eps])
-    print(table)
+    print(taylor_exp(x,eps))
 
