@@ -30,7 +30,6 @@ def work():
                 arr = []
                 while(i<c):
                     arr.append(next(generator_init(c)))
-                    print(arr[-1])
                     i+=1
             else:
                 raise ValueError
@@ -46,7 +45,7 @@ def work():
     print(sum_between_negative(arr))
 
 def max_abs_element(arr):
-    max = arr[0]
+    max = abs(arr[0])
     for x in arr:
         if(abs(x) > max):
             max = x
