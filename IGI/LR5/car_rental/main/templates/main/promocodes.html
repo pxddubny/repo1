@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Codes</title>
+</head>
+<body>
+    <h1>Active Promo Codes</h1>
+    {% for promo in active_promos %}
+    <div>
+        <h3>Code: {{ promo.code }} ({{ promo.discount }}% off)</h3>
+        <p>{{ promo.description }}</p>
+        <p>Valid until: {{ promo.end_date }}</p>
+    </div>
+    <hr>
+    {% endfor %}
+    
+    <h2>Expired Promo Codes</h2>
+    {% for promo in expired_promos %}
+    <div>
+        <h3>{{ promo.code }}</h3>
+        <p>Expired on: {{ promo.end_date }}</p>
+    </div>
+    {% endfor %}
+    
+    <a href="/">Main page</a>
+</body>
+</html>

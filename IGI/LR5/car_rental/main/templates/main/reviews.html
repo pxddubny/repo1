@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+</head>
+<body>
+    <h1>Customer Reviews</h1>
+    {% for review in reviews %}
+    <div>
+        <h3>{{ review.name }} - {{ review.get_rating_display }}</h3>
+        <p>{{ review.text }}</p>
+        <p><em>Posted on: {{ review.created_at }}</em></p>
+    </div>
+    <hr>
+    {% endfor %}
+    
+    {% if user.is_authenticated %}
+    <h2>Add your review</h2>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="text" required></textarea><br>
+        <select name="rating">
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select><br>
+        <button type="submit">Submit Review</button>
+    </form>
+    {% else %}
+    <p><a href="/accounts/login">Login</a> to leave a review</p>
+    {% endif %}
+    
+    <a href="/">Main page</a>
+</body>
+</html>

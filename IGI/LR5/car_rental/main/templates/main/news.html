@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+</head>
+<body>
+    <h1>some news</h1> 
+    {% for el in news %}
+    <h3>{{ el.title }}</h3>
+    <p>{{ el.content }}</p>
+    {% if el.img_path %}  <!-- Проверка наличия пути -->
+        <p><img src="/static/car_photos/{{ el.img_path }}" alt="{{ el.title }}"></p>
+    {% endif %}
+{% endfor %}
+    <a href="/">main page</a>
+</body>
+</html>

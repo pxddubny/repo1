@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car rental</title>
+</head>
+<body>
+    <h1>welcome to car rental</h1>
+    <h2>some news</h2> 
+    {% for el in news %}
+    <h3>{{ el.title }}</h3>
+    <p>{{ el.content }}</p>
+{% endfor %}
+
+<p><a href="/about-us">about us</a></p>
+<p><a href="/news">news</a></p>
+<p><a href="/faq">faq</a></p>
+<p><a href="/employees/">our team</a></p>
+<p><a href="/vacancies/">vacancies</a></p>
+<p><a href="/reviews/">reviews</a></p>
+<p><a href="/promocodes/">promo codes</a></p>
+<p><a href="/privacy/">privacy policy</a></p>
+</body>
+</html>
