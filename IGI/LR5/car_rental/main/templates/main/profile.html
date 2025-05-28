@@ -26,6 +26,8 @@
                 <th>Total</th>
                 <th>Discount</th>
                 <th>Status</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +46,12 @@
                         {% else %}bg-warning{% endif %}">
                         {{ rental.get_status_display }}
                     </span>
+                </td>
+                <td>
+                    <a href="{% url 'redact_rental' rental.id %}">Edit</a>
+                </td>
+                <td>
+                    <a href="{% url 'delete_rental' rental.id %}" onclick="return confirm('Are you sure you want to delete this rental?');">Delete</a>
                 </td>
             </tr>
             {% endfor %}

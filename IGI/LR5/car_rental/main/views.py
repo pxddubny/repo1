@@ -3,8 +3,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.views import LoginView, LogoutView
 from .models import News, FAQ, Employee, Vacancy, Review, PromoCode, Rental, Car
 from django.utils import timezone
-from .forms import UserRegisterForm
-from .forms import RentalForm
+from .forms import UserRegisterForm, RentalForm
 import datetime
 import calendar
 from django.db.models import Count, Sum
@@ -14,7 +13,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Настройки по умолчанию (если нет в settings.py)
+# Настройки по умолчанию
 DEFAULT_CAT_FACT = "Стандартный факт: Коты любят спать до 16 часов в день."
 
 def get_cat_fact_with_fallback():
@@ -40,16 +39,11 @@ def index(request):
     })
 
 def status_distribution(request):
-    # Подсчёт количества аренд по статусам
     status_counts = Rental.objects.values('status').annotate(count=Count('status')).order_by('status')
-    # Преобразуем в словарь для удобства
     status_data = {entry['status']: entry['count'] for entry in status_counts}
-    # Максимальное значение для масштабирования псевдографики
     max_count = max(status_data.values(), default=1)
-    # Создаём данные для псевдографики
     status_bars = {}
     for status, count in status_data.items():
-        # Ищем человекочитаемое название статуса в STATUS_CHOICES
         status_label = status
         for code, label in Rental.STATUS_CHOICES:
             if code == status:
@@ -62,14 +56,12 @@ def status_distribution(request):
     return render(request, 'main/status_distribution.html', {'status_bars': status_bars})
 
 def rental_sums_by_date(request):
-    # Данные за последние 7 дней
     end_date = timezone.now().date()
     start_date = end_date - timedelta(days=7)
     rental_sums = Rental.objects.filter(start_date__range=[start_date, end_date]) \
         .values('start_date') \
         .annotate(total=Sum('total_amount')) \
         .order_by('start_date')
-    # Максимальная сумма для масштабирования
     max_total = max((entry['total'] for entry in rental_sums), default=1)
     sums_data = [
         {
@@ -82,20 +74,15 @@ def rental_sums_by_date(request):
     return render(request, 'main/rental_sums_by_date.html', {'sums_data': sums_data})
 
 def rentals_by_car(request):
-    # Подсчёт аренд по автомобилям (используем car__model__name для получения названия модели)
     car_rentals = Rental.objects.values('car__model__name').annotate(count=Count('car')).order_by('car__model__name')
-    
-    # Отладочная информация
     print("DEBUG: car_rentals =", list(car_rentals))
     print("DEBUG: All Rentals with Cars:", Rental.objects.select_related('car__model').all())
     
-    # Если данных нет, передаём сообщение об ошибке
     if not car_rentals:
         return render(request, 'main/rentals_by_car.html', {
             'error_message': 'Нет данных об арендах. Убедитесь, что в базе данных есть записи в модели Rental и связанные автомобили.'
         })
     
-    # Фильтруем только записи с непустым car__model__name
     car_rentals = [r for r in car_rentals if r['car__model__name']]
     
     if not car_rentals:
@@ -103,12 +90,10 @@ def rentals_by_car(request):
             'error_message': 'Нет данных об арендах с определённой моделью автомобиля.'
         })
     
-    # Максимальное количество аренд для масштабирования псевдографики
     max_count = max(entry['count'] for entry in car_rentals)
     if max_count == 0:
-        max_count = 1  # Избегаем деления на 0
+        max_count = 1
     
-    # Формируем данные для шаблона
     car_data = [
         {
             'car': entry['car__model__name'] if entry['car__model__name'] else 'Неизвестный автомобиль',
@@ -121,39 +106,25 @@ def rentals_by_car(request):
     return render(request, 'main/rentals_by_car.html', {'car_data': car_data})
 
 def car_detail(request, car_id):
-    """Детальная страница автомобиля"""
     car = get_object_or_404(Car, pk=car_id)
     return render(request, 'main/car_detail.html', {'car': car})
 
 def create_rental(request):
-    # Получаем временную зону и текущую дату
     user_timezone = timezone.get_current_timezone()
     current_date = timezone.now().astimezone(user_timezone)
-    
-    # Генерируем календарь
     cal = calendar.monthcalendar(current_date.year, current_date.month)
     
     if request.method == 'POST':
         form = RentalForm(request.POST)
         if form.is_valid():
-            # Получаем промокод если указан
-            promo_code = None
-            if form.cleaned_data['promo_code']:
-                try:
-                    promo_code = PromoCode.objects.get(
-                        code=form.cleaned_data['promo_code'],
-                    )
-                except PromoCode.DoesNotExist:
-                    form.add_error('promo_code', "Неверный промокод")
-                    return render(request, 'main/create_rental.html', context)
+            promo_code = form.cleaned_data.get('promo_code_input')  # Исправлено здесь
             
-            # Создаем запись аренды
             rental = Rental(
                 client=request.user,
                 car=form.cleaned_data['car'],
                 start_date=form.cleaned_data['start_date'],
                 days=form.cleaned_data['days'],
-                promo_code=promo_code,
+                promo_code=promo_code,  # promo_code будет None, если не указан
                 status='PENDING'
             )
             rental.save()
@@ -169,25 +140,71 @@ def create_rental(request):
         'calendar': cal,
     })
 
+@login_required
+def redact_rental(request, rental_id):
+    rental = get_object_or_404(Rental, id=rental_id, client=request.user)
+    user_timezone = timezone.get_current_timezone()
+    current_date = timezone.now().astimezone(user_timezone)
+    cal = calendar.monthcalendar(current_date.year, current_date.month)
+    
+    if request.method == 'POST':
+        form = RentalForm(request.POST, instance=rental)
+        if form.is_valid():
+            promo_code = None
+            if form.cleaned_data['promo_code']:
+                try:
+                    promo_code = PromoCode.objects.get(
+                        code=form.cleaned_data['promo_code'],
+                    )
+                except PromoCode.DoesNotExist:
+                    form.add_error('promo_code', "Неверный промокод")
+                    return render(request, 'main/redact_rental.html', {
+                        'form': form,
+                        'current_date': current_date.strftime('%d/%m/%Y'),
+                        'user_timezone': user_timezone,
+                        'calendar': cal,
+                        'rental': rental,
+                    })
+            
+            rental.car = form.cleaned_data['car']
+            rental.start_date = form.cleaned_data['start_date']
+            rental.days = form.cleaned_data['days']
+            rental.promo_code = promo_code
+            rental.save()
+            
+            return redirect('profile')
+    else:
+        form = RentalForm(instance=rental)
+    
+    return render(request, 'main/redact_rental.html', {
+        'form': form,
+        'current_date': current_date.strftime('%d/%m/%Y'),
+        'user_timezone': user_timezone,
+        'calendar': cal,
+        'rental': rental,
+    })
+
+@login_required
+def delete_rental(request, rental_id):
+    rental = get_object_or_404(Rental, id=rental_id, client=request.user)
+    if request.method == 'POST':
+        rental.delete()
+        return redirect('profile')
+    return render(request, 'main/delete_rental.html', {'rental': rental})
+
 def role_check(role):
-    """декоратор для проверки роли"""
     return user_passes_test(lambda u: u.role == role)
 
 @login_required
 def profile(request):
-    """Profile view with rentals and promo codes"""
     user = request.user
     rentals = Rental.objects.filter(client=user).order_by('-start_date')
-    
-    # Get promo codes with search and sorting
     promocodes = user.promocodes.all()
     
-    # Search functionality
     search_query = request.GET.get('promo_search')
     if search_query:
         promocodes = promocodes.filter(code__icontains=search_query)
     
-    # Sorting functionality
     sort = request.GET.get('sort')
     order = request.GET.get('order')
     
@@ -209,9 +226,9 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.role = 'CLIENT'  # по умолчанию — клиент
+            user.role = 'CLIENT'
             user.save()
-            return redirect('login')  # перенаправление на страницу входа
+            return redirect('login')
     else:
         form = UserRegisterForm()
     return render(request, 'main/register.html', {'form': form})
@@ -222,7 +239,7 @@ class CustomLoginView(LoginView):
     redirect_field_name = 'next'
 
 class CustomLogoutView(LogoutView):
-    next_page = 'login'  # перенаправление на страницу логина после выхода
+    next_page = 'login'
 
 def about(request):
     return render(request, "main/about.html")
@@ -258,11 +275,7 @@ def reviews_view(request):
 
 def promocodes_view(request):
     now = timezone.now().date()
-    
-    # Get sorting parameter
-    sort_by = request.GET.get('sort', 'code')  # Default sort by code
-    
-    # Get active promos with sorting
+    sort_by = request.GET.get('sort', 'code')
     active_promos = PromoCode.objects.all().order_by(sort_by)
     
     return render(request, 'main/promocodes.html', {

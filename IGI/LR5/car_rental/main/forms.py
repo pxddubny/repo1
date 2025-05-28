@@ -10,22 +10,59 @@ from django.utils import timezone
 from .models import Rental, Car, PromoCode
 from datetime import datetime
 
-class RentalForm(forms.Form):
-    car = forms.ModelChoiceField(
-        queryset=Car.objects.all(),
-        label="Выберите автомобиль"
-    )
-    days = forms.IntegerField(
-        min_value=1,
-        label="Количество дней аренды"
-    )
-    start_date = forms.DateField(
-    )
-    promo_code = forms.CharField(
+
+class RentalForm(forms.ModelForm):
+    promo_code_input = forms.CharField(
+        max_length=50,
         required=False,
-        label="Промокод (если есть)"
+        label="Промокод (если есть)",
+        help_text="Введите код промокода",
+        widget=forms.TextInput(attrs={'placeholder': 'ABCD123'})
     )
 
+    class Meta:
+        model = Rental
+        fields = ['car', 'days', 'start_date']  # Убрали promo_code из fields
+        labels = {
+            'car': "Автомобиль",
+            'days': "Количество дней",
+            'start_date': "Дата начала",
+        }
+        widgets = {
+            'start_date': forms.DateInput(attrs={'type': 'date'}),
+        }
+
+    def clean_promo_code_input(self):
+        """Валидация промокода"""
+        code = self.cleaned_data.get('promo_code_input', '').strip()
+        if not code:
+            return None
+            
+        try:
+            promo = PromoCode.objects.get(
+                code__iexact=code,
+                is_active=True
+            )
+            return promo
+        except PromoCode.DoesNotExist:
+            raise forms.ValidationError("Неверный или неактивный промокод")
+
+    def save(self, commit=True):
+        """Сохранение с применением промокода"""
+        instance = super().save(commit=False)
+        promo = self.cleaned_data.get('promo_code_input')
+        
+        if promo:
+            instance.promo_code = promo
+            # Пересчет суммы с учетом скидки
+            instance.discount_amount = (instance.rental_amount * promo.discount) / 100
+            instance.total_amount = instance.rental_amount - instance.discount_amount
+        
+        if commit:
+            instance.save()
+            self.save_m2m()
+            
+        return instance
 class UserRegisterForm(UserCreationForm):
     phone = forms.CharField(
         label='Phone',

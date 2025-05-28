@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Оформление аренды автомобиля</title>
+    <title>Редактирование аренды</title>
 </head>
 <body>
-    <h1>Оформление аренды автомобиля</h1>
+    <h1>Редактирование аренды #{{ rental.id }}</h1>
     
     <p><strong>Текущая дата:</strong> {{ current_date }}</p>
     <p><strong>Ваша временная зона:</strong> {{ user_timezone }}</p>
@@ -47,7 +47,7 @@
             {% endif %}
         </div>
         
-        <button type="submit">Оформить аренду</button>
+        <button type="submit">Сохранить изменения</button>
     </form>
     
     <div class="calendar">
@@ -65,5 +65,7 @@
             {% endfor %}
         </table>
     </div>
+    
+    <p><a href="{% url 'profile' %}">Вернуться в профиль</a></p>
 </body>
 </html>

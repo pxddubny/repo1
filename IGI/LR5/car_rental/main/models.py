@@ -95,6 +95,7 @@ class PromoCode(models.Model):
     code = models.CharField('code', max_length=50, unique=True)
     description = models.TextField('description')
     discount = models.PositiveSmallIntegerField('discount')
+    is_active = models.BooleanField('active', default=True)  # Добавьте это поле
 
     def __str__(self):
         return f"{self.code} ({self.discount}%)"

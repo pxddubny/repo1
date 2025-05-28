@@ -23,4 +23,6 @@ urlpatterns = [
     path('status-distribution/', views.status_distribution, name='status_distribution'),
     path('rental-sums-by-date/', views.rental_sums_by_date, name='rental_sums_by_date'),
     path('rentals-by-car/', views.rentals_by_car, name='rentals_by_car'),
+    path('redact_rental/<int:rental_id>/', views.redact_rental, name='redact_rental'),
+    path('delete_rental/<int:rental_id>/', views.delete_rental, name='delete_rental'),
 ]
