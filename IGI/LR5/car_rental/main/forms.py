@@ -5,16 +5,23 @@ import re
 
 class UserRegisterForm(UserCreationForm):
     phone = forms.CharField(
-        label='phone',
-        help_text='format: +375 (29) XXX-XX-XX',
-        widget=forms.TextInput(attrs={'placeholder': '+375 (29) XXX-XX-XX'})
+        label='Phone',
+        help_text='Format: +375 (29) XXX-XX-XX',
+        widget=forms.TextInput(attrs={
+            'placeholder': '+375 (29) XXX-XX-XX',
+            'pattern': '\+375\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}',
+            'title': 'Format: +375 (29) XXX-XX-XX'
+        })
     )
     birth_date = forms.DateField(
-        label='Дата рождения',
+        label='Date of Birth',
         widget=forms.DateInput(attrs={'type': 'date'})
     )
+    address = forms.CharField(
+        widget=forms.Textarea(attrs={'placeholder': 'Your address'})
+    )
 
-    class Meta():
+    class Meta:
         model = User
         fields = [
             'username', 'first_name', 'last_name', 'middle_name',
@@ -24,5 +31,5 @@ class UserRegisterForm(UserCreationForm):
     def clean_phone(self):
         phone = self.cleaned_data['phone']
         if not re.match(r'^\+375\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}$', phone):
-            raise forms.ValidationError("not right format!")
+            raise forms.ValidationError("Phone format: +375 (29) XXX-XX-XX")
         return phone

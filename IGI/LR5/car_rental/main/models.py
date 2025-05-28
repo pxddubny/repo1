@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 import re
 from django.conf import settings
+import datetime
 
 class News(models.Model):
     title = models.CharField(max_length=200)
@@ -93,10 +94,6 @@ class PromoCode(models.Model):
     code = models.CharField('code', max_length=50, unique=True)
     description = models.TextField('description')
     discount = models.PositiveSmallIntegerField('discount')
-    start_date = models.DateTimeField('start date')
-    end_date = models.DateTimeField('end date')
-    is_active = models.BooleanField('active', default=True)
-    created_at = models.DateTimeField('created at', auto_now_add=True)
 
     def __str__(self):
         return f"{self.code} ({self.discount}%)"
@@ -105,6 +102,18 @@ class PromoCode(models.Model):
         verbose_name = 'Promo Code'
         verbose_name_plural = 'Promo Codes'
 
+
+class Fine(models.Model):
+    name = models.CharField('name')
+    fine = models.DecimalField('fine',max_digits=8, decimal_places=2,)
+
+    def __str__(self):
+        return f"{self.name} ({self.fine})"
+
+    class Meta:
+        verbose_name = 'Fine'
+        verbose_name_plural = 'Fines'
+        
 # 1. Тип кузова (OneToOne пример)
 class BodyType(models.Model):
     name = models.CharField(max_length=50)
@@ -139,14 +148,6 @@ class Car(models.Model):
         self.daily_rental_price = self.price * max(0.5, 1 - (age * 0.05)) *0.01 
         super().save(*args, **kwargs)
 
-# 4. Парки автомобилей
-class CarPark(models.Model):
-    name = models.CharField(max_length=100)
-    cars = models.ManyToManyField(Car)  # Пример ManyToMany
-
-    def __str__(self):
-        return self.name
-
 #rega
 
 def validate_phone(value):
@@ -169,10 +170,11 @@ class User(AbstractUser):
     )
     middle_name = models.CharField('middle name', max_length=150, blank=True)
     phone = models.CharField('phone', max_length=20, validators=[validate_phone])
-    birth_date = models.DateField('bd date', validators=[validate_age])
+    birth_date = models.DateField('bd date', validators=[validate_age], null=True, blank=True)
     address = models.TextField('address')
     role = models.CharField('role', max_length=10, choices=ROLES, default='CLIENT')
-    discount_points = models.PositiveIntegerField('discount points', default=0)
+    promocodes = models.ManyToManyField(PromoCode, blank=True)
+    fines = models.ManyToManyField(Fine, blank=True)
 
     def save(self, *args, **kwargs):
         if self.role == 'SUPERUSER':
@@ -193,4 +195,52 @@ class User(AbstractUser):
         verbose_name = 'user'
         verbose_name_plural = 'users'
 
+class Rental(models.Model):
+    STATUS_CHOICES = [
+        ('PENDING', 'Waiting confirmation'),
+        ('CONFIRMED', 'Confirmed'),
+        ('ACTIVE', 'Active'),
+        ('COMPLETED', 'Completed'),
+        ('CANCELLED', 'Cancelled'),
+    ]
+
+    client = models.ForeignKey(User, on_delete=models.PROTECT)
+    car = models.ForeignKey(Car, on_delete=models.PROTECT)
+    start_date = models.DateField('Start date')
+    days = models.PositiveIntegerField('Days quantity')
+    expected_return_date = models.DateField('Expected return date', blank=True)
+    rental_amount = models.DecimalField('Rental amount', max_digits=10, decimal_places=2, blank=True)
+    discount_amount = models.DecimalField('Discount amount', max_digits=10, decimal_places=2, default=0)
+    total_amount = models.DecimalField('Total amount', max_digits=10, decimal_places=2, blank=True)
+    promo_code = models.ForeignKey(PromoCode, on_delete=models.SET_NULL, null=True, blank=True)
+    status = models.CharField('Status', max_length=10, choices=STATUS_CHOICES, default='PENDING')
+    fines = models.ManyToManyField(Fine, blank=True)
+
+    def __str__(self):
+        return f"Rental #{self.id} - {self.client} - {self.car}"
+
+    @property
+    def daily_rental_price(self):
+        """Автоматически получаем цену из связанного автомобиля"""
+        return self.car.daily_rental_price
+
+    def save(self, *args, **kwargs):
+        # Рассчитываем ожидаемую дату возврата
+        if not self.expected_return_date:
+            self.expected_return_date = self.start_date + timedelta(days=self.days)
         
+        # Рассчитываем сумму аренды (цена из Car × количество дней)
+        self.rental_amount = self.daily_rental_price * self.days
+        
+        # Применяем скидку, если есть промокод
+        if self.promo_code:
+            self.discount_amount = (self.rental_amount * self.promo_code.discount) / 100
+        
+        # Итоговая сумма (без штрафов)
+        self.total_amount = self.rental_amount - self.discount_amount
+        
+        super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name = 'Rental'
+        verbose_name_plural = 'Rentals'

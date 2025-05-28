@@ -3,23 +3,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registration</title>
+    <title>Registration</title>
+    <style>
+        .errorlist { color: red; }
+        .helptext { font-size: 0.8em; color: #666; }
+    </style>
 </head>
 <body>
-    <h2>registration</h2>
+    <h2>Registration</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.username.label_tag }} <input type="text" name="username" id="id_username" placeholder="username" required><br>
-        {{ form.first_name.label_tag }} <input type="text" name="first_name" id="id_first_name" placeholder="first name" required><br>
-        {{ form.last_name.label_tag }} <input type="text" name="last_name" id="id_last_name" placeholder="last name" required><br>
-        {{ form.middle_name.label_tag }} <input type="text" name="middle_name" id="id_middle_name" placeholder="middle name"><br>
-        {{ form.email.label_tag }} <input type="email" name="email" id="id_email" placeholder="email" required><br>
-        {{ form.birth_date.label_tag }} <input type="date" name="birth_date" id="id_birth_date" placeholder="date of birth" required><br>
-        {{ form.phone.label_tag }} <input type="tel" name="phone" id="id_phone" pattern="\+375\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}" placeholder="+375 (29) 123-45-67" title="format: +375 (29) xxx-xx-xx" required><br>
-        {{ form.address.label_tag }} <textarea name="address" id="id_address" placeholder="address" required></textarea><br>
-        {{ form.password1.label_tag }} <input type="password" name="password1" id="id_password1" placeholder="password" required><br>
-        {{ form.password2.label_tag }} <input type="password" name="password2" id="id_password2" placeholder="confirm password" required><br>
-        <button type="submit">sign up</button>
+        
+        {% if form.non_field_errors %}
+            <div class="errorlist">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        
+        {% for field in form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.help_text %}
+                    <span class="helptext">{{ field.help_text }}</span>
+                {% endif %}
+                {% for error in field.errors %}
+                    <div class="errorlist">{{ error }}</div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        
+        <button type="submit">Sign Up</button>
     </form>
 </body>
 </html>
