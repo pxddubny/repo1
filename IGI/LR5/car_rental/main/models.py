@@ -6,6 +6,7 @@ from django.utils import timezone
 import re
 from django.conf import settings
 import datetime
+from decimal import Decimal
 
 class News(models.Model):
     title = models.CharField(max_length=200)
@@ -133,7 +134,7 @@ class CarModel(models.Model):
 class Car(models.Model):
     license_plate = models.CharField(max_length=20, unique=True)
     model = models.ForeignKey(CarModel, on_delete=models.CASCADE)
-    body_type = models.OneToOneField(BodyType, on_delete=models.PROTECT)  # Пример OneToOne
+    body_type = models.OneToOneField(BodyType, on_delete=models.PROTECT,  null=True, blank=True)  # Пример OneToOne
     year = models.PositiveIntegerField()
     daily_rental_price = models.DecimalField(max_digits=8, decimal_places=2, editable = False)
     price = models.DecimalField(max_digits=12, decimal_places=2)
@@ -142,10 +143,10 @@ class Car(models.Model):
         return f"{self.model} ({self.license_plate})"
 
     def save(self, *args, **kwargs):
-        current_year = datetime.now().year
+        current_year = timezone.now().year
         age = current_year - self.year
 
-        self.daily_rental_price = self.price * max(0.5, 1 - (age * 0.05)) *0.01 
+        self.daily_rental_price = (float(str(self.price)) * max(0.5, 1 - (age * 0.05)) *0.01) 
         super().save(*args, **kwargs)
 
 #rega
@@ -175,6 +176,7 @@ class User(AbstractUser):
     role = models.CharField('role', max_length=10, choices=ROLES, default='CLIENT')
     promocodes = models.ManyToManyField(PromoCode, blank=True)
     fines = models.ManyToManyField(Fine, blank=True)
+    
 
     def save(self, *args, **kwargs):
         if self.role == 'SUPERUSER':
@@ -209,11 +211,11 @@ class Rental(models.Model):
     start_date = models.DateField('Start date')
     days = models.PositiveIntegerField('Days quantity')
     expected_return_date = models.DateField('Expected return date', blank=True)
-    rental_amount = models.DecimalField('Rental amount', max_digits=10, decimal_places=2, blank=True)
-    discount_amount = models.DecimalField('Discount amount', max_digits=10, decimal_places=2, default=0)
-    total_amount = models.DecimalField('Total amount', max_digits=10, decimal_places=2, blank=True)
+    rental_amount = models.DecimalField('Rental amount', max_digits=10, decimal_places=2, blank=True, editable = False)
+    discount_amount = models.DecimalField('Discount amount', max_digits=10, decimal_places=2, default=0, editable = False)
+    total_amount = models.DecimalField('Total amount', max_digits=10, decimal_places=2, blank=True, editable = False)
     promo_code = models.ForeignKey(PromoCode, on_delete=models.SET_NULL, null=True, blank=True)
-    status = models.CharField('Status', max_length=10, choices=STATUS_CHOICES, default='PENDING')
+    status = models.CharField('Status', max_length=10, choices=STATUS_CHOICES, default='PENDING', blank=True)
     fines = models.ManyToManyField(Fine, blank=True)
 
     def __str__(self):
@@ -227,7 +229,7 @@ class Rental(models.Model):
     def save(self, *args, **kwargs):
         # Рассчитываем ожидаемую дату возврата
         if not self.expected_return_date:
-            self.expected_return_date = self.start_date + timedelta(days=self.days)
+            self.expected_return_date = self.start_date + datetime.timedelta(days=self.days)
         
         # Рассчитываем сумму аренды (цена из Car × количество дней)
         self.rental_amount = self.daily_rental_price * self.days
@@ -238,7 +240,11 @@ class Rental(models.Model):
         
         # Итоговая сумма (без штрафов)
         self.total_amount = self.rental_amount - self.discount_amount
-        
+
+        if self.pk:  # Проверяем, что объект уже сохранен (имеет id)
+            fines_total = sum(fine.amount for fine in self.fines.all())
+            self.total_amount += Decimal(str(fines_total))
+    
         super().save(*args, **kwargs)
 
     class Meta:

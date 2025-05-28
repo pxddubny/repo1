@@ -1,24 +1,71 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.views import LoginView, LogoutView
-from .models import News, FAQ, Employee, Vacancy, Review, PromoCode
+from .models import News, FAQ, Employee, Vacancy, Review, PromoCode, Rental
 from django.utils import timezone
 from .forms import UserRegisterForm
+from .forms import RentalForm
+import datetime
+from django.shortcuts import render, redirect
+from django.utils import timezone
+from .forms import RentalForm
+from .models import Rental, PromoCode
+import datetime
+import calendar
+
+def create_rental(request):
+    # Получаем временную зону и текущую дату
+    user_timezone = timezone.get_current_timezone()
+    current_date = timezone.now().astimezone(user_timezone)
+    
+    # Генерируем календарь
+    cal = calendar.monthcalendar(current_date.year, current_date.month)
+    
+    if request.method == 'POST':
+        form = RentalForm(request.POST)
+        if form.is_valid():
+            # Получаем промокод если указан
+            promo_code = None
+            if form.cleaned_data['promo_code']:
+                try:
+                    promo_code = PromoCode.objects.get(
+                        code=form.cleaned_data['promo_code'],
+                    )
+                except PromoCode.DoesNotExist:
+                    form.add_error('promo_code', "Неверный промокод")
+                    return render(request, 'main/create_rental.html', context)
+            
+            # Создаем запись аренды
+            rental = Rental(
+                client=request.user,
+                car=form.cleaned_data['car'],
+                start_date=form.cleaned_data['start_date'],
+                days=form.cleaned_data['days'],
+                promo_code=promo_code,
+                status='PENDING'
+            )
+            rental.save()
+            
+            return redirect('profile')
+    else:
+        form = RentalForm()
+    
+    return render(request, 'main/create_rental.html', {
+        'form': form,
+        'current_date': current_date.strftime('%d/%m/%Y'),
+        'user_timezone': user_timezone,
+        'calendar': cal,
+    })
 
 def role_check(role):
     """декоратор для проверки роли"""
     return user_passes_test(lambda u: u.role == role)
 
-@role_check('SUPERUSER')
-def admin_dashboard(request):
-    """только для владельца"""
-    return render(request, 'admin_dash.html')
-
 @login_required
 def profile(request):
     """для всех авторизованных"""
     user = request.user
-    rentals = []  # временная заглушка, так как модель Rental не определена
+    rentals = Rental.objects.filter(client=user).order_by('-start_date')
     return render(request, 'main/profile.html', {'user': user, 'rentals': rentals})
 
 def register(request):
@@ -88,3 +135,4 @@ def promocodes_view(request):
 
 def privacy_view(request):
     return render(request, 'main/privacy.html')
+

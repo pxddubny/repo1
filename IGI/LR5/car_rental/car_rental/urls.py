@@ -16,5 +16,6 @@ urlpatterns = [
     path('vacancies/', views.vacancies_view, name='vacancies'),
     path('reviews/', views.reviews_view, name='reviews'),
     path('promocodes/', views.promocodes_view, name='promocodes'),
-    path('privacy/', views.privacy_view, name='privacy')
+    path('privacy/', views.privacy_view, name='privacy'),
+    path('create_rental/', views.create_rental, name='create_rental'),
 ]

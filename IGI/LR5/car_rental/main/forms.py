@@ -2,6 +2,29 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
 import re
+from django.utils import timezone
+from .models import Car, PromoCode
+
+from django import forms
+from django.utils import timezone
+from .models import Rental, Car, PromoCode
+from datetime import datetime
+
+class RentalForm(forms.Form):
+    car = forms.ModelChoiceField(
+        queryset=Car.objects.all(),
+        label="Выберите автомобиль"
+    )
+    days = forms.IntegerField(
+        min_value=1,
+        label="Количество дней аренды"
+    )
+    start_date = forms.DateField(
+    )
+    promo_code = forms.CharField(
+        required=False,
+        label="Промокод (если есть)"
+    )
 
 class UserRegisterForm(UserCreationForm):
     phone = forms.CharField(

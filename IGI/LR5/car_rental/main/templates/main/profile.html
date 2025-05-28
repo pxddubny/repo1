@@ -9,10 +9,51 @@
     <h2>profile</h2>
     <p>username: {{ user.username }}</p>
     <p>email: {{ user.email }}</p>
-    <p>rentals: {{ rentals }}</p>
+    <p>rentals: {{ rental }}</p>
     <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
         <button type="submit">sign out</button>
     </form>
+    {% if rentals %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>car</th>
+                <th>startdate</th>
+                <th>days</th>
+                <th>summ</th>
+                <th>discount</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rental in rentals %}
+            <tr>
+                <td>{{ rental.id }}</td>
+                <td>{{ rental.car }}</td>
+                <td>{{ rental.start_date }}</td>
+                <td>{{ rental.days }}</td>
+                <td>{{ rental.total_amount }} ₽</td>
+                <td>{{ rental.discount_amount }} ₽</td>
+                <td>
+                    <span class="badge 
+                        {% if rental.status == 'COMPLETED' %}bg-success
+                        {% elif rental.status == 'CANCELLED' %}bg-danger
+                        {% else %}bg-warning{% endif %}">
+                        {{ rental.get_status_display }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <div class="alert alert-info">no rentals</div>
+{% endif %}
+<p><a href="/">main page</a></p>
+    
+
+    <a href="/create_rental">new rental</a>
 </body>
 </html>
