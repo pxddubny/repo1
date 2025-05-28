@@ -1,4 +1,4 @@
-from django.urls import path,include
+from django.urls import re_path,include, path
 from main import views
 from django.contrib import admin, auth
 
@@ -18,4 +18,6 @@ urlpatterns = [
     path('promocodes/', views.promocodes_view, name='promocodes'),
     path('privacy/', views.privacy_view, name='privacy'),
     path('create_rental/', views.create_rental, name='create_rental'),
+    path('cars/', views.car_list, name='car_list'),
+    re_path(r'^cars/(?P<car_id>\d+)/$', views.car_detail, name='car_detail'),
 ]

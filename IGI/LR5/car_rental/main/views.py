@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.views import LoginView, LogoutView
-from .models import News, FAQ, Employee, Vacancy, Review, PromoCode, Rental
+from .models import News, FAQ, Employee, Vacancy, Review, PromoCode, Rental, Car
 from django.utils import timezone
 from .forms import UserRegisterForm
 from .forms import RentalForm
@@ -12,6 +12,13 @@ from .forms import RentalForm
 from .models import Rental, PromoCode
 import datetime
 import calendar
+
+
+def car_detail(request, car_id):
+    """Детальная страница автомобиля"""
+    car = get_object_or_404(Car, pk=car_id)
+    return render(request, 'main/car_detail.html', {'car': car})
+
 
 def create_rental(request):
     # Получаем временную зону и текущую дату
@@ -63,10 +70,34 @@ def role_check(role):
 
 @login_required
 def profile(request):
-    """для всех авторизованных"""
+    """Profile view with rentals and promo codes"""
     user = request.user
     rentals = Rental.objects.filter(client=user).order_by('-start_date')
-    return render(request, 'main/profile.html', {'user': user, 'rentals': rentals})
+    
+    # Get promo codes with search and sorting
+    promocodes = user.promocodes.all()
+    
+    # Search functionality
+    search_query = request.GET.get('promo_search')
+    if search_query:
+        promocodes = promocodes.filter(code__icontains=search_query)
+    
+    # Sorting functionality
+    sort = request.GET.get('sort')
+    order = request.GET.get('order')
+    
+    if sort == 'code':
+        if order == 'desc':
+            promocodes = promocodes.order_by('-code')
+        else:
+            promocodes = promocodes.order_by('code')
+    
+    context = {
+        'user': user,
+        'rentals': rentals,
+        'promocodes': promocodes,
+    }
+    return render(request, 'main/profile.html', context)
 
 def register(request):
     if request.method == 'POST':
@@ -125,14 +156,27 @@ def reviews_view(request):
     return render(request, 'main/reviews.html', {'reviews': reviews})
 
 def promocodes_view(request):
-    now = timezone.now()
-    active_promos = PromoCode.objects.filter(is_active=True, end_date__gte=now)
-    expired_promos = PromoCode.objects.filter(end_date__lt=now)
+    now = timezone.now().date()
+    
+    # Get sorting parameter
+    sort_by = request.GET.get('sort', 'code')  # Default sort by code
+    
+    # Get active promos with sorting
+    active_promos = PromoCode.objects.all().order_by(sort_by)
+    
+    
     return render(request, 'main/promocodes.html', {
         'active_promos': active_promos,
-        'expired_promos': expired_promos
     })
 
 def privacy_view(request):
     return render(request, 'main/privacy.html')
+
+def car_list(request):
+    search_query = request.GET.get('search', '')
+    if search_query:
+        cars = Car.objects.filter(license_plate__icontains=search_query)
+    else:
+        cars = Car.objects.all()
+    return render(request, 'main/car_list.html', {'cars': cars})
 

@@ -3,28 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
+    <title>Profile</title>
 </head>
 <body>
-    <h2>profile</h2>
-    <p>username: {{ user.username }}</p>
-    <p>email: {{ user.email }}</p>
-    <p>rentals: {{ rental }}</p>
+    <h2>Profile: {{ user.username }}</h2>
+    <p>Phone: {{ user.phone }}</p>
+    
     <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
-        <button type="submit">sign out</button>
+        <button type="submit">Sign Out</button>
     </form>
+
+    <h3>Your Rentals</h3>
     {% if rentals %}
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>car</th>
-                <th>startdate</th>
-                <th>days</th>
-                <th>summ</th>
-                <th>discount</th>
-                <th>status</th>
+                <th>Car</th>
+                <th>Start Date</th>
+                <th>Days</th>
+                <th>Total</th>
+                <th>Discount</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -48,12 +49,13 @@
             {% endfor %}
         </tbody>
     </table>
-{% else %}
-    <div class="alert alert-info">no rentals</div>
-{% endif %}
-<p><a href="/">main page</a></p>
-    
+    {% else %}
+    <div class="alert alert-info">No rentals yet</div>
+    {% endif %}
 
-    <a href="/create_rental">new rental</a>
+    <div style="margin-top: 20px;">
+        <a href="/" style="margin-right: 15px;">Main Page</a>
+        <a href="/create_rental">New Rental</a>
+    </div>
 </body>
 </html>

@@ -7,23 +7,35 @@
 </head>
 <body>
     <h1>Active Promo Codes</h1>
+    
+    <div class="sort-buttons">
+        <form method="get" action="">
+            <button type="submit" name="sort" value="code">Sort by Code (A-Z)</button>
+            <button type="submit" name="sort" value="-code">Sort by Code (Z-A)</button>
+            <button type="submit" name="sort" value="discount">Sort by Discount (Low-High)</button>
+            <button type="submit" name="sort" value="-discount">Sort by Discount (High-Low)</button>
+        </form>
+    </div>
+    
     {% for promo in active_promos %}
-    <div>
-        <h3>Code: {{ promo.code }} ({{ promo.discount }}% off)</h3>
+    <div class="promo-card">
+        <h3>
+            <span class="promo-code">{{ promo.code }}</span> - 
+            <span class="promo-discount">{{ promo.discount }}% off</span>
+        </h3>
         <p>{{ promo.description }}</p>
-        <p>Valid until: {{ promo.end_date }}</p>
+        {% if promo.start_date or promo.end_date %}
+        <p><small>
+            Valid: 
+            {% if promo.start_date %}{{ promo.start_date|date:"Y-m-d" }}{% endif %}
+            {% if promo.end_date %} to {{ promo.end_date|date:"Y-m-d" }}{% endif %}
+        </small></p>
+        {% endif %}
     </div>
-    <hr>
+    {% empty %}
+    <p>No active promo codes available.</p>
     {% endfor %}
     
-    <h2>Expired Promo Codes</h2>
-    {% for promo in expired_promos %}
-    <div>
-        <h3>{{ promo.code }}</h3>
-        <p>Expired on: {{ promo.end_date }}</p>
-    </div>
-    {% endfor %}
-    
-    <a href="/">Main page</a>
+    <a href="/" class="main-link">Back to Main page</a>
 </body>
 </html>
