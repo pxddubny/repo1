@@ -121,3 +121,14 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = 'main.User'  # Указываем кастомную модель
+
+# Добавляем группы по ролям
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+LOGIN_REDIRECT_URL = 'profile'  # после логина перенаправляет на профиль
+LOGIN_URL = 'login'  # страница логина
+LOGOUT_REDIRECT_URL = 'login'

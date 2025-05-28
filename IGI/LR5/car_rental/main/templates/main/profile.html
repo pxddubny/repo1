@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <h2>profile</h2>
+    <p>username: {{ user.username }}</p>
+    <p>email: {{ user.email }}</p>
+    <p>rentals: {{ rentals }}</p>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">sign out</button>
+    </form>
+</body>
+</html>
