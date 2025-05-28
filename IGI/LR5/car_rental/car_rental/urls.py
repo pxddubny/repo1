@@ -1,6 +1,7 @@
 from django.urls import path
 from main import views
 from django.conf.urls.static import static
+from django.contrib import admin
 
 urlpatterns = [
     path("", views.index),
@@ -12,4 +13,5 @@ urlpatterns = [
     path('reviews/', views.reviews_view, name='reviews'),
     path('promocodes/', views.promocodes_view, name='promocodes'),
     path('privacy/', views.privacy_view, name='privacy'),
+    path('admin/', admin.site.urls),
 ]

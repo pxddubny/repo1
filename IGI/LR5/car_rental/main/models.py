@@ -99,3 +99,38 @@ class PromoCode(models.Model):
     class Meta:
         verbose_name = 'Promo Code'
         verbose_name_plural = 'Promo Codes'
+
+# 1. Тип кузова (OneToOne пример)
+class BodyType(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
+
+# 2. Модели авто (ForeignKey пример)
+class CarModel(models.Model):
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name
+
+# 3. Автомобили (основная модель)
+class Car(models.Model):
+    license_plate = models.CharField(max_length=20, unique=True)
+    model = models.ForeignKey(CarModel, on_delete=models.CASCADE)
+    body_type = models.OneToOneField(BodyType, on_delete=models.PROTECT)  # Пример OneToOne
+    year = models.PositiveIntegerField()
+    price = models.DecimalField(max_digits=12, decimal_places=2)
+    daily_rental_price = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.model} ({self.license_plate})"
+
+# 4. Парки автомобилей
+class CarPark(models.Model):
+    name = models.CharField(max_length=100)
+    cars = models.ManyToManyField(Car)  # Пример ManyToMany
+
+    def __str__(self):
+        return self.name
