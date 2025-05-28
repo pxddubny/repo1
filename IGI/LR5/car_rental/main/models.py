@@ -126,11 +126,18 @@ class Car(models.Model):
     model = models.ForeignKey(CarModel, on_delete=models.CASCADE)
     body_type = models.OneToOneField(BodyType, on_delete=models.PROTECT)  # Пример OneToOne
     year = models.PositiveIntegerField()
+    daily_rental_price = models.DecimalField(max_digits=8, decimal_places=2, editable = False)
     price = models.DecimalField(max_digits=12, decimal_places=2)
-    daily_rental_price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return f"{self.model} ({self.license_plate})"
+
+    def save(self, *args, **kwargs):
+        current_year = datetime.now().year
+        age = current_year - self.year
+
+        self.daily_rental_price = self.price * max(0.5, 1 - (age * 0.05)) *0.01 
+        super().save(*args, **kwargs)
 
 # 4. Парки автомобилей
 class CarPark(models.Model):

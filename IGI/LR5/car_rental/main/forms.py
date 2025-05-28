@@ -14,7 +14,7 @@ class UserRegisterForm(UserCreationForm):
         widget=forms.DateInput(attrs={'type': 'date'})
     )
 
-    class Meta:
+    class Meta():
         model = User
         fields = [
             'username', 'first_name', 'last_name', 'middle_name',
