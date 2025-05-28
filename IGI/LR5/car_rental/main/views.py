@@ -6,19 +6,124 @@ from django.utils import timezone
 from .forms import UserRegisterForm
 from .forms import RentalForm
 import datetime
-from django.shortcuts import render, redirect
-from django.utils import timezone
-from .forms import RentalForm
-from .models import Rental, PromoCode
-import datetime
 import calendar
+from django.db.models import Count, Sum
+from datetime import timedelta
+import requests
+import logging
 
+logger = logging.getLogger(__name__)
+
+# Настройки по умолчанию (если нет в settings.py)
+DEFAULT_CAT_FACT = "Стандартный факт: Коты любят спать до 16 часов в день."
+
+def get_cat_fact_with_fallback():
+    try:
+        response = requests.get(
+            'https://catfact.ninja/fact',
+            timeout=3,
+            headers={'User-Agent': 'Mozilla/5.0'}
+        )
+        response.raise_for_status()
+        return response.json().get('fact', DEFAULT_CAT_FACT)
+    except Exception as e:
+        logger.error(f"CatFact API error: {str(e)}")
+        return DEFAULT_CAT_FACT
+
+def index(request):
+    cat_fact = get_cat_fact_with_fallback()
+    news = News.objects.order_by('id')[:1]
+    return render(request, 'main/index.html', {
+        'news': news,
+        'cat_fact': cat_fact,
+        'api_works': cat_fact != DEFAULT_CAT_FACT
+    })
+
+def status_distribution(request):
+    # Подсчёт количества аренд по статусам
+    status_counts = Rental.objects.values('status').annotate(count=Count('status')).order_by('status')
+    # Преобразуем в словарь для удобства
+    status_data = {entry['status']: entry['count'] for entry in status_counts}
+    # Максимальное значение для масштабирования псевдографики
+    max_count = max(status_data.values(), default=1)
+    # Создаём данные для псевдографики
+    status_bars = {}
+    for status, count in status_data.items():
+        # Ищем человекочитаемое название статуса в STATUS_CHOICES
+        status_label = status
+        for code, label in Rental.STATUS_CHOICES:
+            if code == status:
+                status_label = label
+                break
+        status_bars[status_label] = {
+            'count': count,
+            'bar': '█' * int(count * 20 / max_count)
+        }
+    return render(request, 'main/status_distribution.html', {'status_bars': status_bars})
+
+def rental_sums_by_date(request):
+    # Данные за последние 7 дней
+    end_date = timezone.now().date()
+    start_date = end_date - timedelta(days=7)
+    rental_sums = Rental.objects.filter(start_date__range=[start_date, end_date]) \
+        .values('start_date') \
+        .annotate(total=Sum('total_amount')) \
+        .order_by('start_date')
+    # Максимальная сумма для масштабирования
+    max_total = max((entry['total'] for entry in rental_sums), default=1)
+    sums_data = [
+        {
+            'date': entry['start_date'].strftime('%Y-%m-%d'),
+            'total': float(entry['total']),
+            'bar': '█' * int(float(entry['total']) * 20 / float(max_total))
+        }
+        for entry in rental_sums
+    ]
+    return render(request, 'main/rental_sums_by_date.html', {'sums_data': sums_data})
+
+def rentals_by_car(request):
+    # Подсчёт аренд по автомобилям (используем car__model__name для получения названия модели)
+    car_rentals = Rental.objects.values('car__model__name').annotate(count=Count('car')).order_by('car__model__name')
+    
+    # Отладочная информация
+    print("DEBUG: car_rentals =", list(car_rentals))
+    print("DEBUG: All Rentals with Cars:", Rental.objects.select_related('car__model').all())
+    
+    # Если данных нет, передаём сообщение об ошибке
+    if not car_rentals:
+        return render(request, 'main/rentals_by_car.html', {
+            'error_message': 'Нет данных об арендах. Убедитесь, что в базе данных есть записи в модели Rental и связанные автомобили.'
+        })
+    
+    # Фильтруем только записи с непустым car__model__name
+    car_rentals = [r for r in car_rentals if r['car__model__name']]
+    
+    if not car_rentals:
+        return render(request, 'main/rentals_by_car.html', {
+            'error_message': 'Нет данных об арендах с определённой моделью автомобиля.'
+        })
+    
+    # Максимальное количество аренд для масштабирования псевдографики
+    max_count = max(entry['count'] for entry in car_rentals)
+    if max_count == 0:
+        max_count = 1  # Избегаем деления на 0
+    
+    # Формируем данные для шаблона
+    car_data = [
+        {
+            'car': entry['car__model__name'] if entry['car__model__name'] else 'Неизвестный автомобиль',
+            'count': entry['count'],
+            'bar': '█' * int(entry['count'] * 20 / max_count)
+        }
+        for entry in car_rentals
+    ]
+    
+    return render(request, 'main/rentals_by_car.html', {'car_data': car_data})
 
 def car_detail(request, car_id):
     """Детальная страница автомобиля"""
     car = get_object_or_404(Car, pk=car_id)
     return render(request, 'main/car_detail.html', {'car': car})
-
 
 def create_rental(request):
     # Получаем временную зону и текущую дату
@@ -119,10 +224,6 @@ class CustomLoginView(LoginView):
 class CustomLogoutView(LogoutView):
     next_page = 'login'  # перенаправление на страницу логина после выхода
 
-def index(request):
-    news = News.objects.order_by('id')[:1]
-    return render(request, 'main/index.html', {'news': news})
-
 def about(request):
     return render(request, "main/about.html")
 
@@ -164,7 +265,6 @@ def promocodes_view(request):
     # Get active promos with sorting
     active_promos = PromoCode.objects.all().order_by(sort_by)
     
-    
     return render(request, 'main/promocodes.html', {
         'active_promos': active_promos,
     })
@@ -179,4 +279,3 @@ def car_list(request):
     else:
         cars = Car.objects.all()
     return render(request, 'main/car_list.html', {'cars': cars})
-

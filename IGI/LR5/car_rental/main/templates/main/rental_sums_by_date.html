@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Суммы аренд по датам</title>
+</head>
+<body>
+    <h1>Суммы аренд по датам</h1>
+    <table>
+        <tr>
+            <th>Дата</th>
+            <th>Сумма (руб.)</th>
+            <th>График</th>
+        </tr>
+        {% for item in sums_data %}
+        <tr>
+            <td>{{ item.date }}</td>
+            <td>{{ item.total|floatformat:2 }}</td>
+            <td>{{ item.bar }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Нет данных</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

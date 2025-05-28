@@ -20,4 +20,7 @@ urlpatterns = [
     path('create_rental/', views.create_rental, name='create_rental'),
     path('cars/', views.car_list, name='car_list'),
     re_path(r'^cars/(?P<car_id>\d+)/$', views.car_detail, name='car_detail'),
+    path('status-distribution/', views.status_distribution, name='status_distribution'),
+    path('rental-sums-by-date/', views.rental_sums_by_date, name='rental_sums_by_date'),
+    path('rentals-by-car/', views.rentals_by_car, name='rentals_by_car'),
 ]

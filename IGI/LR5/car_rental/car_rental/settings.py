@@ -132,3 +132,5 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_REDIRECT_URL = 'profile'  # после логина перенаправляет на профиль
 LOGIN_URL = 'login'  # страница логина
 LOGOUT_REDIRECT_URL = 'login'
+
+DEFAULT_CAT_FACT = "Кошки могут поворачивать уши на 180 градусов"

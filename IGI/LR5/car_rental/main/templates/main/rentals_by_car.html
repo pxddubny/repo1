@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Аренды по автомобилям</title>
+</head>
+<body>
+    <h1>Аренды по автомобилям</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <table>
+            <tr>
+                <th>Модель автомобиля</th>
+                <th>Количество аренд</th>
+                <th>График</th>
+            </tr>
+            {% for item in car_data %}
+            <tr>
+                <td>{{ item.car }}</td>
+                <td>{{ item.count }}</td>
+                <td>{{ item.bar }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">Нет данных об арендах</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    <p><a href="/">Вернуться на главную</a></p>
+</body>
+</html>

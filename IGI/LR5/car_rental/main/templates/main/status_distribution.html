@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Распределение аренд по статусам</title>
+</head>
+<body>
+    <h1>Распределение аренд по статусам</h1>
+    <table>
+        <tr>
+            <th>Статус</th>
+            <th>Количество</th>
+            <th>График</th>
+        </tr>
+        {% for status, data in status_bars.items %}
+        <tr>
+            <td>{{ status }}</td>
+            <td>{{ data.count }}</td>
+            <td>{{ data.bar }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Нет данных</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
