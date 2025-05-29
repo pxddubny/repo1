@@ -25,4 +25,7 @@ urlpatterns = [
     path('rentals-by-car/', views.rentals_by_car, name='rentals_by_car'),
     path('redact_rental/<int:rental_id>/', views.redact_rental, name='redact_rental'),
     path('delete_rental/<int:rental_id>/', views.delete_rental, name='delete_rental'),
+    path('clients-with-rentals/', views.clients_with_rentals, name='clients_with_rentals'),
+    path('view-user-profile/<int:user_id>/', views.view_user_profile, name='view_user_profile'), 
+    path('rental-profit/', views.rental_profit, name='rental_profit'),
 ]

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Аренды по автомобилям</title>
+    <title>rentals by cars</title>
 </head>
 <body>
-    <h1>Аренды по автомобилям</h1>
+    <h1>rentals by cars</h1>
     {% if error_message %}
         <p style="color: red;">{{ error_message }}</p>
     {% else %}
         <table>
             <tr>
-                <th>Модель автомобиля</th>
-                <th>Количество аренд</th>
-                <th>График</th>
+                <th>car model</th>
+                <th>number of rentals</th>
+                <th>chart</th>
             </tr>
             {% for item in car_data %}
             <tr>
@@ -23,11 +23,11 @@
             </tr>
             {% empty %}
             <tr>
-                <td colspan="3">Нет данных об арендах</td>
+                <td colspan="3">no rental data</td>
             </tr>
             {% endfor %}
         </table>
     {% endif %}
-    <p><a href="/">Вернуться на главную</a></p>
+    <p><a href="/">back to main</a></p>
 </body>
 </html>

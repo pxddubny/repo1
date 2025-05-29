@@ -184,7 +184,7 @@ class User(AbstractUser):
             self.is_staff = True
             self.is_superuser = True
         elif self.role == 'MANAGER':
-            self.is_staff = True
+            self.is_staff = False
             self.is_superuser = False
         else:
             self.is_staff = False

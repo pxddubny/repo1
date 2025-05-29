@@ -10,6 +10,13 @@ from django.db.models import Count, Sum
 from datetime import timedelta
 import requests
 import logging
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.shortcuts import render
+from .models import User, Rental
+from django.db.models import Count
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.shortcuts import render, get_object_or_404
+from .models import User, Rental
 
 logger = logging.getLogger(__name__)
 
@@ -292,3 +299,65 @@ def car_list(request):
     else:
         cars = Car.objects.all()
     return render(request, 'main/car_list.html', {'cars': cars})
+
+@login_required
+@user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])
+def clients_with_rentals(request):
+    # Получаем клиентов с хотя бы одной арендой
+    clients = User.objects.filter(role='CLIENT', rental__isnull=False).distinct() \
+        .annotate(rental_count=Count('rental'))
+    
+    # Отладочная информация
+    print("DEBUG: Clients with rentals =", list(clients.values('username', 'rental_count')))
+    
+    # Если клиентов нет, передаём сообщение об ошибке
+    if not clients.exists():
+        return render(request, 'main/clients_with_rentals.html', {
+            'error_message': 'Нет клиентов с арендами.'
+        })
+    
+    return render(request, 'main/clients_with_rentals.html', {'clients': clients})
+@login_required
+@user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])
+def view_user_profile(request, user_id):
+    # Получаем пользователя по ID
+    user = get_object_or_404(User, id=user_id)
+    
+    # Получаем все аренды пользователя
+    rentals = Rental.objects.filter(client=user).order_by('-start_date')
+    
+    # Обработка изменения статуса
+    if request.method == 'POST':
+        rental_id = request.POST.get('rental_id')
+        new_status = request.POST.get('status')
+        if rental_id and new_status in dict(Rental.STATUS_CHOICES).keys():
+            rental = get_object_or_404(Rental, id=rental_id, client=user)
+            rental.status = new_status
+            rental.save()
+            return redirect('view_user_profile', user_id=user.id)
+    
+    context = {
+        'viewed_user': user,
+        'rentals': rentals,
+        'status_choices': Rental.STATUS_CHOICES,  # Передаём статусы в контекст
+    }
+    return render(request, 'main/view_user_profile.html', context)
+
+@login_required
+@user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])
+def rental_profit(request):
+    # Получаем аренды со статусом CONFIRMED и выше (CONFIRMED, ACTIVE, COMPLETED)
+    confirmed_rentals = Rental.objects.filter(status__in=['CONFIRMED', 'ACTIVE', 'COMPLETED'])
+    
+    # Получаем аренды со статусом PENDING
+    pending_rentals = Rental.objects.filter(status='PENDING')
+    
+    # Подсчитываем общую прибыль от confirmed_rentals
+    total_profit = sum(rental.total_amount for rental in confirmed_rentals) or Decimal('0.00')
+    
+    context = {
+        'total_profit': total_profit,
+        'confirmed_rentals': confirmed_rentals,
+        'pending_rentals': pending_rentals,
+    }
+    return render(request, 'main/rental_profit.html', context)

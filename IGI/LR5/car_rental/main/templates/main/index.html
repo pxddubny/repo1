@@ -33,11 +33,22 @@
     <p><a href="/register/">register</a></p>
     {% endif %}
     {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
-    <h2>Управление и аналитика</h2>
-    <p><a href="/admin/">Админ-панель</a></p>
-    <p><a href="/status-distribution/">Распределение аренд по статусам</a></p>
-    <p><a href="/rental-sums-by-date/">Суммы аренд по датам</a></p>
-    <p><a href="/rentals-by-car/">Аренды по автомобилям</a></p>
+    <h2>admin</h2>
+    <p><a href="/status-distribution/">status distribution</a></p>
+    <p><a href="/rentals-by-car/">rents by car</a></p>
+    {% if user.role in 'MANAGER,SUPERUSER' %}
+            <a href="{% url 'clients_with_rentals' %}" style="margin-right: 15px;">clients with rents</a>
+        {% endif %}
+    {% endif %}
+    {% if user.role in 'MANAGER,SUPERUSER' %}
+    <p>
+            <a href="{% url 'rental_profit' %}" style="margin-right: 15px;">rental profit</a>
+            </p>
+        {% endif %}
+    
+        {% if user.is_authenticated and user.role in 'SUPERUSER' %}
+        <p><a href="/admin/">panel</a></p>
+
     {% endif %}
 </body>
 </html>
