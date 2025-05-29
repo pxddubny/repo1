@@ -17,8 +17,11 @@ from django.db.models import Count
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.shortcuts import render, get_object_or_404
 from .models import User, Rental
+from decimal import Decimal
+import logging
 
 logger = logging.getLogger(__name__)
+
 
 # Настройки по умолчанию
 DEFAULT_CAT_FACT = "Стандартный факт: Коты любят спать до 16 часов в день."

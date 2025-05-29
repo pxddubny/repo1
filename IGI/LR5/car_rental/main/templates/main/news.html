@@ -11,7 +11,7 @@
     <h3>{{ el.title }}</h3>
     <p>{{ el.content }}</p>
     {% if el.img_path %}  <!-- Проверка наличия пути -->
-        <p><img src="/static/car_photos/{{ el.img_path }}" alt="{{ el.title }}"></p>
+        <p><img src="{{ el.img_path }}" alt="{{ el.title }}"></p>
     {% endif %}
 {% endfor %}
     <a href="/">main page</a>
