@@ -1,0 +1,147 @@
+2025-05-29 10:45:02,186 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:45:17,195 [WARNING] django.request - Not Found: /about-us
+2025-05-29 10:46:05,711 [INFO] django.utils.autoreload - /home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/car_rental/urls.py changed, reloading.
+2025-05-29 10:46:06,144 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:46:14,877 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-05-29 10:46:16,634 [DEBUG] main.views - Загрузка главной страницы
+2025-05-29 10:46:16,635 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-05-29 10:46:17,015 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-05-29 10:46:17,017 [INFO] main.views - Главная страница успешно загружена
+2025-05-29 10:46:20,096 [DEBUG] main.views - Загрузка новостей
+2025-05-29 10:46:24,879 [DEBUG] main.views - Загрузка FAQ
+2025-05-29 10:46:37,373 [DEBUG] main.views - Загрузка главной страницы
+2025-05-29 10:46:37,374 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-05-29 10:46:37,539 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-05-29 10:46:37,540 [INFO] main.views - Главная страница успешно загружена
+2025-05-29 10:46:42,275 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-05-29 10:46:46,870 [DEBUG] main.views - Загрузка главной страницы
+2025-05-29 10:46:46,871 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-05-29 10:46:47,044 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-05-29 10:46:47,045 [INFO] main.views - Главная страница успешно загружена
+2025-05-29 10:47:14,224 [DEBUG] main.views - Загрузка профиля пользователя ivan
+2025-05-29 10:48:03,881 [DEBUG] main.views - Загрузка профиля пользователя ivan
+2025-05-29 10:48:07,620 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:48:15,952 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:48:15,973 [ERROR] django.request - Internal Server Error: /redact_rental/15/
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 164, in redact_rental
+    if form.cleaned_data['promo_code']:
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'promo_code'
+2025-05-29 10:50:39,792 [INFO] django.utils.autoreload - /home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py changed, reloading.
+2025-05-29 10:50:40,297 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:50:46,522 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:50:46,554 [ERROR] django.request - Internal Server Error: /redact_rental/15/
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 167, in redact_rental
+    code=form.cleaned_data['promo_code'],
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'promo_code'
+2025-05-29 10:51:28,826 [INFO] django.utils.autoreload - /home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py changed, reloading.
+2025-05-29 10:51:29,301 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:51:31,428 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:51:33,156 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:51:33,180 [ERROR] django.request - Internal Server Error: /redact_rental/15/
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 167, in redact_rental
+    code=form.cleaned_data['promo_code'],
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'promo_code'
+2025-05-29 10:52:19,870 [INFO] django.utils.autoreload - /home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py changed, reloading.
+2025-05-29 10:52:20,364 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:52:21,702 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:52:21,732 [ERROR] django.request - Internal Server Error: /redact_rental/15/
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 166, in redact_rental
+    promo_code = PromoCode.objects.get(
+        code=form.cleaned_data['promo_code_input'],
+    )
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/db/models/query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+main.models.PromoCode.DoesNotExist: PromoCode matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 170, in redact_rental
+    form.add_error('promo_code', "Неверный промокод")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/forms/forms.py", line 301, in add_error
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: 'RentalForm' has no field named 'promo_code'.
+2025-05-29 10:52:38,701 [INFO] django.utils.autoreload - /home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py changed, reloading.
+2025-05-29 10:52:39,101 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:52:42,320 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:52:42,352 [ERROR] django.request - Internal Server Error: /redact_rental/15/
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 166, in redact_rental
+    promo_code = PromoCode.objects.get(
+        code=form.cleaned_data['promo_code_input'],
+    )
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/db/models/query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+main.models.PromoCode.DoesNotExist: PromoCode matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py", line 170, in redact_rental
+    form.add_error('promo_code', "Неверный промокод")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/myenv/lib/python3.13/site-packages/django/forms/forms.py", line 301, in add_error
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: 'RentalForm' has no field named 'promo_code'.
+2025-05-29 10:55:38,172 [INFO] django.utils.autoreload - /home/poddubny/!Work/Igi_Strweb/353505_PADDZIAREHIN_20/IGI/LR5/car_rental/main/views.py changed, reloading.
+2025-05-29 10:55:38,599 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-05-29 10:55:40,229 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:55:40,242 [INFO] main.views - Аренда #15 отредактирована
+2025-05-29 10:55:40,268 [DEBUG] main.views - Загрузка профиля пользователя ivan
+2025-05-29 10:56:07,615 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:56:15,081 [DEBUG] main.views - Редактирование аренды #15 пользователем ivan
+2025-05-29 10:56:15,088 [INFO] main.views - Аренда #15 отредактирована
+2025-05-29 10:56:15,104 [DEBUG] main.views - Загрузка профиля пользователя ivan
+2025-05-29 10:56:39,623 [DEBUG] main.views - Загрузка профиля пользователя ivan

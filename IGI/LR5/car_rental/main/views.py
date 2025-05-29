@@ -40,13 +40,12 @@ def get_cat_fact_with_fallback():
         return DEFAULT_CAT_FACT
 
 def index(request):
+    logger.debug("Загрузка главной страницы")
     cat_fact = get_cat_fact_with_fallback()
     news = News.objects.order_by('id')[:1]
-    return render(request, 'main/index.html', {
-        'news': news,
-        'cat_fact': cat_fact,
-        'api_works': cat_fact != DEFAULT_CAT_FACT
-    })
+    logger.info("Главная страница успешно загружена")
+    return render(request, 'main/index.html', {'news': news, 'cat_fact': cat_fact, 'api_works': cat_fact != DEFAULT_CAT_FACT})
+
 
 def status_distribution(request):
     status_counts = Rental.objects.values('status').annotate(count=Count('status')).order_by('status')
@@ -152,40 +151,29 @@ def create_rental(request):
 
 @login_required
 def redact_rental(request, rental_id):
+    logger.debug(f"Редактирование аренды #{rental_id} пользователем {request.user.username}")
     rental = get_object_or_404(Rental, id=rental_id, client=request.user)
     user_timezone = timezone.get_current_timezone()
     current_date = timezone.now().astimezone(user_timezone)
     cal = calendar.monthcalendar(current_date.year, current_date.month)
-    
+
     if request.method == 'POST':
         form = RentalForm(request.POST, instance=rental)
         if form.is_valid():
-            promo_code = None
-            if form.cleaned_data['promo_code']:
-                try:
-                    promo_code = PromoCode.objects.get(
-                        code=form.cleaned_data['promo_code'],
-                    )
-                except PromoCode.DoesNotExist:
-                    form.add_error('promo_code', "Неверный промокод")
-                    return render(request, 'main/redact_rental.html', {
-                        'form': form,
-                        'current_date': current_date.strftime('%d/%m/%Y'),
-                        'user_timezone': user_timezone,
-                        'calendar': cal,
-                        'rental': rental,
-                    })
-            
+            promo_code = form.cleaned_data.get('promo_code_input')
             rental.car = form.cleaned_data['car']
             rental.start_date = form.cleaned_data['start_date']
             rental.days = form.cleaned_data['days']
             rental.promo_code = promo_code
             rental.save()
-            
+            logger.info(f"Аренда #{rental.id} отредактирована")
             return redirect('profile')
+        else:
+            logger.warning(f"Ошибка редактирования аренды: {form.errors}")
+
     else:
         form = RentalForm(instance=rental)
-    
+
     return render(request, 'main/redact_rental.html', {
         'form': form,
         'current_date': current_date.strftime('%d/%m/%Y'),
@@ -194,10 +182,12 @@ def redact_rental(request, rental_id):
         'rental': rental,
     })
 
+
 @login_required
 def delete_rental(request, rental_id):
     rental = get_object_or_404(Rental, id=rental_id, client=request.user)
     if request.method == 'POST':
+        logger.info(f"Аренда #{rental.id} удалена пользователем {request.user.username}")
         rental.delete()
         return redirect('profile')
     return render(request, 'main/delete_rental.html', {'rental': rental})
@@ -207,38 +197,42 @@ def role_check(role):
 
 @login_required
 def profile(request):
+    logger.debug(f"Загрузка профиля пользователя {request.user.username}")
     user = request.user
     rentals = Rental.objects.filter(client=user).order_by('-start_date')
     promocodes = user.promocodes.all()
-    
+
     search_query = request.GET.get('promo_search')
     if search_query:
         promocodes = promocodes.filter(code__icontains=search_query)
-    
+
     sort = request.GET.get('sort')
     order = request.GET.get('order')
-    
+
     if sort == 'code':
         if order == 'desc':
             promocodes = promocodes.order_by('-code')
         else:
             promocodes = promocodes.order_by('code')
-    
-    context = {
+
+    return render(request, 'main/profile.html', {
         'user': user,
         'rentals': rentals,
         'promocodes': promocodes,
-    }
-    return render(request, 'main/profile.html', context)
+    })
 
 def register(request):
+    logger.debug("Регистрация нового пользователя")
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.role = 'CLIENT'
             user.save()
+            logger.info(f"Зарегистрирован новый пользователь: {user.username}")
             return redirect('login')
+        else:
+            logger.warning(f"Ошибка регистрации: {form.errors}")
     else:
         form = UserRegisterForm()
     return render(request, 'main/register.html', {'form': form})
@@ -252,25 +246,32 @@ class CustomLogoutView(LogoutView):
     next_page = 'login'
 
 def about(request):
+    logger.debug("Загрузка страницы 'О нас'")
     return render(request, "main/about.html")
 
 def news(request):
-    news = News.objects.all()
-    return render(request, "main/news.html", {'news': news})
+    logger.debug("Загрузка новостей")
+    all_news = News.objects.all()
+    return render(request, "main/news.html", {'news': all_news})
 
 def faq(request):
+    logger.debug("Загрузка FAQ")
     faqs = FAQ.objects.all()
     return render(request, "main/faq.html", {'faqs': faqs})
 
 def employees_view(request):
+    logger.debug("Загрузка страницы сотрудников")
     employees = Employee.objects.all()
     return render(request, 'main/employees.html', {'employees': employees})
 
 def vacancies_view(request):
+    logger.debug("Загрузка вакансий")
     vacancies = Vacancy.objects.filter(is_active=True)
     return render(request, 'main/vacancies.html', {'vacancies': vacancies})
 
+
 def reviews_view(request):
+    logger.debug("Загрузка отзывов")
     if request.method == 'POST' and request.user.is_authenticated:
         Review.objects.create(
             user=request.user,
@@ -279,23 +280,22 @@ def reviews_view(request):
             text=request.POST.get('text'),
             is_published=True
         )
-    
+        logger.info(f"Пользователь {request.user.username} оставил отзыв")
     reviews = Review.objects.filter(is_published=True)
-    return render(request, 'main/reviews.html', {'reviews': reviews})
+    return render(request, "main/reviews.html", {'reviews': reviews})
 
 def promocodes_view(request):
-    now = timezone.now().date()
+    logger.debug("Загрузка страницы промокодов")
     sort_by = request.GET.get('sort', 'code')
     active_promos = PromoCode.objects.all().order_by(sort_by)
-    
-    return render(request, 'main/promocodes.html', {
-        'active_promos': active_promos,
-    })
+    return render(request, 'main/promocodes.html', {'active_promos': active_promos})
 
 def privacy_view(request):
+    logger.debug("Загрузка политики конфиденциальности")
     return render(request, 'main/privacy.html')
 
 def car_list(request):
+    logger.debug("Загрузка списка автомобилей")
     search_query = request.GET.get('search', '')
     if search_query:
         cars = Car.objects.filter(license_plate__icontains=search_query)
@@ -303,33 +303,26 @@ def car_list(request):
         cars = Car.objects.all()
     return render(request, 'main/car_list.html', {'cars': cars})
 
+
 @login_required
 @user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])
 def clients_with_rentals(request):
-    # Получаем клиентов с хотя бы одной арендой
-    clients = User.objects.filter(role='CLIENT', rental__isnull=False).distinct() \
+    logger.debug("Загрузка списка клиентов с арендами")
+    clients = User.objects.filter(role='CLIENT', rental__isnull=False).distinct()\
         .annotate(rental_count=Count('rental'))
-    
-    # Отладочная информация
-    print("DEBUG: Clients with rentals =", list(clients.values('username', 'rental_count')))
-    
-    # Если клиентов нет, передаём сообщение об ошибке
     if not clients.exists():
+        logger.warning("Нет клиентов с арендами")
         return render(request, 'main/clients_with_rentals.html', {
             'error_message': 'Нет клиентов с арендами.'
         })
-    
     return render(request, 'main/clients_with_rentals.html', {'clients': clients})
+
 @login_required
 @user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])
 def view_user_profile(request, user_id):
-    # Получаем пользователя по ID
+    logger.debug(f"Просмотр профиля пользователя с ID {user_id}")
     user = get_object_or_404(User, id=user_id)
-    
-    # Получаем все аренды пользователя
     rentals = Rental.objects.filter(client=user).order_by('-start_date')
-    
-    # Обработка изменения статуса
     if request.method == 'POST':
         rental_id = request.POST.get('rental_id')
         new_status = request.POST.get('status')
@@ -337,30 +330,23 @@ def view_user_profile(request, user_id):
             rental = get_object_or_404(Rental, id=rental_id, client=user)
             rental.status = new_status
             rental.save()
+            logger.info(f"Статус аренды #{rental.id} обновлён на {new_status}")
             return redirect('view_user_profile', user_id=user.id)
-    
-    context = {
+    return render(request, 'main/view_user_profile.html', {
         'viewed_user': user,
         'rentals': rentals,
-        'status_choices': Rental.STATUS_CHOICES,  # Передаём статусы в контекст
-    }
-    return render(request, 'main/view_user_profile.html', context)
+        'status_choices': Rental.STATUS_CHOICES,
+    })
 
 @login_required
 @user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])
 def rental_profit(request):
-    # Получаем аренды со статусом CONFIRMED и выше (CONFIRMED, ACTIVE, COMPLETED)
     confirmed_rentals = Rental.objects.filter(status__in=['CONFIRMED', 'ACTIVE', 'COMPLETED'])
-    
-    # Получаем аренды со статусом PENDING
     pending_rentals = Rental.objects.filter(status='PENDING')
-    
-    # Подсчитываем общую прибыль от confirmed_rentals
-    total_profit = sum(rental.total_amount for rental in confirmed_rentals) or Decimal('0.00')
-    
-    context = {
+    total_profit = sum(r.total_amount for r in confirmed_rentals) or Decimal('0.00')
+    logger.info(f"Просмотр прибыли от аренды пользователем {request.user.username}: {total_profit}")
+    return render(request, 'main/rental_profit.html', {
         'total_profit': total_profit,
         'confirmed_rentals': confirmed_rentals,
         'pending_rentals': pending_rentals,
-    }
-    return render(request, 'main/rental_profit.html', context)
+    })
