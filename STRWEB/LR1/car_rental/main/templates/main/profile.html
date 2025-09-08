@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - Car Rental{% endblock %}
+
+{% block header %}Profile: {{ user.username }}{% endblock %}
+
+{% block content %}
+<p><strong>Phone:</strong> {{ user.phone }}</p>
+
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Sign Out</button>
+</form>
+
+<h3>Your Rentals</h3>
+{% if rentals %}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Car</th>
+            <th>Start Date</th>
+            <th>Days</th>
+            <th>Total</th>
+            <th>Discount</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental.id }}</td>
+            <td>{{ rental.car }}</td>
+            <td>{{ rental.start_date }}</td>
+            <td>{{ rental.days }}</td>
+            <td>{{ rental.total_amount }} ₽</td>
+            <td>{{ rental.discount_amount }} ₽</td>
+            <td>{{ rental.get_status_display }}</td>
+            <td><a href="{% url 'redact_rental' rental.id %}">Edit</a></td>
+            <td><a href="{% url 'delete_rental' rental.id %}" onclick="return confirm('Are you sure?');">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No rentals yet</p>
+{% endif %}
+
+<div>
+    <a href="/create_rental">New Rental</a>
+</div>
+{% endblock %}
+
+{% block cat_fact %}{% endblock %}
+{% block news %}{% endblock %}

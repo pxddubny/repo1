@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Car Rental - Home
+
+    
+    
+
+{% endblock %}
+
+{% block content %}
+<figure>
+    <img src="/static/logos/banner.png" alt="banner">
+    <img src="/static/logos/badge.png" alt="logo">
+    <figcaption>Our company banner and logo</figcaption>
+</figure>
+
+<h2>
+    you can order one of this cars:
+</h2>
+<table>
+    <thead>
+        <tr>
+            <th>License plate</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for el in cars %}
+            <tr>
+                <td>{{el.license_plate}}</td>
+                <td>{{el.model}}</td>
+                <td>{{el.year}}</td>
+                <td>{{el.price}}</td>
+                <td>{% if el.pk %}
+                <a href="{% url 'car_detail' car_id=el.pk %}" title="View car details">
+                    View Details
+                </a>
+                {% else %}
+                N/A
+                {% endif %}
+                </td>                   
+
+
+            </tr>
+    
+
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if user.is_authenticated %}
+    <nav>
+        <a href="/create_rental">New Rental</a>
+    </nav>
+{% endif %}
+
+<h2>Some News</h2>
+        {% for el in news %}
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.content }}</p>
+            <p><img src="{{ el.img_path }}" alt="{{ el.title }}"></p>
+        {% endfor %}
+<h2>Our partners</h2>
+    {% for el in partners %}
+        <h3>{{ el.name }}</h3>
+        <a href={{ el.website }}>Web-site</a>
+        <img src="{{ el.logo.url }}" alt="{{ el.title }}">
+    {% endfor %}
+{% endblock %}

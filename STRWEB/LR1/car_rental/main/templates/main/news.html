@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}News - Car Rental{% endblock %}
+
+{% block header %}Latest News{% endblock %}
+
+{% block content %}
+{% for el in news %}
+<h3>{{ el.title }}</h3>
+<p>{{ el.content }}</p>
+{% if el.img_path %}
+
+    <p><img src="{{ el.img_path }}" alt="{{ el.title }}"></p>
+{% endif %}
+{% endfor %}
+{% endblock %}
+
+{% block cat_fact %}{% endblock %}
+{% block news %}{% endblock %}
