@@ -5574,3 +5574,1694 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'add_to_cart' not found. 'add
 2025-09-08 19:52:13,060 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
 2025-09-08 19:52:13,061 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
 2025-09-08 19:52:17,738 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 19:53:41,284 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 19:53:41,294 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 19:53:41,295 [DEBUG] matplotlib - interactive is False
+2025-09-08 19:53:41,295 [DEBUG] matplotlib - platform is linux
+2025-09-08 19:53:41,330 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 19:53:41,331 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 19:56:03,354 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 19:56:03,363 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 19:56:03,364 [DEBUG] matplotlib - interactive is False
+2025-09-08 19:56:03,365 [DEBUG] matplotlib - platform is linux
+2025-09-08 19:56:03,401 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 19:56:03,402 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 19:56:07,048 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 19:56:07,176 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 19:56:07,185 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 19:56:07,186 [DEBUG] matplotlib - interactive is False
+2025-09-08 19:56:07,186 [DEBUG] matplotlib - platform is linux
+2025-09-08 19:56:07,222 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 19:56:07,223 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 19:56:11,076 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 19:56:31,113 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 19:56:45,014 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:00:32,595 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-08 20:00:32,885 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:00:33,018 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:00:33,028 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:00:33,029 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:00:33,030 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:00:33,065 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:00:33,067 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:00:34,289 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-08 20:00:34,577 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:00:34,716 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:00:34,725 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:00:34,726 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:00:34,726 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:00:34,765 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:00:34,766 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:00:38,709 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:00:43,431 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:01:15,221 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-08 20:01:15,509 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:01:15,653 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:01:15,663 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:01:15,664 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:01:15,665 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:01:15,698 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:01:15,699 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:01:19,817 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:01:49,098 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:02:35,304 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-08 20:02:35,609 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:02:35,739 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:02:35,748 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:02:35,750 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:02:35,750 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:02:35,785 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:02:35,786 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:06:42,989 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:06:43,302 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:06:43,446 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:06:43,454 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:06:43,455 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:06:43,455 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:06:43,491 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:06:43,493 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:09:26,359 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:09:26,645 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:09:26,786 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:09:26,795 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:09:26,797 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:09:26,797 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:09:26,833 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:09:26,835 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:09:32,400 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:13:07,029 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:13:07,320 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:13:07,453 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:13:07,462 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:13:07,463 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:13:07,463 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:13:07,498 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:13:07,499 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:13:15,375 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:13:36,628 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:13:41,582 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:14:21,088 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:14:21,380 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:14:21,517 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:14:21,526 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:14:21,527 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:14:21,527 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:14:21,564 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:14:21,565 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:14:22,792 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:14:23,097 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:14:23,232 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:14:23,241 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:14:23,242 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:14:23,243 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:14:23,277 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:14:23,278 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:14:32,934 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:14:44,528 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:14:44,656 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:14:44,665 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:14:44,666 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:14:44,666 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:14:44,702 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:14:44,703 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:14:47,328 [DEBUG] main.views - Загрузка главной страницы
+2025-09-08 20:14:47,329 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-08 20:14:47,641 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-08 20:14:47,642 [INFO] main.views - Главная страница успешно загружена
+2025-09-08 20:14:56,155 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 20:15:09,597 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:17:28,651 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:17:28,941 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:17:39,021 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:17:39,235 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:17:39,370 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:17:39,379 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:17:39,381 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:17:39,381 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:17:39,416 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:17:39,417 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:19:43,738 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:19:43,868 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:19:43,876 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:19:43,878 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:19:43,878 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:19:43,914 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:19:43,915 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:19:46,988 [DEBUG] main.views - Загрузка главной страницы
+2025-09-08 20:19:46,989 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-08 20:19:47,215 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-08 20:19:47,216 [INFO] main.views - Главная страница успешно загружена
+2025-09-08 20:19:53,331 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 20:20:03,812 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:20:46,722 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 20:20:55,639 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:22:30,942 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-08 20:22:31,268 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:22:31,413 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:22:31,420 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:22:31,421 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:22:31,421 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:22:31,458 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:22:31,460 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:23:00,804 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:23:01,090 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:23:01,227 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:23:01,236 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:23:01,238 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:23:01,238 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:23:01,273 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:23:01,274 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:23:06,910 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:23:11,246 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:24:49,991 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:24:50,271 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:24:50,405 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:24:50,414 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:24:50,416 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:24:50,416 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:24:50,453 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:24:50,454 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:24:58,941 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:28:02,479 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-08 20:28:02,772 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:28:02,909 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:28:02,918 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:28:02,919 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:28:02,919 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:28:02,953 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:28:02,954 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:28:40,325 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:28:40,600 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:28:40,734 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:28:40,743 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:28:40,745 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:28:40,745 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:28:40,779 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:28:40,780 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:29:06,086 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-08 20:29:06,402 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:29:06,538 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:29:06,547 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:29:06,549 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:29:06,549 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:29:06,583 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:29:06,585 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:29:46,960 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py changed, reloading.
+2025-09-08 20:29:47,245 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:29:47,376 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:29:47,385 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:29:47,386 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:29:47,386 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:29:47,421 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:29:47,422 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:29:57,099 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:30:02,909 [ERROR] django.request - Internal Server Error: /create_rental/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 231, in create_rental
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 258, in clean
+    overlapping_rentals = Rental.objects.filter(
+                          ~~~~~~~~~~~~~~~~~~~~~^
+        car=self.car,
+        ^^^^^^^^^^^^^
+    ...<3 lines>...
+        is_paid=True  # Только оплаченные аренды
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).exclude(id=self.id)
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/query.py", line 1420, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2025-09-08 20:33:08,526 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py changed, reloading.
+2025-09-08 20:33:08,811 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:33:08,943 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:33:08,952 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:33:08,954 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:33:08,954 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:33:08,988 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:33:08,990 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:33:43,349 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py changed, reloading.
+2025-09-08 20:33:43,623 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-08 20:33:43,750 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-08 20:33:43,759 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-08 20:33:43,760 [DEBUG] matplotlib - interactive is False
+2025-09-08 20:33:43,760 [DEBUG] matplotlib - platform is linux
+2025-09-08 20:33:43,796 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-08 20:33:43,797 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-08 20:34:01,246 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 20:34:07,572 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-08 20:34:26,647 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 11:56:58,335 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 11:56:58,817 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 11:56:58,826 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 11:56:58,828 [DEBUG] matplotlib - interactive is False
+2025-09-10 11:56:58,828 [DEBUG] matplotlib - platform is linux
+2025-09-10 11:56:58,888 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 11:56:58,891 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 11:57:19,913 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 11:57:22,904 [ERROR] django.request - Internal Server Error: /cart/checkout/6/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 334, in checkout_rental
+    rental.save()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 308, in save
+    raise e
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 304, in save
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 254, in clean
+    raise ValidationError('Start date cannot be in the past')
+django.core.exceptions.ValidationError: ['Start date cannot be in the past']
+2025-09-10 11:58:05,471 [ERROR] django.request - Internal Server Error: /cart/checkout/6/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 334, in checkout_rental
+    rental.save()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 308, in save
+    raise e
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 304, in save
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 254, in clean
+    raise ValidationError('Start date cannot be in the past')
+django.core.exceptions.ValidationError: ['Start date cannot be in the past']
+2025-09-10 12:00:20,122 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 12:00:22,381 [ERROR] django.request - Internal Server Error: /cart/checkout/7/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 334, in checkout_rental
+    rental.save()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 308, in save
+    raise e
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 304, in save
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 254, in clean
+    raise ValidationError('Start date cannot be in the past')
+django.core.exceptions.ValidationError: ['Start date cannot be in the past']
+2025-09-10 12:00:25,404 [ERROR] django.request - Internal Server Error: /cart/checkout/18/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 335, in checkout_rental
+    messages.success(request, 'Rental paid successfully!')
+    ^^^^^^^^
+NameError: name 'messages' is not defined
+2025-09-10 12:00:40,447 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-10 12:00:40,816 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 12:00:40,989 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 12:00:40,996 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 12:00:40,997 [DEBUG] matplotlib - interactive is False
+2025-09-10 12:00:40,997 [DEBUG] matplotlib - platform is linux
+2025-09-10 12:00:41,060 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 12:00:41,064 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 12:00:42,128 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 12:00:59,090 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 12:01:00,749 [ERROR] django.request - Internal Server Error: /cart/checkout/6/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 334, in checkout_rental
+    rental.save()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 308, in save
+    raise e
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 304, in save
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 254, in clean
+    raise ValidationError('Start date cannot be in the past')
+django.core.exceptions.ValidationError: ['Start date cannot be in the past']
+2025-09-10 12:01:21,566 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-10 12:01:21,975 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 12:01:22,170 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 12:01:22,179 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 12:01:22,181 [DEBUG] matplotlib - interactive is False
+2025-09-10 12:01:22,181 [DEBUG] matplotlib - platform is linux
+2025-09-10 12:01:22,231 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 12:01:22,233 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 12:01:28,355 [ERROR] django.request - Internal Server Error: /cart/checkout/6/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py", line 334, in checkout_rental
+    rental.save()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 308, in save
+    raise e
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 304, in save
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py", line 254, in clean
+    raise ValidationError('Start date cannot be in the past')
+django.core.exceptions.ValidationError: ['Start date cannot be in the past']
+2025-09-10 12:01:32,116 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 12:02:38,995 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/models.py changed, reloading.
+2025-09-10 12:02:39,374 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 12:02:39,578 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 12:02:39,588 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 12:02:39,589 [DEBUG] matplotlib - interactive is False
+2025-09-10 12:02:39,590 [DEBUG] matplotlib - platform is linux
+2025-09-10 12:02:39,637 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 12:02:39,638 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 12:02:40,148 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 12:02:41,615 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 12:05:38,303 [DEBUG] main.views - Редактирование аренды #7 пользователем admin
+2025-09-10 12:26:01,705 [DEBUG] main.views - Загрузка главной страницы
+2025-09-10 12:26:01,708 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-10 12:26:02,204 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-10 12:26:02,205 [INFO] main.views - Главная страница успешно загружена
+2025-09-10 15:06:31,219 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:06:31,612 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:06:31,620 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:06:31,621 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:06:31,621 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:06:31,668 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:06:31,670 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:16:38,487 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/forms.py changed, reloading.
+2025-09-10 15:16:38,770 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:16:38,921 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:16:38,928 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:16:38,929 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:16:38,929 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:16:38,965 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:16:38,966 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:17:50,485 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-10 15:17:50,802 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:17:50,939 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:17:50,948 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:17:50,950 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:17:50,950 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:17:50,986 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:17:50,987 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:17:54,880 [DEBUG] main.views - Загрузка главной страницы
+2025-09-10 15:17:54,882 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-10 15:17:55,290 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-10 15:17:55,291 [INFO] main.views - Главная страница успешно загружена
+2025-09-10 15:24:08,216 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:24:39,403 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:24:58,019 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:25:34,608 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:29:31,886 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:36:16,881 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/car_rental/urls.py changed, reloading.
+2025-09-10 15:36:17,209 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:36:17,345 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:36:17,354 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:36:17,356 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:36:17,356 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:36:17,390 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:36:17,391 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:36:20,601 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/car_rental/urls.py changed, reloading.
+2025-09-10 15:36:20,883 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:36:21,013 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:36:21,023 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:36:21,025 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:36:21,025 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:36:21,059 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:36:21,061 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:36:49,355 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-10 15:36:49,659 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:36:49,802 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:36:49,810 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:36:49,811 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:36:49,811 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:36:49,847 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:36:49,849 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:37:45,346 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:37:52,810 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:37:59,237 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:38:13,690 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:38:19,642 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:39:03,388 [INFO] main.views - Аренда #19 оплачена пользователем admin
+2025-09-10 15:39:03,392 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:40:38,087 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/car_rental/urls.py changed, reloading.
+2025-09-10 15:40:38,384 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:40:38,515 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:40:38,525 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:40:38,526 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:40:38,527 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:40:38,561 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:40:38,563 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:41:26,940 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/car_rental/urls.py changed, reloading.
+2025-09-10 15:41:27,239 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:41:27,373 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:41:27,383 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:41:27,384 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:41:27,385 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:41:27,419 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:41:27,420 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:41:49,696 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/car_rental/urls.py changed, reloading.
+2025-09-10 15:41:49,988 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:41:50,135 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:41:50,142 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:41:50,143 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:41:50,143 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:41:50,179 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:41:50,181 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:42:01,412 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-10 15:42:01,701 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-10 15:42:01,851 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-10 15:42:01,858 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-10 15:42:01,859 [DEBUG] matplotlib - interactive is False
+2025-09-10 15:42:01,859 [DEBUG] matplotlib - platform is linux
+2025-09-10 15:42:01,895 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-10 15:42:01,897 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-10 15:42:46,817 [WARNING] django.request - Not Found: /payment/19/
+2025-09-10 15:42:55,316 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:43:13,964 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-10 15:43:21,327 [INFO] main.views - Вся корзина оплачена пользователем admin
+2025-09-10 15:43:21,331 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-11 10:21:16,908 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-11 10:21:17,339 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-11 10:21:17,352 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-11 10:21:17,353 [DEBUG] matplotlib - interactive is False
+2025-09-11 10:21:17,353 [DEBUG] matplotlib - platform is linux
+2025-09-11 10:21:17,410 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-11 10:21:17,412 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-11 10:21:18,809 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-11 10:22:19,990 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-11 10:22:54,104 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-11 10:26:25,028 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-12 11:01:42,293 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-12 11:01:43,077 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-12 11:01:43,113 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-12 11:01:43,117 [DEBUG] matplotlib - interactive is False
+2025-09-12 11:01:43,118 [DEBUG] matplotlib - platform is linux
+2025-09-12 11:01:43,241 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-12 11:01:43,246 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-12 11:01:45,779 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-12 11:02:06,352 [DEBUG] main.views - Загрузка главной страницы
+2025-09-12 11:02:06,357 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-12 11:02:06,616 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-12 11:02:06,619 [INFO] main.views - Главная страница успешно загружена

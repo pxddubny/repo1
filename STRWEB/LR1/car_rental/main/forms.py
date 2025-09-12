@@ -22,7 +22,7 @@ class RentalForm(forms.ModelForm):
 
     class Meta:
         model = Rental
-        fields = ['car', 'days', 'start_date']  # Убрали promo_code из fields
+        fields = ['car', 'days', 'start_date']
         labels = {
             'car': "Автомобиль",
             'days': "Количество дней",
@@ -31,6 +31,15 @@ class RentalForm(forms.ModelForm):
         widgets = {
             'start_date': forms.DateInput(attrs={'type': 'date'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        # Если передан автомобиль в initial данных, устанавливаем его
+        if 'initial' in kwargs and 'car' in kwargs['initial']:
+            car = kwargs['initial']['car']
+            if isinstance(car, Car):
+                self.fields['car'].initial = car
 
     def clean_promo_code_input(self):
         """Валидация промокода"""
@@ -48,21 +57,21 @@ class RentalForm(forms.ModelForm):
             raise forms.ValidationError("Неверный или неактивный промокод")
 
     def save(self, commit=True):
-        """Сохранение с применением промокода"""
+        """Сохранение - пересчет сделает модель Rental автоматически"""
         instance = super().save(commit=False)
         promo = self.cleaned_data.get('promo_code_input')
         
-        if promo:
+        # Устанавливаем промокод только если он не None
+        if promo is not None:
             instance.promo_code = promo
-            # Пересчет суммы с учетом скидки
-            instance.discount_amount = (instance.rental_amount * promo.discount) / 100
-            instance.total_amount = instance.rental_amount - instance.discount_amount
-        
+        # Если промокод None, оставляем поле пустым (null)
+
         if commit:
             instance.save()
             self.save_m2m()
             
         return instance
+        
 class UserRegisterForm(UserCreationForm):
     phone = forms.CharField(
         label='Phone',

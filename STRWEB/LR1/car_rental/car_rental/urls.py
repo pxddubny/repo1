@@ -29,5 +29,11 @@ urlpatterns = [
     path('view-user-profile/<int:user_id>/', views.view_user_profile, name='view_user_profile'), 
     path('rental-profit/', views.rental_profit, name='rental_profit'),
     
-    
+    path('cart/checkout/<int:rental_id>/', views.checkout_rental, name='checkout_rental'),
+    path('cart/checkout/all/', views.checkout_all, name='checkout_all'),
+		
+	path('payment/', views.payment_all_page, name='payment_all_page'),
+    path('process_payment_all/', views.process_payment_all, name='process_payment_all'),
+    path('payment/<int:rental_id>/', views.payment_page, name='payment_page'),
+    path('process_payment/<int:rental_id>/', views.process_payment, name='process_payment'),
 ]

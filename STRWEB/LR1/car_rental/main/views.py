@@ -29,54 +29,6 @@ logger = logging.getLogger(__name__)
 DEFAULT_CAT_FACT = "Стандартный факт: Коты любят спать до 16 часов в день."
 
 
-@login_required
-def add_to_cart_from_list(request, car_id):
-    """Быстрое добавление автомобиля в корзину из списка"""
-    car = get_object_or_404(Car, id=car_id)
-    
-    # Создаем аренду с дефолтными значениями
-    rental = Rental(
-        client=request.user,
-        car=car,
-        start_date=date.today(),
-        days=1,
-        is_paid=False
-    )
-    rental.save()
-    return redirect('car_list')
-
-@login_required
-def remove_from_cart(request, rental_id):
-    """Удалить аренду из корзины"""
-    rental = get_object_or_404(Rental, id=rental_id, client=request.user, is_paid=False)
-    
-    if request.method == 'POST':
-        rental.delete()
-        return redirect('cart_view')
-    
-    # Если GET запрос, тоже удаляем (для простоты)
-    rental.delete()
-    return redirect('cart_view')
-
-@login_required
-def checkout(request, rental_id):
-    """Оплатить одну аренду из корзины"""
-    rental = get_object_or_404(Rental, id=rental_id, client=request.user, is_paid=False)
-    rental.is_paid = True
-    rental.status = 'CONFIRMED'
-    rental.save()
-    return redirect('cart_view')
-
-@login_required
-def checkout_all(request):
-    """Оплатить всю корзину"""
-    cart_items = Rental.objects.filter(client=request.user, is_paid=False)
-    for rental in cart_items:
-        rental.is_paid = True
-        rental.status = 'CONFIRMED'
-        rental.save()
-    return redirect('cart_view')
-
 def get_cat_fact_with_fallback():
     try:
         response = requests.get(
@@ -269,29 +221,94 @@ def car_detail(request, car_id):
     car = get_object_or_404(Car, pk=car_id)
     return render(request, 'main/car_detail.html', {'car': car})
 
+@login_required
+def payment_page(request, rental_id):
+    """Страница оплаты аренды"""
+    rental = get_object_or_404(Rental, id=rental_id, client=request.user, status='PENDING')
+    return render(request, 'main/payment.html', {'rental': rental})
+
+@login_required
+def payment_all_page(request):
+    """Страница оплаты всей корзины"""
+    cart_items = Rental.objects.filter(client=request.user, status='PENDING')
+    
+    if not cart_items:
+        return redirect('profile')
+    
+    total_amount = sum(rental.total_amount for rental in cart_items)
+    
+    return render(request, 'main/payment_all.html', {
+        'cart_items': cart_items,
+        'total_amount': total_amount
+    })
+
+@login_required
+def process_payment_all(request):
+    """Обработка оплаты всей корзины"""
+    cart_items = Rental.objects.filter(client=request.user, status='PENDING')
+    
+    if not cart_items:
+        return redirect('profile')
+    
+    if request.method == 'POST':
+        for rental in cart_items:
+            rental.status = 'CONFIRMED'
+            rental.is_paid = True
+            rental.save()
+        
+        logger.info(f"Вся корзина оплачена пользователем {request.user.username}")
+        return redirect('profile')
+    
+    return redirect('payment_all_page')
+
+@login_required
+def process_payment(request, rental_id):
+    """Обработка оплаты"""
+    rental = get_object_or_404(Rental, id=rental_id, client=request.user, status='PENDING')
+    
+    if request.method == 'POST':
+        rental.status = 'CONFIRMED'
+        rental.is_paid = True
+        rental.save()
+        logger.info(f"Аренда #{rental.id} оплачена пользователем {request.user.username}")
+        return redirect('profile')
+    
+    return redirect('payment_page', rental_id=rental_id)
+
 def create_rental(request):
     user_timezone = timezone.get_current_timezone()
     current_date = timezone.now().astimezone(user_timezone)
     cal = calendar.monthcalendar(current_date.year, current_date.month)
     
+    # Получаем car_id из GET параметров
+    car_id = request.GET.get('car_id')
+    initial_data = {}
+    
+    if car_id:
+        try:
+            car = get_object_or_404(Car, pk=car_id)
+            initial_data['car'] = car
+        except (ValueError, Car.DoesNotExist):
+            pass
+    
     if request.method == 'POST':
         form = RentalForm(request.POST)
         if form.is_valid():
             promo_code = form.cleaned_data.get('promo_code_input')
-            
             rental = Rental(
                 client=request.user,
                 car=form.cleaned_data['car'],
                 start_date=form.cleaned_data['start_date'],
                 days=form.cleaned_data['days'],
-                promo_code=promo_code,
                 status='PENDING'
             )
+            # Устанавливаем промокод только если он есть
+            if promo_code:
+                rental.promo_code = promo_code
             rental.save()
-            
             return redirect('profile')
     else:
-        form = RentalForm()
+        form = RentalForm(initial=initial_data)
     
     return render(request, 'main/create_rental.html', {
         'form': form,
@@ -315,7 +332,11 @@ def redact_rental(request, rental_id):
             rental.car = form.cleaned_data['car']
             rental.start_date = form.cleaned_data['start_date']
             rental.days = form.cleaned_data['days']
-            rental.promo_code = promo_code
+            # Устанавливаем промокод только если он есть
+            if promo_code:
+                rental.promo_code = promo_code
+            else:
+                rental.promo_code = None  # Явно устанавливаем None если промокода нет
             rental.save()
             logger.info(f"Аренда #{rental.id} отредактирована")
             return redirect('profile')
@@ -349,27 +370,48 @@ def role_check(role):
 def profile(request):
     logger.debug(f"Загрузка профиля пользователя {request.user.username}")
     user = request.user
-    rentals = Rental.objects.filter(client=user).order_by('-start_date')
+    
+    # Корзина = PENDING статус
+    cart_items = Rental.objects.filter(client=user, status='PENDING')
+    cart_count = cart_items.count()
+    
+    # Заказы = все кроме PENDING
+    orders = Rental.objects.filter(client=user).exclude(status='PENDING').order_by('-start_date')
+    
     promocodes = user.promocodes.all()
-
     search_query = request.GET.get('promo_search')
     if search_query:
         promocodes = promocodes.filter(code__icontains=search_query)
 
-    sort = request.GET.get('sort')
-    order = request.GET.get('order')
-
-    if sort == 'code':
-        if order == 'desc':
-            promocodes = promocodes.order_by('-code')
-        else:
-            promocodes = promocodes.order_by('code')
-
     return render(request, 'main/profile.html', {
         'user': user,
-        'rentals': rentals,
+        'cart_items': cart_items,
+        'cart_count': cart_count,
+        'orders': orders,
         'promocodes': promocodes,
     })
+
+@login_required
+def checkout_rental(request, rental_id):
+    """Оплатить одну аренду из корзины"""
+    rental = get_object_or_404(Rental, id=rental_id, client=request.user, status='PENDING')
+    rental.status = 'CONFIRMED'
+    rental.save()
+    return redirect('profile')
+
+@login_required
+def checkout_all(request):
+    """Оплатить всю корзину"""
+    cart_items = Rental.objects.filter(client=request.user, status='PENDING')
+    
+    if not cart_items:
+        return redirect('profile')
+    
+    for rental in cart_items:
+        rental.status = 'CONFIRMED'
+        rental.save()
+    
+    return redirect('profile')
 
 def register(request):
     logger.debug("Регистрация нового пользователя")

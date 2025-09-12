@@ -12,8 +12,44 @@
     <button type="submit">Sign Out</button>
 </form>
 
-<h3>Your Rentals</h3>
-{% if rentals %}
+<!-- Корзина (PENDING статус) -->
+<h3>🛒 Cart ({{ cart_count }})</h3>
+{% if cart_items %}
+<table>
+    <thead>
+        <tr>
+            <th>Car</th>
+            <th>Start Date</th>
+            <th>Days</th>
+            <th>Total</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for rental in cart_items %}
+        <tr>
+            <td>{{ rental.car }}</td>
+            <td>{{ rental.start_date }}</td>
+            <td>{{ rental.days }}</td>
+            <td>{{ rental.total_amount }} ₽</td>
+            <td>
+                <a href="{% url 'redact_rental' rental.id %}">Edit</a>
+                <a href="{% url 'delete_rental' rental.id %}" onclick="return confirm('Are you sure?');">Delete</a>
+                
+                <a href="{% url 'payment_page' rental.id %}">Pay</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'payment_all_page' %}">Pay All</a>
+{% else %}
+<p>Your cart is empty</p>
+{% endif %}
+
+<!-- Заказы (все кроме PENDING) -->
+<h3>Your Orders</h3>
+{% if orders %}
 <table>
     <thead>
         <tr>
@@ -22,30 +58,24 @@
             <th>Start Date</th>
             <th>Days</th>
             <th>Total</th>
-            <th>Discount</th>
             <th>Status</th>
-            <th>Edit</th>
-            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
-        {% for rental in rentals %}
+        {% for rental in orders %}
         <tr>
             <td>{{ rental.id }}</td>
             <td>{{ rental.car }}</td>
             <td>{{ rental.start_date }}</td>
             <td>{{ rental.days }}</td>
             <td>{{ rental.total_amount }} ₽</td>
-            <td>{{ rental.discount_amount }} ₽</td>
             <td>{{ rental.get_status_display }}</td>
-            <td><a href="{% url 'redact_rental' rental.id %}">Edit</a></td>
-            <td><a href="{% url 'delete_rental' rental.id %}" onclick="return confirm('Are you sure?');">Delete</a></td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 {% else %}
-<p>No rentals yet</p>
+<p>No orders yet</p>
 {% endif %}
 
 <div>

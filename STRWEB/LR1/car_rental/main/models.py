@@ -250,8 +250,13 @@ class Rental(models.Model):
 
     def clean(self):
         """Валидация даты начала аренды"""
-        if self.start_date < timezone.now().date():
-            raise ValidationError('Start date cannot be in the past')
+        #if self.start_date < timezone.now().date():
+         #   raise ValidationError('Start date cannot be in the past')
+        
+        # Проверяем, что expected_return_date установлен
+        if not self.expected_return_date:
+            # Если не установлен, рассчитываем его
+            self.expected_return_date = self.start_date + datetime.timedelta(days=self.days)
         
         # Проверка доступности автомобиля (только для новых или измененных аренд)
         if self._state.adding or self.has_changed(['start_date', 'days', 'car']):
@@ -265,7 +270,7 @@ class Rental(models.Model):
             
             if overlapping_rentals.exists():
                 raise ValidationError('Car is not available on selected dates')
-
+            
     def has_changed(self, fields):
         """Проверяет, изменились ли указанные поля"""
         if not self.pk:
@@ -284,17 +289,24 @@ class Rental(models.Model):
         # Применяем скидку
         if self.promo_code:
             self.discount_amount = (self.rental_amount * self.promo_code.discount) / 100
+        else:
+            self.discount_amount = Decimal('0.00')
         
         # Итоговая сумма
         self.total_amount = self.rental_amount - self.discount_amount
 
         if self.pk:
-            fines_total = sum(fine.amount for fine in self.fines.all())
+            fines_total = sum(float(fine.fine) for fine in self.fines.all())
             self.total_amount += Decimal(str(fines_total))
         
         # Валидация перед сохранением
-        self.clean()
-    
+        try:
+            self.clean()
+        except ValidationError as e:
+            # Если возникает ошибка валидации, можно либо выбросить исключение,
+            # либо обработать его в зависимости от вашей логики
+            raise e
+        
         super().save(*args, **kwargs)
 
     def mark_as_paid(self):
