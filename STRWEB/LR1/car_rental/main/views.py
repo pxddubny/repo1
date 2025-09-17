@@ -49,7 +49,7 @@ def get_cat_fact_with_fallback():
 def index(request):
     logger.debug("Загрузка главной страницы")
     cat_fact = get_cat_fact_with_fallback()
-    news = News.objects.order_by('id')[:1]
+    news = News.objects.order_by('-id')[:1]
     cars = Car.objects.all()
     partners = Partner.objects.all()
     logger.info("Главная страница успешно загружена")
