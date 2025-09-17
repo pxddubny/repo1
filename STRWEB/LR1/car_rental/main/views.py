@@ -16,7 +16,7 @@ from .models import User, Rental
 from django.db.models import Count
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.shortcuts import render, get_object_or_404
-from .models import User, Rental, Partner
+from .models import User, Rental, Partner, Company
 from decimal import Decimal
 import logging
 import matplotlib.pyplot as plt
@@ -28,6 +28,10 @@ logger = logging.getLogger(__name__)
 # Настройки по умолчанию
 DEFAULT_CAT_FACT = "Стандартный факт: Коты любят спать до 16 часов в день."
 
+
+def company_info(request):
+    company = Company.objects.first()
+    return render(request, 'main/about.html', {'company': company})
 
 def get_cat_fact_with_fallback():
     try:
@@ -424,7 +428,7 @@ def register(request):
             logger.info(f"Зарегистрирован новый пользователь: {user.username}")
             return redirect('login')
         else:
-            logger.warning(f"О  ибка регистрации: {form.errors}")
+            logger.warning(f"Ошибка регистрации: {form.errors}")
     else:
         form = UserRegisterForm()
     return render(request, 'main/register.html', {'form': form})

@@ -12,45 +12,44 @@
     <form method="post">
         {% csrf_token %}
         
-        <div class="form-group">
+        <section>
             {{ form.car.label_tag }}
             {{ form.car }}
             {% if form.car.errors %}
-                <div class="error">{{ form.car.errors }}</div>
+                <p class="error">{{ form.car.errors }}</p>
             {% endif %}
-        </div>
+        </section>
         
-        <div class="form-group">
+        <section>
             {{ form.days.label_tag }}
             {{ form.days }}
             {% if form.days.errors %}
-                <div class="error">{{ form.days.errors }}</div>
+                <p class="error">{{ form.days.errors }}</p>
             {% endif %}
-        </div>
+        </section>
         
-        <div class="form-group">
+        <section>
             {{ form.start_date.label_tag }}
             {{ form.start_date }}
             <small>{{ form.start_date.help_text }}</small>
             {% if form.start_date.errors %}
-                <div class="error">{{ form.start_date.errors }}</div>
+                <p class="error">{{ form.start_date.errors }}</p>
             {% endif %}
-        </div>
+        </section>
         
-        <!-- Изменено с promo_code на promo_code_input -->
-        <div class="form-group">
+        <section>
             {{ form.promo_code_input.label_tag }}
             {{ form.promo_code_input }}
             <small>{{ form.promo_code_input.help_text }}</small>
             {% if form.promo_code_input.errors %}
-                <div class="error">{{ form.promo_code_input.errors }}</div>
+                <p class="error">{{ form.promo_code_input.errors }}</p>
             {% endif %}
-        </div>
+        </section>
         
         <button type="submit">Оформить аренду</button>
     </form>
     
-    <div class="calendar">
+    <article>
         <h3>Календарь на текущий месяц</h3>
         <table>
             <tr>
@@ -64,6 +63,6 @@
             </tr>
             {% endfor %}
         </table>
-    </div>
+    </article>
 </body>
 </html>

@@ -7265,3 +7265,786 @@ django.core.exceptions.ValidationError: ['Start date cannot be in the past']
 2025-09-12 11:02:06,357 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-09-12 11:02:06,616 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
 2025-09-12 11:02:06,619 [INFO] main.views - Главная страница успешно загружена
+2025-09-14 16:40:22,824 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-14 16:40:23,674 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-14 16:40:23,716 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-14 16:40:23,719 [DEBUG] matplotlib - interactive is False
+2025-09-14 16:40:23,720 [DEBUG] matplotlib - platform is linux
+2025-09-14 16:40:23,870 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-14 16:40:23,874 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-14 16:42:01,792 [WARNING] django.request - Not Found: /about-company/
+2025-09-14 16:42:13,831 [WARNING] django.request - Not Found: /admin/main/companyinfo/
+2025-09-14 16:42:16,912 [DEBUG] main.views - Загрузка главной страницы
+2025-09-14 16:42:16,915 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-14 16:42:17,359 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-14 16:42:17,362 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 11:29:31,538 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:29:31,574 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:29:31,578 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:29:31,579 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:29:31,734 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:29:31,741 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:29:39,057 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:29:39,074 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:29:39,076 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:29:39,076 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:29:39,170 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:29:39,174 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:30:09,121 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:30:09,139 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:30:09,141 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:30:09,142 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:30:09,238 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:30:09,241 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:30:13,857 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 11:30:14,229 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:30:14,246 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:30:14,253 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:30:14,253 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:30:14,343 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:30:14,346 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:30:17,447 [WARNING] django.request - Not Found: /admin/main/companyinfo/
+2025-09-15 11:30:25,651 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 11:30:25,655 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 11:30:26,126 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 11:30:26,129 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 11:30:31,643 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - STREAM b'gAMA' 41 4
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - STREAM b'cHRM' 57 32
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - STREAM b'bKGD' 101 6
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - b'bKGD' 101 6 (unknown)
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - STREAM b'tIME' 119 7
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - b'tIME' 119 7 (unknown)
+2025-09-15 11:35:49,632 [DEBUG] PIL.PngImagePlugin - STREAM b'IDAT' 138 32768
+2025-09-15 11:35:49,633 [DEBUG] PIL.Image - Importing AvifImagePlugin
+2025-09-15 11:35:49,654 [DEBUG] PIL.Image - Importing BlpImagePlugin
+2025-09-15 11:35:49,657 [DEBUG] PIL.Image - Importing BmpImagePlugin
+2025-09-15 11:35:49,657 [DEBUG] PIL.Image - Importing BufrStubImagePlugin
+2025-09-15 11:35:49,658 [DEBUG] PIL.Image - Importing CurImagePlugin
+2025-09-15 11:35:49,658 [DEBUG] PIL.Image - Importing DcxImagePlugin
+2025-09-15 11:35:49,660 [DEBUG] PIL.Image - Importing DdsImagePlugin
+2025-09-15 11:35:49,666 [DEBUG] PIL.Image - Importing EpsImagePlugin
+2025-09-15 11:35:49,668 [DEBUG] PIL.Image - Importing FitsImagePlugin
+2025-09-15 11:35:49,669 [DEBUG] PIL.Image - Importing FliImagePlugin
+2025-09-15 11:35:49,670 [DEBUG] PIL.Image - Importing FpxImagePlugin
+2025-09-15 11:35:49,671 [DEBUG] PIL.Image - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-09-15 11:35:49,671 [DEBUG] PIL.Image - Importing FtexImagePlugin
+2025-09-15 11:35:49,672 [DEBUG] PIL.Image - Importing GbrImagePlugin
+2025-09-15 11:35:49,673 [DEBUG] PIL.Image - Importing GifImagePlugin
+2025-09-15 11:35:49,673 [DEBUG] PIL.Image - Importing GribStubImagePlugin
+2025-09-15 11:35:49,673 [DEBUG] PIL.Image - Importing Hdf5StubImagePlugin
+2025-09-15 11:35:49,674 [DEBUG] PIL.Image - Importing IcnsImagePlugin
+2025-09-15 11:35:49,678 [DEBUG] PIL.Image - Importing IcoImagePlugin
+2025-09-15 11:35:49,680 [DEBUG] PIL.Image - Importing ImImagePlugin
+2025-09-15 11:35:49,681 [DEBUG] PIL.Image - Importing ImtImagePlugin
+2025-09-15 11:35:49,682 [DEBUG] PIL.Image - Importing IptcImagePlugin
+2025-09-15 11:35:49,683 [DEBUG] PIL.Image - Importing JpegImagePlugin
+2025-09-15 11:35:49,683 [DEBUG] PIL.Image - Importing Jpeg2KImagePlugin
+2025-09-15 11:35:49,683 [DEBUG] PIL.Image - Importing McIdasImagePlugin
+2025-09-15 11:35:49,684 [DEBUG] PIL.Image - Importing MicImagePlugin
+2025-09-15 11:35:49,684 [DEBUG] PIL.Image - Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-09-15 11:35:49,685 [DEBUG] PIL.Image - Importing MpegImagePlugin
+2025-09-15 11:35:49,685 [DEBUG] PIL.Image - Importing MpoImagePlugin
+2025-09-15 11:35:49,689 [DEBUG] PIL.Image - Importing MspImagePlugin
+2025-09-15 11:35:49,690 [DEBUG] PIL.Image - Importing PalmImagePlugin
+2025-09-15 11:35:49,692 [DEBUG] PIL.Image - Importing PcdImagePlugin
+2025-09-15 11:35:49,693 [DEBUG] PIL.Image - Importing PcxImagePlugin
+2025-09-15 11:35:49,693 [DEBUG] PIL.Image - Importing PdfImagePlugin
+2025-09-15 11:35:49,703 [DEBUG] PIL.Image - Importing PixarImagePlugin
+2025-09-15 11:35:49,704 [DEBUG] PIL.Image - Importing PngImagePlugin
+2025-09-15 11:35:49,704 [DEBUG] PIL.Image - Importing PpmImagePlugin
+2025-09-15 11:35:49,704 [DEBUG] PIL.Image - Importing PsdImagePlugin
+2025-09-15 11:35:49,705 [DEBUG] PIL.Image - Importing QoiImagePlugin
+2025-09-15 11:35:49,707 [DEBUG] PIL.Image - Importing SgiImagePlugin
+2025-09-15 11:35:49,708 [DEBUG] PIL.Image - Importing SpiderImagePlugin
+2025-09-15 11:35:49,709 [DEBUG] PIL.Image - Importing SunImagePlugin
+2025-09-15 11:35:49,710 [DEBUG] PIL.Image - Importing TgaImagePlugin
+2025-09-15 11:35:49,711 [DEBUG] PIL.Image - Importing TiffImagePlugin
+2025-09-15 11:35:49,711 [DEBUG] PIL.Image - Importing WebPImagePlugin
+2025-09-15 11:35:49,720 [DEBUG] PIL.Image - Importing WmfImagePlugin
+2025-09-15 11:35:49,721 [DEBUG] PIL.Image - Importing XbmImagePlugin
+2025-09-15 11:35:49,722 [DEBUG] PIL.Image - Importing XpmImagePlugin
+2025-09-15 11:35:49,724 [DEBUG] PIL.Image - Importing XVThumbImagePlugin
+2025-09-15 11:35:49,794 [DEBUG] PIL.PngImagePlugin - STREAM b'IHDR' 16 13
+2025-09-15 11:35:49,795 [DEBUG] PIL.PngImagePlugin - STREAM b'sRGB' 41 1
+2025-09-15 11:35:49,795 [DEBUG] PIL.PngImagePlugin - STREAM b'cICP' 54 4
+2025-09-15 11:35:49,795 [DEBUG] PIL.PngImagePlugin - b'cICP' 54 4 (unknown)
+2025-09-15 11:35:49,795 [DEBUG] PIL.PngImagePlugin - STREAM b'IDAT' 70 8192
+2025-09-15 11:35:56,365 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:35:59,006 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:35:59,626 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:36:00,434 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:36:57,804 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:38:13,255 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-15 11:38:14,111 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 11:38:14,539 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:38:14,557 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:38:14,559 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:38:14,559 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:38:14,659 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:38:14,663 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:38:16,407 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:38:18,207 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:38:18,499 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:38:18,693 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:05,357 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-15 11:39:06,172 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 11:39:06,492 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:39:06,509 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:39:06,512 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:39:06,512 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:39:06,604 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:39:06,608 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:39:07,097 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:07,778 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:08,083 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:08,370 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:08,448 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:08,669 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:08,839 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:09,055 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:09,186 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:09,497 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:09,746 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:39:09,809 [DEBUG] main.views - Загрузка страницы 'О нас'
+2025-09-15 11:40:11,406 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/car_rental/urls.py changed, reloading.
+2025-09-15 11:40:12,171 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 11:40:12,502 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 11:40:12,520 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 11:40:12,522 [DEBUG] matplotlib - interactive is False
+2025-09-15 11:40:12,523 [DEBUG] matplotlib - platform is linux
+2025-09-15 11:40:12,620 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 11:40:12,624 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 11:57:51,223 [WARNING] django.request - Not Found: /favicon.ico
+2025-09-15 11:57:55,433 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 11:57:55,435 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 11:57:55,728 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 11:57:55,731 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:20:53,528 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:20:53,531 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:20:53,805 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:20:53,807 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:21:20,152 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:21:20,154 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:21:20,360 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:21:20,364 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:22:22,167 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:22:22,169 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:22:22,550 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:22:22,552 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:22:24,455 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:22:24,458 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:22:24,670 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:22:24,674 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:22:26,159 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:22:26,161 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:22:26,363 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:22:26,367 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:24:24,082 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:24:24,084 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:24:24,262 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:24:24,266 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:26:02,657 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:26:02,659 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:26:02,901 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:26:02,905 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:26:07,161 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-09-15 12:26:53,717 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:26:53,719 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:26:54,003 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:26:54,008 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 12:27:21,144 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 12:27:21,146 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 12:27:21,360 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 12:27:21,365 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 13:03:31,600 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 13:03:31,602 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 13:03:31,871 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 13:03:31,874 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 13:36:03,042 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 13:36:03,946 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 13:36:03,985 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 13:36:03,996 [DEBUG] matplotlib - interactive is False
+2025-09-15 13:36:03,996 [DEBUG] matplotlib - platform is linux
+2025-09-15 13:36:04,118 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 13:36:04,122 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 13:54:53,134 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 13:54:53,139 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 13:54:53,143 [ERROR] main.views - CatFact API error: HTTPSConnectionPool(host='catfact.ninja', port=443): Max retries exceeded with url: /fact (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f66db07f8c0>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)"))
+2025-09-15 13:54:53,143 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 13:55:10,034 [DEBUG] main.views - Загрузка профиля пользователя admin
+2025-09-15 13:56:33,652 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-15 13:56:43,791 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-15 14:12:04,742 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 14:12:05,102 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 14:12:05,122 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 14:12:05,125 [DEBUG] matplotlib - interactive is False
+2025-09-15 14:12:05,125 [DEBUG] matplotlib - platform is linux
+2025-09-15 14:12:05,225 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 14:12:05,229 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 14:12:17,256 [ERROR] django.request - Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 141, in post
+    auth_logout(request)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/__init__.py", line 254, in logout
+    request.session.flush()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 418, in flush
+    self.delete()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1281, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/deletion.py", line 448, in delete
+    count = sql.DeleteQuery(model).delete_batch(
+        [instance.pk], self.using
+    )
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 42, in delete_batch
+    num_deleted += self.do_query(
+                   ~~~~~~~~~~~~~^
+        self.get_meta().db_table, self.where, using=using
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 24, in do_query
+    return self.get_compiler(using).execute_sql(ROW_COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+2025-09-15 14:12:25,973 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-15 14:12:40,575 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-15 14:12:40,904 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-15 14:12:40,922 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-15 14:12:40,929 [DEBUG] matplotlib - interactive is False
+2025-09-15 14:12:40,929 [DEBUG] matplotlib - platform is linux
+2025-09-15 14:12:41,026 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-15 14:12:41,030 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-15 14:13:12,409 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 14:13:12,414 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 14:13:12,418 [ERROR] main.views - CatFact API error: HTTPSConnectionPool(host='catfact.ninja', port=443): Max retries exceeded with url: /fact (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fe053b6c1a0>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)"))
+2025-09-15 14:13:12,419 [INFO] main.views - Главная страница успешно загружена
+2025-09-15 14:13:13,954 [ERROR] django.request - Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 141, in post
+    auth_logout(request)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/__init__.py", line 254, in logout
+    request.session.flush()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 418, in flush
+    self.delete()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1281, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/deletion.py", line 448, in delete
+    count = sql.DeleteQuery(model).delete_batch(
+        [instance.pk], self.using
+    )
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 42, in delete_batch
+    num_deleted += self.do_query(
+                   ~~~~~~~~~~~~~^
+        self.get_meta().db_table, self.where, using=using
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 24, in do_query
+    return self.get_compiler(using).execute_sql(ROW_COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+2025-09-15 14:13:18,256 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-15 14:13:24,913 [ERROR] django.request - Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 141, in post
+    auth_logout(request)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/__init__.py", line 254, in logout
+    request.session.flush()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 418, in flush
+    self.delete()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1281, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/deletion.py", line 448, in delete
+    count = sql.DeleteQuery(model).delete_batch(
+        [instance.pk], self.using
+    )
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 42, in delete_batch
+    num_deleted += self.do_query(
+                   ~~~~~~~~~~~~~^
+        self.get_meta().db_table, self.where, using=using
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 24, in do_query
+    return self.get_compiler(using).execute_sql(ROW_COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+2025-09-15 14:13:39,816 [ERROR] django.request - Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/views.py", line 141, in post
+    auth_logout(request)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/auth/__init__.py", line 254, in logout
+    request.session.flush()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 418, in flush
+    self.delete()
+    ~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/base.py", line 1281, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/deletion.py", line 448, in delete
+    count = sql.DeleteQuery(model).delete_batch(
+        [instance.pk], self.using
+    )
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 42, in delete_batch
+    num_deleted += self.do_query(
+                   ~~~~~~~~~~~~~^
+        self.get_meta().db_table, self.where, using=using
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/subqueries.py", line 24, in do_query
+    return self.get_compiler(using).execute_sql(ROW_COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+2025-09-15 14:13:56,145 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-15 14:16:41,667 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-15 14:16:49,363 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-15 14:25:29,177 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-15 14:32:51,655 [DEBUG] main.views - Загрузка FAQ
+2025-09-15 14:33:13,426 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-09-15 14:33:13,558 [WARNING] django.request - Not Found: /employees/static/media/image.png
+2025-09-15 14:44:00,366 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-15 14:44:05,971 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-15 14:46:24,104 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-15 14:48:39,907 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-15 14:58:14,693 [WARNING] django.request - Not Found: /favicon.ico
+2025-09-15 14:58:20,206 [DEBUG] main.views - Загрузка главной страницы
+2025-09-15 14:58:20,209 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-15 14:58:20,681 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-15 14:58:20,686 [INFO] main.views - Главная страница успешно загружена
+2025-09-16 13:22:36,512 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-16 13:22:37,181 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-16 13:22:37,203 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-16 13:22:37,205 [DEBUG] matplotlib - interactive is False
+2025-09-16 13:22:37,205 [DEBUG] matplotlib - platform is linux
+2025-09-16 13:22:37,325 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-16 13:22:37,329 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-16 13:24:53,081 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-16 13:25:02,226 [WARNING] django.request - Not Found: /favicon.ico
+2025-09-16 13:30:06,261 [DEBUG] main.views - Загрузка отзывов
+2025-09-16 13:30:21,975 [DEBUG] main.views - Загрузка FAQ
+2025-09-16 13:35:20,519 [DEBUG] main.views - Загрузка FAQ
+2025-09-16 13:35:24,256 [DEBUG] main.views - Загрузка отзывов
+2025-09-16 17:42:29,427 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-16 17:42:30,279 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-16 17:42:30,301 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-16 17:42:30,303 [DEBUG] matplotlib - interactive is False
+2025-09-16 17:42:30,303 [DEBUG] matplotlib - platform is linux
+2025-09-16 17:42:30,438 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-16 17:42:30,442 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-16 17:59:19,284 [DEBUG] main.views - Загрузка главной страницы
+2025-09-16 17:59:19,289 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-16 17:59:19,629 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-16 17:59:19,634 [INFO] main.views - Главная страница успешно загружена
+2025-09-16 18:01:23,336 [DEBUG] main.views - Загрузка главной страницы
+2025-09-16 18:01:23,338 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-16 18:01:24,369 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-16 18:01:24,374 [INFO] main.views - Главная страница успешно загружена
+2025-09-16 18:01:57,011 [DEBUG] main.views - Загрузка главной страницы
+2025-09-16 18:01:57,013 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-16 18:01:57,398 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-16 18:01:57,403 [INFO] main.views - Главная страница успешно загружена
+2025-09-16 18:02:37,564 [DEBUG] main.views - Загрузка главной страницы
+2025-09-16 18:02:37,566 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-16 18:02:37,780 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-16 18:02:37,784 [INFO] main.views - Главная страница успешно загружена
+2025-09-16 18:03:00,249 [DEBUG] main.views - Загрузка главной страницы
+2025-09-16 18:03:00,251 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-16 18:03:00,501 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-16 18:03:00,505 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 07:13:01,541 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-17 07:13:02,485 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-17 07:13:02,530 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-17 07:13:02,541 [DEBUG] matplotlib - interactive is False
+2025-09-17 07:13:02,542 [DEBUG] matplotlib - platform is linux
+2025-09-17 07:13:02,709 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-17 07:13:02,717 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-17 07:13:04,069 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 07:13:04,073 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 07:13:05,039 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 07:13:05,044 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 07:59:43,188 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 07:59:43,191 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 07:59:43,439 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 07:59:43,446 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:01:47,106 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:01:47,108 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:01:47,382 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:01:47,386 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:03:07,319 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:03:07,321 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:03:07,598 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:03:07,601 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:05:36,964 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:05:36,966 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:05:37,210 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:05:37,214 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:29:01,323 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:29:01,324 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:29:01,558 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:29:01,561 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:32:18,837 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:32:18,839 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:32:19,066 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:32:19,070 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:32:53,512 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:32:53,514 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:32:53,701 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:32:53,706 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:33:22,579 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 08:33:31,533 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-17 08:33:42,381 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-17 08:33:48,262 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 08:38:12,158 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-17 08:38:35,417 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-17 08:38:40,779 [INFO] main.views - Аренда #22 оплачена пользователем ok
+2025-09-17 08:38:40,793 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-17 08:38:56,926 [DEBUG] main.views - Загрузка профиля пользователя ok
+2025-09-17 08:39:03,237 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 08:53:43,209 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 08:53:43,212 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 08:53:43,713 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 08:53:43,716 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 08:53:45,612 [DEBUG] main.views - Регистрация нового пользователя
+2025-09-17 08:55:18,164 [DEBUG] main.views - Регистрация нового пользователя
+2025-09-17 08:56:46,182 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/car_rental/main/views.py changed, reloading.
+2025-09-17 08:56:46,976 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-17 08:56:47,313 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-17 08:56:47,330 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-17 08:56:47,332 [DEBUG] matplotlib - interactive is False
+2025-09-17 08:56:47,332 [DEBUG] matplotlib - platform is linux
+2025-09-17 08:56:47,426 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-17 08:56:47,429 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-17 08:56:53,836 [DEBUG] main.views - Регистрация нового пользователя
+2025-09-17 09:26:18,039 [DEBUG] main.views - Регистрация нового пользователя
+2025-09-17 09:27:15,166 [DEBUG] main.views - Регистрация нового пользователя
+2025-09-17 09:38:43,688 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:38:43,695 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:38:44,603 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:38:44,608 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:39:00,123 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:39:00,126 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:39:00,318 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:39:00,323 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:40:38,354 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:40:38,356 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:40:38,560 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:40:38,563 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:40:38,698 [WARNING] django.request - Not Found: /image-large.jpg
+2025-09-17 09:40:43,659 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:40:43,661 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:40:43,873 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:40:43,877 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:40:43,998 [WARNING] django.request - Not Found: /image-large.jpg
+2025-09-17 09:42:42,583 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:42:42,585 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:42:43,331 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:42:43,335 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:43:37,186 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:43:37,189 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:43:37,389 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:43:37,393 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:43:57,485 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:43:57,487 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:43:57,684 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:43:57,689 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:44:11,884 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:44:11,887 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:44:12,343 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:44:12,347 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:45:00,070 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:45:00,072 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:45:00,324 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:45:00,328 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:45:14,884 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:45:14,885 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:45:15,145 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:45:15,149 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 09:45:26,619 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 09:45:26,621 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 09:45:26,817 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 09:45:26,821 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 10:34:46,163 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 10:34:46,165 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 10:34:46,471 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 10:34:46,475 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 10:34:52,446 [WARNING] django.request - Not Found: /about-us/static/audio.mp3
+2025-09-17 10:35:41,774 [WARNING] django.request - Not Found: /about-us/static/audio.mp3
+2025-09-17 10:36:19,260 [WARNING] django.request - Not Found: /about-us/static/media/audio.mp3
+2025-09-17 10:36:31,394 [WARNING] django.request - Not Found: /about-us/static/media/audio.mp3
+2025-09-17 10:50:05,952 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 10:50:05,955 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 10:50:06,262 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 10:50:06,267 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 10:55:17,294 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 10:55:17,297 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 10:55:17,814 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 10:55:17,817 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 10:57:49,227 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 10:57:49,229 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 10:57:49,625 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 10:57:49,629 [INFO] main.views - Главная страница успешно загружена

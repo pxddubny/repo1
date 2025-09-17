@@ -9,7 +9,6 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('about-us/', views.about, name='about'),
     path('news/', views.news, name='news'),
     path('faq/', views.faq, name='faq'),
     path('employees/', views.employees_view, name='employees'),
@@ -36,4 +35,8 @@ urlpatterns = [
     path('process_payment_all/', views.process_payment_all, name='process_payment_all'),
     path('payment/<int:rental_id>/', views.payment_page, name='payment_page'),
     path('process_payment/<int:rental_id>/', views.process_payment, name='process_payment'),
+		
+    
+    #path('about-us/', views.about, name='about'),
+    path('about-us/', views.company_info, name='company_info'),
 ]

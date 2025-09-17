@@ -9,7 +9,13 @@
 <div>
     <h3>{{ review.name }} - {{ review.get_rating_display }}</h3>
     <p>{{ review.text }}</p>
-    <p><em>Posted on: {{ review.created_at }}</em></p>
+
+    <p><em>Posted on: 
+    <time datetime="{{ review.created_at|date:'Y-m-d\TH:i:sO' }}">
+        {{ review.created_at }}
+    </time>
+    </em></p>
+
 </div>
 <hr>
 {% endfor %}

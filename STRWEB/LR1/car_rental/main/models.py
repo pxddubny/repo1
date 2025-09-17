@@ -20,6 +20,30 @@ class News(models.Model):
         verbose_name = 'News'
         verbose_name_plural = 'News'
 
+class Company(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Название компании")
+    about = models.TextField(verbose_name="О компании")
+    logo = models.ImageField(upload_to='static/info/', verbose_name="Логотип", blank=True)
+    
+    video = models.FileField(upload_to='static/info/', verbose_name="Видео", blank=True)
+    
+    # История
+    history = models.TextField(verbose_name="История компании", blank=True, 
+                              help_text="Пишите историю по годам: 2020 - начали работу, 2022 - открыли новый офис")
+    
+    address = models.TextField(verbose_name="Адрес", blank=True)
+    phone = models.CharField(max_length=20, verbose_name="Телефон", blank=True)
+    email = models.EmailField(verbose_name="Email", blank=True)
+    
+    certificate = models.ImageField(upload_to='static/info/', verbose_name="Сертификат", blank=True)
+
+    class Meta:
+        verbose_name = "Компания"
+        verbose_name_plural = "Компания"
+
+    def __str__(self):
+        return self.name
+
 class Partner(models.Model):
     name = models.CharField('name', max_length=200)
     website = models.URLField('website')
