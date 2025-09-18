@@ -8379,3 +8379,42 @@ django.db.utils.OperationalError: database is locked
 2025-09-17 13:11:29,251 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-09-17 13:11:29,530 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
 2025-09-17 13:11:29,535 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 14:16:34,045 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-17 14:16:34,859 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-17 14:16:34,894 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-17 14:16:34,904 [DEBUG] matplotlib - interactive is False
+2025-09-17 14:16:34,904 [DEBUG] matplotlib - platform is linux
+2025-09-17 14:16:35,092 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-17 14:16:35,099 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-09-17 14:18:36,980 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 14:18:36,983 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 14:18:37,939 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 14:18:37,943 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 14:20:24,554 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 14:20:24,556 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 14:20:24,946 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 14:20:24,951 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 14:20:32,335 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 14:20:32,337 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 14:20:32,728 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 14:20:32,731 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 14:20:40,269 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 14:39:32,546 [DEBUG] main.views - Загрузка главной страницы
+2025-09-17 14:39:32,548 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-09-17 14:39:34,105 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-09-17 14:39:34,109 [INFO] main.views - Главная страница успешно загружена
+2025-09-17 14:39:38,426 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 14:39:52,198 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 14:39:59,629 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 14:40:17,979 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 14:50:09,333 [INFO] main.views - Аренда #23 оплачена пользователем Ivan
+2025-09-17 14:50:09,349 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 14:51:19,505 [INFO] main.views - Аренда #24 оплачена пользователем Ivan
+2025-09-17 14:51:19,517 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-09-17 15:00:30,053 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-17 15:00:30,402 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-09-17 15:00:30,419 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-09-17 15:00:30,422 [DEBUG] matplotlib - interactive is False
+2025-09-17 15:00:30,423 [DEBUG] matplotlib - platform is linux
+2025-09-17 15:00:30,533 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-09-17 15:00:30,537 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
