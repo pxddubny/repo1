@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car List</title>
+</head>
+<body>
+    <h1>Car List</h1>
+    
+    <form method="get">
+        <input type="text" name="search" placeholder="Search by license plate" value="{{ request.GET.search }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>License Plate</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Daily Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+            <tr>
+                <td>{{ car.license_plate }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.year }}</td>
+                <td>{{ car.daily_rental_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">main page</a>
+</body>
+</html>

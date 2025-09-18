@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rentals by cars</title>
+</head>
+<body>
+    <h1>rentals by cars</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <table>
+            <tr>
+                <th>car model</th>
+                <th>number of rentals</th>
+                <th>chart</th>
+            </tr>
+            {% for item in car_data %}
+            <tr>
+                <td>{{ item.car }}</td>
+                <td>{{ item.count }}</td>
+                <td>{{ item.bar }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">no rental data</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    <p><a href="/">back to main</a></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacancies</title>
+</head>
+<body>
+    <h1>Job Openings</h1>
+    {% for vacancy in vacancies %}
+    <div>
+        <h3>{{ vacancy.title }}</h3>
+        <p><strong>Description:</strong> {{ vacancy.description }}</p>
+        <p><strong>Requirements:</strong> {{ vacancy.requirements }}</p>
+        {% if vacancy.salary %}
+        <p><strong>Salary:</strong> {{ vacancy.salary }}</p>
+        {% endif %}
+        <p><em>Posted on: {{ vacancy.created_at }}</em></p>
+    </div>
+    <hr>
+    {% endfor %}
+    <a href="/">Main page</a>
+</body>
+</html>

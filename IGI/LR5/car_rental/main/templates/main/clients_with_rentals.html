@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clients with rentals</title>
+</head>
+<body>
+    <h1>clients with rentals</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <table>
+            <tr>
+                <th>username</th>
+                <th>number of rentals</th>
+                <th>actions</th>
+            </tr>
+            {% for client in clients %}
+            <tr>
+                <td>{{ client.username }}</td>
+                <td>{{ client.rental_count }}</td>
+                <td>
+                    <a href="{% url 'view_user_profile' client.id %}">view profile</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">no clients with rentals</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+    <a href="/" style="margin-right: 15px;">Main Page</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faq</title>
+</head>
+<body>
+    <h1>some faq</h1> 
+    {% for el in faqs %}
+    <h3>{{ el.title }}</h3>
+    <p>{{ el.question }}</p>
+    <p>{{ el.answer }}</p>
+    <p>{{ el.ans_date }}</p>
+{% endfor %}
+    <a href="/">main page</a>
+</body>
+</html>

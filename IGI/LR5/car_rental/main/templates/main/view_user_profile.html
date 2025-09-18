@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user profile</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .status-form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>user profile: {{ viewed_user.username }}</h1>
+    
+    <h2>user information</h2>
+    <p><strong>name:</strong> {{ viewed_user.first_name }} {{ viewed_user.middle_name }} {{ viewed_user.last_name }}</p>
+    <p><strong>phone:</strong> {{ viewed_user.phone }}</p>
+    <p><strong>birth date:</strong> {{ viewed_user.birth_date|date:"d.m.Y" }}</p>
+    <p><strong>address:</strong> {{ viewed_user.address }}</p>
+    <p><strong>role:</strong> {{ viewed_user.get_role_display }}</p>
+
+    <h2>user rentals</h2>
+    {% if rentals %}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>car</th>
+            <th>start date</th>
+            <th>days</th>
+            <th>expected return date</th>
+            <th>amount</th>
+            <th>discount</th>
+            <th>status</th>
+            <th>change status</th>
+        </tr>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental.id }}</td>
+            <td>{{ rental.car }}</td>
+            <td>{{ rental.start_date }}</td>
+            <td>{{ rental.days }}</td>
+            <td>{{ rental.expected_return_date|date:"d.m.Y" }}</td>
+            <td>{{ rental.total_amount }} ₽</td>
+            <td>{{ rental.discount_amount }} ₽</td>
+            <td>{{ rental.get_status_display }}</td>
+            <td>
+                <form method="post" class="status-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="rental_id" value="{{ rental.id }}">
+                    <select name="status" onchange="this.form.submit()">
+                        {% for status_code, status_name in status_choices %}
+                        <option value="{{ status_code }}" {% if rental.status == status_code %}selected{% endif %}>
+                            {{ status_name }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>the user has no rentals.</p>
+    {% endif %}
+
+    <p><a href="{% url 'clients_with_rentals' %}">back to client list</a></p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental</title>
+</head>
+<body>
+    <h1>Welcome to Car Rental</h1>
+    
+    <h2>Random Cat Fact</h2>
+    <p>{{ cat_fact }}</p>
+    {% if not api_works %}
+    <p><small>[Стандартный факт, API временно недоступно]</small></p>
+    {% endif %}
+
+    <h2>Some News</h2>
+    {% for el in news %}
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.content }}</p>
+    {% endfor %}
+
+    <p><a href="/about-us">about us</a></p>
+    <p><a href="/news">news</a></p>
+    <p><a href="/faq">faq</a></p>
+    <p><a href="/employees/">our team</a></p>
+    <p><a href="/vacancies/">vacancies</a></p>
+    <p><a href="/reviews/">reviews</a></p>
+    <p><a href="/promocodes/">promo codes</a></p>
+    <p><a href="/privacy/">privacy policy</a></p>
+    <p><a href="/profile/">profile</a></p>
+    <p><a href="/cars/">cars list</a></p>
+    {% if not user.is_authenticated %}
+    <p><a href="/register/">register</a></p>
+    {% endif %}
+    {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
+    <h2>admin</h2>
+    <p><a href="/status-distribution/">status distribution</a></p>
+    <p><a href="/rentals-by-car/">rents by car</a></p>
+    {% if user.role in 'MANAGER,SUPERUSER' %}
+            <a href="{% url 'clients_with_rentals' %}" style="margin-right: 15px;">clients with rents</a>
+        {% endif %}
+    {% endif %}
+    {% if user.role in 'MANAGER,SUPERUSER' %}
+    <p>
+            <a href="{% url 'rental_profit' %}" style="margin-right: 15px;">rental profit</a>
+            </p>
+        {% endif %}
+    
+        {% if user.is_authenticated and user.role in 'SUPERUSER' %}
+        <p><a href="/admin/">panel</a></p>
+
+    {% endif %}
+</body>
+</html>
