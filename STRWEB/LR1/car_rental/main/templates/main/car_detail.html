@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ car.model }} Details - Car Rental{% endblock %}
+
+{% block header %}{{ car.model }} ({{ car.license_plate }}){% endblock %}
+
+{% block content %}
+<div>
+    <p><strong>License Plate:</strong> {{ car.license_plate }}</p>
+    <p><strong>Year:</strong> {{ car.year }}</p>
+    <p><strong>Body Type:</strong> {{ car.body_type.name }}</p>
+    <p><strong>Daily Rental Price:</strong> {{ car.daily_rental_price }} ₽</p>
+    <p><strong>Full Price:</strong> {{ car.price }} ₽</p>
+</div>
+
+<a href="{% url 'car_list' %}">Back to all cars</a>
+<br>
+
+<!-- Измененная кнопка "Добавить в корзину" -->
+<form action="{% url 'create_rental' %}" method="get" style="display: inline;">
+    <input type="hidden" name="car_id" value="{{ car.id }}">
+    <button type="submit">Добавить в корзину</button>
+</form>
+{% endblock %}

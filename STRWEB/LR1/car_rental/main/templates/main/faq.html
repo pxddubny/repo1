@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ - Car Rental{% endblock %}
+
+{% block header %}Frequently Asked Questions{% endblock %}
+
+{% block content %}
+{% for el in faqs %}
+<h3>{{ el.title }}</h3>
+<p>{{ el.question }}</p>
+<p>{{ el.answer }}</p>
+<p>{{ el.ans_date }}</p>
+{% endfor %}
+{% endblock %}
+
+{% block cat_fact %}{% endblock %}
+{% block news %}{% endblock %}
