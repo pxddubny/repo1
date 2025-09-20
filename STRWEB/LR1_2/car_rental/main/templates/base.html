@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/AutoRental">
+<head>
+    <meta charset="UTF-8">
+    <meta name='description' content='Прокат автомобилей [ООО ТМЫВ ДЕНЕГ] | Эконом, премиум и внедорожники | Почасовая, суточная, долгосрочная аренда | Полная страховка | Доставка по городу'>
+    <title>{% block title %}Car Rental{% endblock %}</title>
+    <link rel="shortcut icon" href="/static/logos/badge.png" type="image/x-icon" />
+</head>
+<body>
+
+    {% block navigation %}
+    <nav itemprop="mainEntity" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <a href="/" itemprop="url">main page</a>
+        <a href="/about-us" itemprop="url">about us</a>
+        <a href="/news" itemprop="url">news</a>
+        <a href="/faq" itemprop="url">faq</a>
+        <a href="/employees/" itemprop="url">our team</a>
+        <a href="/vacancies/" itemprop="url">vacancies</a>
+        <a href="/reviews/" itemprop="url">reviews</a>
+        <a href="/promocodes/" itemprop="url">promo codes</a>
+        <a href="/privacy/" itemprop="url">privacy policy</a>
+        <a href="/profile/" itemprop="url">profile</a>
+        <a href="/cars/" itemprop="url">cars list</a>
+        
+        {% if not user.is_authenticated %}
+        <a href="/register/" itemprop="url">register</a>
+        {% endif %}
+        
+        {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
+        | admin
+        <a href="/rentals-by-car/" itemprop="url">rents by car</a>
+        {% if user.role in 'MANAGER,SUPERUSER' %}
+        <a href="{% url 'clients_with_rentals' %}" style="margin-right: 15px;" itemprop="url">clients with rents</a>
+        {% endif %}
+        {% endif %}
+        
+        {% if user.role in 'MANAGER,SUPERUSER' %}
+        <a href="{% url 'rental_profit' %}" style="margin-right: 15px;" itemprop="url">rental profit</a>
+        {% endif %}
+        
+        {% if user.is_authenticated and user.role in 'SUPERUSER' %}
+        <a href="/admin/" itemprop="url">panel</a>
+        {% endif %}
+    </nav>
+    {% endblock %}
+
+    <header>
+        <h1 itemprop="name">{% block header %}Welcome to Car Rental{% endblock %}</h1>
+    </header>
+    
+
+    {% block cat_fact %}
+    <section itemscope itemtype="https://schema.org/Article">
+        <blockquote cite='http://vet31.ru/useful_info/50-interesnykh-faktov-o-koshkakh/'>
+            <h2 itemprop="headline">Random Cat Fact</h2>
+            <b><p lang="en" itemprop="text">{{ cat_fact }}</p>
+            {% if not api_works %}
+            <p><small>[Стандартный факт, API временно недоступно]</small></p>
+            {% endif %}
+            </b>
+        </blockquote>
+    </section>
+    {% endblock %}
+
+    <aside style="float: right; width: 300px; margin-left: 20px;">
+    {% block aside %}
+
+    {% endblock %}
+    </aside>
+
+    <main style="margin-right: 320px;">
+    {% block content %}
+
+    {% endblock %}
+    </main>
+
+    <footer>
+    {% block footer %}
+
+    {% endblock %}
+    </footer>
+</body>
+</html>

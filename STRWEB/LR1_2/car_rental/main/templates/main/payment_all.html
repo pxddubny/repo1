@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Payment All - Car Rental{% endblock %}
+
+{% block header %}Payment for All Cart Items{% endblock %}
+
+{% block content %}
+<h3>Order Details ({{ cart_items.count }} items)</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Car</th>
+            <th>Start Date</th>
+            <th>Days</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for rental in cart_items %}
+        <tr>
+            <td>{{ rental.car }}</td>
+            <td>{{ rental.start_date }}</td>
+            <td>{{ rental.days }}</td>
+            <td>{{ rental.total_amount }} ₽</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p><strong>Total Amount: {{ total_amount }} ₽</strong></p>
+
+<form method="post" action="{% url 'process_payment_all' %}">
+    {% csrf_token %}
+    <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+        Confirm Payment for All Items
+    </button>
+</form>
+
+<a href="{% url 'profile' %}" style="display: inline-block; margin-top: 15px; color: #007bff;">Back to Profile</a>
+{% endblock %}
+
+{% block cat_fact %}{% endblock %}
+{% block news %}{% endblock %}
