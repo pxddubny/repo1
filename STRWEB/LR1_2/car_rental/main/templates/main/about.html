@@ -76,9 +76,17 @@
     <ol>
         <li>Первый пункт</li>
         <li>Второй пункт</li>
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
     </ol>
 
-    <ul>
+    <ul class='markable'>
         <li>Пункт 1</li>
         <li>Пункт 2</li>
     </ul>
@@ -93,45 +101,78 @@
 
     <form method="post">
     {% csrf_token %}
-    <br>
-    <label>Имя: <input type="text" name="name" required></label>
-    <br>
-    <label>Email: <input type="email" name="email" required></label>
-    <br>
-    <label>Пароль: <input type="password" name="password" minlength="8" required></label>
-    <br>
-    <label>Возраст: <input type="number" name="age" min="18" max="100" required></label>
-    <br>
-    <label>Город:
-        <select name="city" required>
-            <option value="">Выберите город</option>
-            <option value="moscow" selected>Москва</option>
-            <option value="spb">Санкт-Петербург</option>
-        </select>
-    </label>
-    <br>
-    <legend>Пол:</legend>
-    <label><input type="radio" name="gender" value="male" required> Мужской</label>
-    <label><input type="radio" name="gender" value="female"> Женский</label>
-    <br>
-    <label><input type="checkbox" name="agree" checked required> Согласен с условиями</label>
-    <br>
-    <label>Комментарий: <textarea name="comment" rows="4"></textarea></label>
-    <br>
-    <label>Дата: <input type="date" name="birthdate" required></label>
-    <label>Время: <input type="time" name="time"></label>
-    <br>
-    <label>Фото: <input type="file" name="photo" accept="image/*"></label>
-    <br>
-    <label>Уровень: <input type="range" name="level" min="1" max="10"></label>
-    <br>
-    <label>Цвет: <input type="color" name="color"></label>
-    <br>
+    
+    <div class="demo-section">
+        <h3>Обычная форма (доступные и обязательные элементы)</h3>
+        <label>Имя: <input type="text" name="name" required></label>
+        <br>
+        <label>Email: <input type="email" name="email" required></label>
+        <br>
+        <label>Пароль: <input type="password" name="password" minlength="8" required></label>
+        <br>
+        <label>Возраст: <input type="number" name="age" min="18" max="100" required></label>
+        <br>
+        <label>Город:
+            <select name="city" required>
+                <option value="">Выберите город</option>
+                <option value="moscow" selected>Москва</option>
+                <option value="spb">Санкт-Петербург</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="demo-section">
+        <h3>Заблокированные элементы</h3>
+        <label>Отключенное поле: <input type="text" name="disabled_field" value="Неактивно" disabled></label>
+        <br>
+        <label>Отключенный выбор:
+            <select name="disabled_select" disabled>
+                <option value="1">Опция 1</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="demo-section">
+        <h3>Элементы вне диапазона</h3>
+        <label>Возраст (вне диапазона): <input type="number" name="invalid_age" value="15" min="18" max="100"></label>
+    </div>
+
+    <div class="demo-section">
+        <h3>Флажки и переключатели</h3>
+        <legend>Пол:</legend>
+        <label><input type="radio" name="gender" value="male" required> Мужской</label>
+        <label><input type="radio" name="gender" value="female"> Женский</label>
+        <br>
+        <label><input type="checkbox" name="agree" checked required> Согласен с условиями</label>
+        <br>
+        <label><input type="checkbox" name="newsletter"> Получать рассылку</label>
+    </div>
+
+    <div class="demo-section">
+        <h3>Кавычки по языкам</h3>
+        <p class="quote" lang="ru">Русский текст с кавычками</p>
+        <p class="quote" lang="en">English text with quotes</p>
+        <p class="quote" lang="fr">Texte français avec guillemets</p>
+        <p class="quote" lang="de">Deutscher Text mit Anführungszeichen</p>
+    </div>
+
+    <div class="demo-section">
+        <h3>Остальные поля</h3>
+        <label>Комментарий: <textarea name="comment" rows="4"></textarea></label>
+        <br>
+        <label>Дата: <input type="date" name="birthdate" required></label>
+        <label>Время: <input type="time" name="time"></label>
+        <br>
+        <label>Фото: <input type="file" name="photo" accept="image/*"></label>
+        <br>
+        <label>Уровень: <input type="range" name="level" min="1" max="10"></label>
+        <br>
+        <label>Цвет: <input type="color" name="color"></label>
+    </div>
+
     <button type="submit">Отправить</button>
     <button type="reset">Сбросить</button>
     <button type="button">Обычная кнопка</button>
-</form>
-
 
   <p id="main-article"
   class="featured post"

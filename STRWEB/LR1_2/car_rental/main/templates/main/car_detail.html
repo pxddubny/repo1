@@ -16,7 +16,6 @@
 <a href="{% url 'car_list' %}">Back to all cars</a>
 <br>
 
-<!-- Измененная кнопка "Добавить в корзину" -->
 <form action="{% url 'create_rental' %}" method="get" style="display: inline;">
     <input type="hidden" name="car_id" value="{{ car.id }}">
     <button type="submit">Добавить в корзину</button>
