@@ -10,35 +10,25 @@
     <button type="submit">Search</button>
 </form>
 
-<table>
-    <thead>
-        <tr>
-            <th>License Plate</th>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Daily Price</th>
-            <th>Info</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for car in cars %}
-        <tr>
-            <td>{{ car.license_plate }}</td>
-            <td>{{ car.model }}</td>
-            <td>{{ car.year }}</td>
-            <td>{{ car.daily_rental_price }}</td>
-            <td>{% if car.pk %}
-                <a href="{% url 'car_detail' car_id=car.pk %}" title="View car details">
-                    View Details
-                </a>
-                {% else %}
-                N/A
-                {% endif %}
-                </td>  
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="cars-grid">
+    {% for car in cars %}
+    <div class="car-card">
+        <div class="car-license">{{ car.license_plate }}</div>
+        <div class="car-model">{{ car.model }}</div>
+        <div class="car-year">{{ car.year }}</div>
+        <div class="car-price">{{ car.daily_rental_price }}</div>
+        <div class="car-info">
+            {% if car.pk %}
+            <a href="{% url 'car_detail' car_id=car.pk %}" title="View car details">
+                View Details
+            </a>
+            {% else %}
+            N/A
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
 
 {% block cat_fact %}{% endblock %}

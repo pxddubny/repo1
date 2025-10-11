@@ -10639,3 +10639,1033 @@ django.db.utils.OperationalError: database is locked
 2025-10-10 10:21:38,304 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-10-10 10:21:38,541 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
 2025-10-10 10:21:38,544 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:24:01,577 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 06:24:02,354 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 06:24:02,389 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 06:24:02,400 [DEBUG] matplotlib - interactive is False
+2025-10-11 06:24:02,401 [DEBUG] matplotlib - platform is linux
+2025-10-11 06:24:02,545 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 06:24:02,550 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 06:24:04,561 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:25:06,142 [WARNING] django.request - Not Found: /favicon.ico
+2025-10-11 06:25:34,835 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 06:25:34,840 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 06:25:35,484 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 06:25:35,489 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:25:44,793 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:25:52,775 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:33:54,856 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:34:54,522 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:35:31,268 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:35:42,343 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 06:36:46,093 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 06:36:46,095 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 06:36:46,669 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 06:36:46,674 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:40:36,155 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 06:40:36,158 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 06:40:36,534 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 06:40:36,540 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:41:31,582 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 06:41:31,584 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 06:41:32,129 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 06:41:32,134 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:42:25,514 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 06:42:25,516 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 06:42:26,090 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 06:42:26,092 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:44:41,257 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 06:44:41,259 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 06:44:41,594 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 06:44:41,598 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 06:47:05,848 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 07:28:23,955 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 07:30:41,402 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 07:30:44,433 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:30:44,435 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:30:45,071 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 07:30:45,090 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:30:45,100 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:30:47,512 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:30:47,514 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:30:47,972 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:30:47,975 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:31:14,486 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:31:14,489 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:31:14,908 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:31:14,968 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:33:25,661 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:33:25,663 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:33:26,241 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:33:26,245 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:34:39,170 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:34:39,172 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:34:39,570 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:34:39,575 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:35:12,403 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:35:12,405 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:35:12,773 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:35:12,777 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:35:30,605 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:35:30,607 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:35:30,973 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:35:30,977 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:38:27,099 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:38:27,101 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:38:27,668 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:38:27,673 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:38:37,170 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:38:37,172 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:38:37,551 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:38:37,556 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:38:45,795 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:38:45,797 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:38:46,167 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:38:46,171 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:38:53,676 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:38:53,678 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:38:54,083 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:38:54,088 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:39:12,231 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:39:12,233 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:39:12,602 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:39:12,607 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:41:18,787 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:41:18,789 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:41:19,230 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:41:19,234 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:41:50,383 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:41:50,384 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:41:50,765 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:41:50,775 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:42:50,040 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:42:50,042 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:42:50,384 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:42:50,389 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 07:43:40,850 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 07:43:40,852 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 07:43:41,366 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 07:43:41,370 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:13:11,962 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 08:13:12,536 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 08:13:12,556 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 08:13:12,563 [DEBUG] matplotlib - interactive is False
+2025-10-11 08:13:12,563 [DEBUG] matplotlib - platform is linux
+2025-10-11 08:13:12,672 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 08:13:12,676 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 08:13:14,220 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:13:14,225 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:13:14,759 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:13:14,762 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:13:24,939 [DEBUG] main.views - Загрузка новостей
+2025-10-11 08:13:33,647 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 08:13:33,809 [WARNING] django.request - Not Found: /employees/static/media/image.png
+2025-10-11 08:13:39,187 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 08:13:46,124 [DEBUG] main.views - Загрузка списка клиентов с арендами
+2025-10-11 08:13:48,378 [INFO] main.views - Просмотр прибыли от аренды пользователем Ivan: 102549.00
+2025-10-11 08:13:56,228 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 08:14:02,877 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:14:02,879 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:14:03,321 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:14:03,324 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:15:43,420 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:15:43,423 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:15:43,806 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:15:43,810 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:15:45,487 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:15:45,489 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:15:45,840 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:15:45,848 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:15:55,472 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:15:55,474 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:15:55,833 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:15:55,837 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:16:00,591 [DEBUG] main.views - Загрузка новостей
+2025-10-11 08:16:02,204 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:16:02,206 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:16:02,620 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:16:02,622 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 08:16:20,063 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 08:16:20,065 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 08:16:20,412 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 08:16:20,418 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:10:33,742 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 14:10:34,288 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 14:10:34,310 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 14:10:34,317 [DEBUG] matplotlib - interactive is False
+2025-10-11 14:10:34,317 [DEBUG] matplotlib - platform is linux
+2025-10-11 14:10:34,427 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 14:10:34,431 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 14:10:37,404 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:10:37,408 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:10:37,965 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:10:37,969 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:10:47,796 [DEBUG] main.views - Загрузка новостей
+2025-10-11 14:13:42,003 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:13:42,006 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:13:42,777 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:13:42,781 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:13:55,549 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:13:55,551 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:13:55,809 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:13:55,813 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:14:41,264 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:14:41,267 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:14:41,550 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:14:41,554 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:14:43,529 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:14:43,531 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:14:43,720 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:14:43,724 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:15:22,153 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:15:22,155 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:15:22,409 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:15:22,413 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:17:21,506 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:17:21,509 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:17:21,808 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:17:21,812 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:17:42,056 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:17:42,058 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:17:42,468 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:17:42,472 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:20:23,406 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:20:23,408 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:20:23,798 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:20:23,802 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:22:13,839 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:22:13,841 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:22:14,190 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:22:14,194 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:22:38,668 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:22:38,670 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:22:39,045 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:22:39,050 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:22:59,534 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:22:59,536 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:22:59,767 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:22:59,771 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:23:14,226 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:23:14,228 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:23:14,577 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:23:14,582 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:23:22,739 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:23:22,741 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:23:23,179 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:23:23,185 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:23:56,224 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:23:56,226 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:23:56,488 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:23:56,492 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:24:29,918 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:24:29,920 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:24:30,408 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:24:30,412 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:24:37,779 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:24:37,781 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:24:38,034 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:24:38,039 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:25:46,564 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:25:46,566 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:25:46,951 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:25:46,955 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:26:04,435 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:26:04,438 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:26:04,676 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:26:04,680 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:30:31,040 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:30:31,042 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:30:31,319 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:30:31,323 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:30:31,468 [ERROR] django.request - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 56, in index
+    return render(request, 'main/index.html', {'news': news, 'cat_fact': cat_fact, 'api_works': cat_fact != DEFAULT_CAT_FACT, 'cars': cars, 'partners': partners})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'news_detail' not found. 'news_detail' is not a valid view function or pattern name.
+2025-10-11 14:30:31,554 [WARNING] django.request - Not Found: /favicon.ico
+2025-10-11 14:35:08,766 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/car_rental/urls.py changed, reloading.
+2025-10-11 14:35:09,600 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 14:35:10,087 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 14:35:10,113 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 14:35:10,122 [DEBUG] matplotlib - interactive is False
+2025-10-11 14:35:10,123 [DEBUG] matplotlib - platform is linux
+2025-10-11 14:35:10,261 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 14:35:10,267 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 14:35:23,193 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py changed, reloading.
+2025-10-11 14:35:24,002 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 14:35:24,442 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 14:35:24,459 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 14:35:24,466 [DEBUG] matplotlib - interactive is False
+2025-10-11 14:35:24,466 [DEBUG] matplotlib - platform is linux
+2025-10-11 14:35:24,555 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 14:35:24,559 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 14:35:27,103 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:35:27,106 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:35:27,543 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:35:27,548 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:35:37,298 [ERROR] django.request - Internal Server Error: /news/3/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 34, in news_detail
+    return render(request, 'news_detail.html', {'news': news})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: news_detail.html
+2025-10-11 14:36:04,827 [ERROR] django.request - Internal Server Error: /news/3/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 34, in news_detail
+    return render(request, 'news_detail.html', {'news': news})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: news_detail.html
+2025-10-11 14:36:05,806 [ERROR] django.request - Internal Server Error: /news/3/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 34, in news_detail
+    return render(request, 'news_detail.html', {'news': news})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: news_detail.html
+2025-10-11 14:36:11,050 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:36:11,052 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:36:11,391 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:36:11,395 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:36:14,606 [ERROR] django.request - Internal Server Error: /news/3/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 34, in news_detail
+    return render(request, 'news_detail.html', {'news': news})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: news_detail.html
+2025-10-11 14:37:41,813 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 14:37:42,204 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 14:37:42,222 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 14:37:42,231 [DEBUG] matplotlib - interactive is False
+2025-10-11 14:37:42,231 [DEBUG] matplotlib - platform is linux
+2025-10-11 14:37:42,346 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 14:37:42,349 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 14:37:50,773 [ERROR] django.request - Internal Server Error: /news/3/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 34, in news_detail
+    return render(request, 'news_detail.html', {'news': news})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: news_detail.html
+2025-10-11 14:40:25,248 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:40:25,253 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:40:25,655 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:40:25,659 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:40:28,092 [ERROR] django.request - Internal Server Error: /news/3/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py", line 34, in news_detail
+    return render(request, 'news_detail.html', {'news': news})
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: news_detail.html
+2025-10-11 14:41:09,772 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/car_rental/main/views.py changed, reloading.
+2025-10-11 14:41:10,555 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 14:41:10,980 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 14:41:10,997 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 14:41:11,003 [DEBUG] matplotlib - interactive is False
+2025-10-11 14:41:11,004 [DEBUG] matplotlib - platform is linux
+2025-10-11 14:41:11,093 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 14:41:11,097 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 14:41:29,464 [DEBUG] main.views - Загрузка новостей
+2025-10-11 14:42:54,939 [DEBUG] main.views - Загрузка новостей
+2025-10-11 14:42:57,896 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:42:57,900 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:42:58,333 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:42:58,337 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:43:12,291 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:43:12,293 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:43:12,711 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:43:12,715 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:43:21,490 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:43:21,492 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:43:21,784 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:43:21,788 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:43:41,033 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:43:41,036 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:43:41,349 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:43:41,354 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 14:43:45,821 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 14:43:45,823 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 14:43:46,059 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 14:43:46,064 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:30:29,515 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:33:30,819 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:33:41,051 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:34:48,543 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:35:15,894 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:35:17,361 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:35:17,721 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:35:18,048 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:35:30,265 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:35:53,844 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:36:05,954 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:36:12,669 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:36:40,662 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:36:51,676 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:36:58,054 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:37:05,982 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:37:51,230 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:38:07,604 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:38:17,356 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:38:37,742 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:38:39,879 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:38:39,881 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:38:40,241 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:38:40,246 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:38:42,393 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:38:58,973 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:38:59,815 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:39:00,126 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:39:00,197 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:39:00,543 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:39:08,236 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:39:09,287 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:41:33,373 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:41:41,071 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:41:46,996 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:42:26,555 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:43:40,864 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:47:35,529 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:48:07,662 [DEBUG] main.views - Загрузка новостей
+2025-10-11 15:48:11,661 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:48:11,663 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:48:11,994 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:48:11,997 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:49:30,582 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:49:30,584 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:49:30,945 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:49:30,949 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:49:57,465 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:49:57,466 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:49:57,763 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:49:57,768 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:51:31,063 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:51:31,065 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:51:31,470 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:51:31,474 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:51:44,333 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:51:44,335 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:51:45,012 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:51:45,018 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:51:50,159 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:51:50,161 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:51:50,357 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:51:50,361 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:52:20,377 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:52:20,379 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:52:20,636 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:52:20,640 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:52:21,729 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:52:21,731 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:52:21,956 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:52:21,961 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:53:54,140 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:53:54,143 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:53:54,723 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:53:54,727 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:54:04,888 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:54:04,890 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:54:05,276 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:54:05,280 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:54:09,879 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:54:09,881 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:54:10,079 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:54:10,084 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:54:15,585 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:54:15,587 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:54:15,856 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:54:15,860 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 15:54:33,711 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 15:54:33,714 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 15:54:33,976 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 15:54:33,980 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:05:58,488 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:07:34,959 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:07:36,428 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:07:57,619 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:07:59,254 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:07:59,358 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:07:59,663 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:11:43,063 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:12:25,219 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:12:26,272 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:12:26,582 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:12:26,820 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:12:26,953 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:14:11,132 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:16:36,868 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:17:02,165 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:17:02,167 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:17:02,581 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:17:02,584 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:19:42,024 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:19:42,026 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:19:42,876 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:19:42,881 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:20:38,933 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:20:38,936 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:20:39,533 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:20:39,536 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:33:51,624 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:33:51,626 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:33:52,162 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:33:52,165 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:43:50,745 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:43:50,747 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:43:51,046 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:43:51,050 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:44:49,898 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:44:49,900 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:44:50,271 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:44:50,275 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:45:32,371 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:45:32,374 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:45:32,591 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:45:32,595 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:46:51,045 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:46:51,048 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:46:51,309 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:46:51,313 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:47:53,880 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:47:53,882 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:47:54,189 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 429 44
+2025-10-11 16:47:54,191 [ERROR] main.views - CatFact API error: 429 Client Error: Too Many Requests for url: https://catfact.ninja/fact
+2025-10-11 16:47:54,194 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:48:32,874 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:48:32,876 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:48:33,094 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 429 44
+2025-10-11 16:48:33,096 [ERROR] main.views - CatFact API error: 429 Client Error: Too Many Requests for url: https://catfact.ninja/fact
+2025-10-11 16:48:33,098 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:49:45,809 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:49:45,812 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:49:46,107 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:49:46,111 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:50:13,509 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:50:13,511 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:50:13,755 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:50:13,760 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:50:42,227 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:50:42,229 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:50:42,530 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 429 44
+2025-10-11 16:50:42,532 [ERROR] main.views - CatFact API error: 429 Client Error: Too Many Requests for url: https://catfact.ninja/fact
+2025-10-11 16:50:42,534 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:50:54,636 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:50:54,638 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:50:55,124 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:50:55,131 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:51:02,189 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:51:02,191 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:51:02,660 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 429 44
+2025-10-11 16:51:02,662 [ERROR] main.views - CatFact API error: 429 Client Error: Too Many Requests for url: https://catfact.ninja/fact
+2025-10-11 16:51:02,665 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:51:15,648 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:51:15,651 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:51:15,946 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:51:15,951 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:51:27,665 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:51:27,667 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:51:28,417 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:51:28,422 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:51:34,038 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:51:34,040 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:51:34,231 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:51:34,236 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:51:57,160 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 16:51:59,874 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 16:51:59,877 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 16:52:00,150 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 16:52:00,152 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 16:52:02,729 [DEBUG] main.views - Загрузка новостей
+2025-10-11 16:52:06,240 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 16:52:06,392 [WARNING] django.request - Not Found: /employees/static/media/image.png
+2025-10-11 16:52:22,588 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 16:52:22,699 [WARNING] django.request - Not Found: /employees/static/media/image.png
+2025-10-11 16:55:21,973 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 16:55:22,073 [WARNING] django.request - Not Found: /employees/static/media/image.png
+2025-10-11 17:48:05,222 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 17:48:05,225 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 17:48:05,566 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 17:48:05,570 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 17:49:19,014 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 17:49:19,015 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 17:49:19,287 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 17:49:19,290 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 17:49:46,909 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 17:49:46,911 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 17:49:47,182 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 17:49:47,186 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 17:50:00,381 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 17:50:00,383 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 17:50:00,777 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 17:50:00,782 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 17:52:49,906 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 17:52:49,908 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 17:52:50,232 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 17:52:50,236 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:16:52,858 [DEBUG] main.views - Загрузка FAQ
+2025-10-11 18:19:12,839 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 18:19:12,946 [WARNING] django.request - Not Found: /employees/static/media/image.png
+2025-10-11 18:20:11,330 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 18:21:59,429 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 18:23:52,426 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 18:24:21,508 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 18:26:43,896 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 18:26:46,349 [DEBUG] main.views - Загрузка вакансий
+2025-10-11 18:34:16,530 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 18:34:18,192 [DEBUG] main.views - Загрузка отзывов
+2025-10-11 18:35:07,223 [DEBUG] main.views - Загрузка страницы промокодов
+2025-10-11 18:38:05,471 [DEBUG] main.views - Загрузка страницы промокодов
+2025-10-11 18:38:07,217 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:38:07,218 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:38:07,542 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:38:07,547 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:38:16,120 [DEBUG] main.views - Загрузка новостей
+2025-10-11 18:38:21,175 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-10-11 18:38:22,100 [DEBUG] main.views - Загрузка вакансий
+2025-10-11 18:38:22,838 [DEBUG] main.views - Загрузка отзывов
+2025-10-11 18:38:23,511 [DEBUG] main.views - Загрузка страницы промокодов
+2025-10-11 18:38:24,346 [DEBUG] main.views - Загрузка политики конфиденциальности
+2025-10-11 18:38:25,255 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-10-11 18:38:25,984 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 18:38:26,864 [DEBUG] main.views - Загрузка профиля пользователя Ivan
+2025-10-11 18:38:27,953 [DEBUG] main.views - Загрузка списка автомобилей
+2025-10-11 18:38:29,170 [DEBUG] matplotlib.pyplot - Loaded backend agg version v2.2.
+2025-10-11 18:38:29,176 [DEBUG] matplotlib.font_manager - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+2025-10-11 18:38:29,177 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-10-11 18:38:29,177 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,177 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,177 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,177 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,178 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-10-11 18:38:29,179 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,180 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Light.ttf', name='Open Sans', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-serif-fonts/LiberationSerif-Bold.ttf', name='Liberation Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adwaita-mono-fonts/AdwaitaMono-BoldItalic.ttf', name='Adwaita Mono', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansThaana[wght].ttf', name='Noto Sans Thaana', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,181 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansEthiopic[wght].ttf', name='Noto Sans Ethiopic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/dejavu-sans-mono-fonts/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTS75F.ttf', name='PT Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansDevanagari-Regular.ttf', name='Droid Sans Devanagari', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/fira-code/FiraCode-Bold.ttf', name='Fira Code', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoNaskhArabic[wght].ttf', name='Noto Naskh Arabic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Bold.otf', name='Nimbus Roman', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,182 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansSinhala[wght].ttf', name='Noto Sans Sinhala', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansGeorgian[wght].ttf', name='Noto Sans Georgian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Italic.otf', name='Montserrat', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansHebrew-Bold.ttf', name='Droid Sans Hebrew', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Regular.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifGujarati[wght].ttf', name='Noto Serif Gujarati', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansArmenian[wght].ttf', name='Noto Sans Armenian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,183 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-ExtraBold.ttf', name='Open Sans', style='normal', variant='normal', weight=800, stretch='normal', size='scalable')) = 10.43
+2025-10-11 18:38:29,184 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Roman.otf', name='P052', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,184 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-MediumIt.otf', name='Source Code Pro', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,184 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansDevanagari[wght].ttf', name='Noto Sans Devanagari', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,184 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-BoldItalic.otf', name='STIX Two Text', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,184 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Bold.otf', name='Montserrat', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,184 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Italic.otf', name='C059', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,185 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Italic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,185 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/rit-rachana-fonts/RIT-Rachana-Bold.otf', name='RIT Rachana', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,185 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-SemiBoldItalic.otf', name='STIX Two Text', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,185 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto/NotoSansGothic-Regular.ttf', name='Noto Sans Gothic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,185 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifKhmer[wght].ttf', name='Noto Serif Khmer', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,185 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifGeorgian[wght].ttf', name='Noto Serif Georgian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,186 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adwaita-mono-fonts/AdwaitaMono-Italic.ttf', name='Adwaita Mono', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,186 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifThai[wght].ttf', name='Noto Serif Thai', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,186 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-Medium.otf', name='Comfortaa', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,186 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-Demi.otf', name='URW Bookman', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,186 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-SemiBoldItalic.otf', name='Montserrat', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-MediumItalic.otf', name='STIX Two Text', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-carlito-fonts/Carlito-Regular.ttf', name='Carlito', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/paktype-naskh-basic-fonts/PakTypeNaskhBasicWide.ttf', name='PakType Naskh Basic Wide', style='normal', variant='normal', weight=400, stretch='expanded', size='scalable')) = 10.25
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/vazirmatn-vf-fonts/Vazirmatn[wght].ttf', name='Vazirmatn', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifSinhala[wght].ttf', name='Noto Serif Sinhala', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansTamil-Regular.ttf', name='Droid Sans Tamil', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,187 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-mono-fonts/LiberationMono-Regular.ttf', name='Liberation Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,188 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Italic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,188 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Semibold.ttf', name='Open Sans', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,188 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifHebrew[wght].ttf', name='Noto Serif Hebrew', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,188 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTS76F.ttf', name='PT Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,188 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-Light.otf', name='URW Bookman', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,188 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell-fonts/Cantarell-Regular.otf', name='Cantarell', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,189 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansHebrew[wght].ttf', name='Noto Sans Hebrew', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,189 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto/NotoSansMath-Regular.ttf', name='Noto Sans Math', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,189 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-Bold.otf', name='STIX Two Text', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,189 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-SemiBold.otf', name='STIX Two Text', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,189 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifArmenian[wght].ttf', name='Noto Serif Armenian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,189 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto/NotoSansSymbols2-Regular.ttf', name='Noto Sans Symbols 2', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifDevanagari[wght].ttf', name='Noto Serif Devanagari', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-Book.otf', name='URW Gothic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/rit-rachana-fonts/RIT-Rachana-Italic.otf', name='RIT Rachana', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansSymbols[wght].ttf', name='Noto Sans Symbols', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-mono-fonts/LiberationMono-Bold.ttf', name='Liberation Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifTamil[wght].ttf', name='Noto Serif Tamil', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,190 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adwaita-sans-fonts/AdwaitaSans-Regular.ttf', name='Adwaita Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,191 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifLao[wght].ttf', name='Noto Serif Lao', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,191 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansJapanese.ttf', name='Droid Sans Japanese', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,191 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansKhmer[wght].ttf', name='Noto Sans Khmer', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,191 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifEthiopic[wght].ttf', name='Noto Serif Ethiopic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,191 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/fira-code/FiraCode-Retina.ttf', name='Fira Code', style='normal', variant='normal', weight=450, stretch='normal', size='scalable')) = 10.0975
+2025-10-11 18:38:29,191 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-BoldIt.otf', name='Source Code Pro', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,192 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-ExtraBoldItalic.otf', name='Montserrat', style='italic', variant='normal', weight=800, stretch='normal', size='scalable')) = 11.43
+2025-10-11 18:38:29,192 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/rit-rachana-fonts/RIT-Rachana-Regular.otf', name='RIT Rachana', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,192 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-ExtraBold.otf', name='Montserrat', style='normal', variant='normal', weight=800, stretch='normal', size='scalable')) = 10.43
+2025-10-11 18:38:29,192 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/paktype-naskh-basic-fonts/PakTypeNaskhBasicSemiWide.ttf', name='PakType Naskh Basic Semi Wide', style='normal', variant='normal', weight=400, stretch='expanded', size='scalable')) = 10.25
+2025-10-11 18:38:29,192 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-SemiboldIt.otf', name='Source Code Pro', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,192 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTC75F.ttf', name='PT Sans Caption', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adwaita-mono-fonts/AdwaitaMono-Bold.ttf', name='Adwaita Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidKufi-Regular.ttf', name='Droid Arabic Kufi', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/fira-code/FiraCode-Regular.ttf', name='Fira Code', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansArabic[wght].ttf', name='Noto Sans Arabic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-Light.otf', name='Comfortaa', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adwaita-mono-fonts/AdwaitaMono-Regular.ttf', name='Adwaita Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,193 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-Medium.otf', name='STIX Two Text', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,194 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=800, stretch='normal', size='scalable')) = 11.43
+2025-10-11 18:38:29,194 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/rit-meera-new-fonts/RIT-MeeraNew.otf', name='RIT Meera New', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,194 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-ExtraLight.otf', name='Source Code Pro', style='normal', variant='normal', weight=200, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,194 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto/NotoSansNKo-Regular.ttf', name='Noto Sans NKo', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,194 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-sans-fonts/LiberationSans-BoldItalic.ttf', name='Liberation Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,194 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-ExtraLightItalic.otf', name='Montserrat', style='italic', variant='normal', weight=200, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,195 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-Semibold.otf', name='Source Code Pro', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,195 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/paktype-naskh-basic-fonts/PakTypeNaskhBasic.ttf', name='PakType Naskh Basic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,195 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifOriya[wght].ttf', name='Noto Serif Oriya', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,195 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-carlito-fonts/Carlito-Italic.ttf', name='Carlito', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,195 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-crosextra-caladea-fonts/Caladea-BoldItalic.ttf', name='Caladea', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,195 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/sil-padauk-fonts/Padauk-Bold.ttf', name='Padauk', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-BoldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Regular.ttf', name='Open Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-LightItalic.otf', name='Montserrat', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansOriya[wght].ttf', name='Noto Sans Oriya', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-BdIta.otf', name='C059', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-BoldItalic.otf', name='Montserrat', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,196 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-ExtraLight.otf', name='Montserrat', style='normal', variant='normal', weight=200, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,197 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Black.otf', name='Montserrat', style='normal', variant='normal', weight=900, stretch='normal', size='scalable')) = 10.525
+2025-10-11 18:38:29,197 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/opensymbol/opens___.ttf', name='OpenSymbol', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,197 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansEthiopic-Bold.ttf', name='Droid Sans Ethiopic', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,197 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Medium.otf', name='Montserrat', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,197 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTN77F.ttf', name='PT Sans Narrow', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+2025-10-11 18:38:29,197 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidKufi-Bold.ttf', name='Droid Arabic Kufi', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,198 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifGurmukhi[wght].ttf', name='Noto Serif Gurmukhi', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,198 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTS55F.ttf', name='PT Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,198 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-BoldItalic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,198 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-Regular.otf', name='Comfortaa', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,198 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-carlito-fonts/Carlito-Bold.ttf', name='Carlito', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,198 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Oblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell-fonts/Cantarell-Light.otf', name='Cantarell', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/madan-fonts/madan.ttf', name='Madan2', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-Italic.otf', name='STIX Two Text', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-Regular.otf', name='Source Code Pro', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifBengali[wght].ttf', name='Noto Serif Bengali', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,199 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansGujarati[wght].ttf', name='Noto Sans Gujarati', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,200 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansMeeteiMayek[wght].ttf', name='Noto Sans Meetei Mayek', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,200 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-Bold.otf', name='Comfortaa', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,200 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerif[wght].ttf', name='Noto Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,200 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-Bold.otf', name='Source Code Pro', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,200 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifKannada[wght].ttf', name='Noto Serif Kannada', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,200 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/dejavu-sans-mono-fonts/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,201 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-mono-fonts/LiberationMono-Italic.ttf', name='Liberation Mono', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,201 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTN57F.ttf', name='PT Sans Narrow', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+2025-10-11 18:38:29,201 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-crosextra-caladea-fonts/Caladea-Regular.ttf', name='Caladea', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,201 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-DemiItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,201 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-BlackItalic.otf', name='Montserrat', style='italic', variant='normal', weight=900, stretch='normal', size='scalable')) = 11.525
+2025-10-11 18:38:29,201 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifTamil-Italic[wght].ttf', name='Noto Serif Tamil', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,202 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Bold.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,202 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Roman.otf', name='C059', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,202 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-LightIt.otf', name='Source Code Pro', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,202 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoText-Regular.otf', name='STIX Two Text', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,202 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/dejavu-sans-mono-fonts/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,202 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansGurmukhi[wght].ttf', name='Noto Sans Gurmukhi', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell-fonts/Cantarell-ExtraBold.otf', name='Cantarell', style='normal', variant='normal', weight=800, stretch='normal', size='scalable')) = 10.43
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-BoldItalic.otf', name='P052', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-mono-fonts/LiberationMono-BoldItalic.ttf', name='Liberation Mono', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/jomolhari-fonts/Jomolhari-alpha3c-0605331.ttf', name='Jomolhari', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansEthiopic-Regular.ttf', name='Droid Sans Ethiopic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSans-Bold.ttf', name='Droid Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,203 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/gnu-free/FreeSansBoldOblique.ttf', name='FreeSans', style='oblique', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,204 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adwaita-sans-fonts/AdwaitaSans-Italic.ttf', name='Adwaita Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,204 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansLao[wght].ttf', name='Noto Sans Lao', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,204 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-ThinItalic.otf', name='Montserrat', style='italic', variant='normal', weight=100, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,204 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/dejavu-sans-mono-fonts/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,204 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSans-Italic[wght].ttf', name='Noto Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,204 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerif-Italic[wght].ttf', name='Noto Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,205 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Italic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,205 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Regular.otf', name='Montserrat', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,205 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Bold.otf', name='P052', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,205 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansCanadianAboriginal[wght].ttf', name='Noto Sans Canadian Aboriginal', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,205 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansFallbackFull.ttf', name='Droid Sans Fallback', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,205 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansThai[wght].ttf', name='Noto Sans Thai', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,206 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Italic.ttf', name='Open Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,206 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Regular.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+2025-10-11 18:38:29,206 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/gnu-free/FreeSansBold.ttf', name='FreeSans', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,206 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansHebrew-Regular.ttf', name='Droid Sans Hebrew', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,206 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-SemiboldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,206 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/gnu-free/FreeSans.ttf', name='FreeSans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,207 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-ExtraLightIt.otf', name='Source Code Pro', style='italic', variant='normal', weight=200, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,207 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell-fonts/Cantarell-Thin.otf', name='Cantarell', style='normal', variant='normal', weight=100, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,207 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/sil-padauk-fonts/Padauk-Regular.ttf', name='Padauk', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,207 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-SemiBold.otf', name='Comfortaa', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,207 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Italic.otf', name='P052', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,207 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansThai.ttf', name='Droid Sans Thai', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-MediumItalic.otf', name='Montserrat', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-crosextra-caladea-fonts/Caladea-Bold.ttf', name='Caladea', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell-fonts/Cantarell-Bold.otf', name='Cantarell', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansArmenian.ttf', name='Droid Sans Armenian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-BoldItalic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Thin.otf', name='Montserrat', style='normal', variant='normal', weight=100, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,208 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-sans-fonts/LiberationSans-Italic.ttf', name='Liberation Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,209 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/fira-code/FiraCode-Medium.ttf', name='Fira Code', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,209 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Bold.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+2025-10-11 18:38:29,209 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-BoldOblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
+2025-10-11 18:38:29,209 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Regular.otf', name='Nimbus Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,209 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansCherokee[wght].ttf', name='Noto Sans Cherokee', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,209 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-sans-fonts/LiberationSans-Regular.ttf', name='Liberation Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansGeorgian.ttf', name='Droid Sans Georgian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansOlChiki[wght].ttf', name='Noto Sans Ol Chiki', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansTamil[wght].ttf', name='Noto Sans Tamil', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansSyriac[wght].ttf', name='Noto Sans Syriac', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-serif-fonts/LiberationSerif-Regular.ttf', name='Liberation Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/gdouros-symbola/Symbola.ttf', name='Symbola', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,210 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-Medium.otf', name='Source Code Pro', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,211 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTC55F.ttf', name='PT Sans Caption', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,211 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-SemiBold.otf', name='Montserrat', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,211 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-BlackIt.otf', name='Source Code Pro', style='italic', variant='normal', weight=900, stretch='normal', size='scalable')) = 11.525
+2025-10-11 18:38:29,211 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-BoldItalic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,211 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansTelugu[wght].ttf', name='Noto Sans Telugu', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,211 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSans[wght].ttf', name='Noto Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,212 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/stix-fonts/STIXTwoMath-Regular.otf', name='STIX Two Math', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,212 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/pt-sans-fonts/PTS56F.ttf', name='PT Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,212 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansMono[wght].ttf', name='Noto Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,212 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSansTamil-Bold.ttf', name='Droid Sans Tamil', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,212 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-It.otf', name='Source Code Pro', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,212 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Regular.otf', name='Nimbus Roman', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-droid-sans-fonts/DroidSans.ttf', name='Droid Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/fira-code/FiraCode-SemiBold.ttf', name='Fira Code', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/julietaula-montserrat-fonts/Montserrat-Light.otf', name='Montserrat', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-DemiOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-carlito-fonts/Carlito-BoldItalic.ttf', name='Carlito', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-sans-fonts/LiberationSans-Bold.ttf', name='Liberation Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,213 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/rit-rachana-fonts/RIT-Rachana-BoldItalic.otf', name='RIT Rachana', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,214 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-BookOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,214 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/fira-code/FiraCode-Light.ttf', name='Fira Code', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,214 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/D050000L.otf', name='D050000L', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,214 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Bold.ttf', name='Open Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-10-11 18:38:29,214 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-Demi.otf', name='URW Gothic', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-10-11 18:38:29,214 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-Light.otf', name='Source Code Pro', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-10-11 18:38:29,215 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/adobe-source-code-pro-fonts/SourceCodePro-Black.otf', name='Source Code Pro', style='normal', variant='normal', weight=900, stretch='normal', size='scalable')) = 10.525
+2025-10-11 18:38:29,215 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-LightItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,215 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/StandardSymbolsPS.otf', name='Standard Symbols PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,215 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansKannada[wght].ttf', name='Noto Sans Kannada', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,215 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-LightItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,215 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSansBengali[wght].ttf', name='Noto Sans Bengali', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-noto-vf/NotoSerifTelugu[wght].ttf', name='Noto Serif Telugu', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/google-crosextra-caladea-fonts/Caladea-Italic.ttf', name='Caladea', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/gnu-free/FreeSansOblique.ttf', name='FreeSans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/Z003-MediumItalic.otf', name='Z003', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-serif-fonts/LiberationSerif-BoldItalic.ttf', name='Liberation Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: score(FontEntry(fname='/usr/share/fonts/liberation-serif-fonts/LiberationSerif-Italic.ttf', name='Liberation Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-10-11 18:38:29,216 [DEBUG] matplotlib.font_manager - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2025-10-11 18:38:30,831 [INFO] main.views - Просмотр прибыли от аренды пользователем Ivan: 102549.00
+2025-10-11 18:39:07,309 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:39:07,311 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:39:07,515 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:39:07,518 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:40:11,604 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:40:11,606 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:40:11,965 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:40:11,969 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:45:44,915 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:45:44,917 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:45:45,407 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:45:45,412 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:46:20,649 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:46:20,652 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:46:25,984 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:46:25,988 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:48:37,553 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:48:37,555 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:48:37,929 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:48:37,933 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:49:15,203 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:49:15,206 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:49:15,739 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:49:15,742 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:49:59,912 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:49:59,914 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:50:00,109 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:50:00,113 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:50:36,661 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:50:36,663 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:50:36,866 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:50:36,870 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:50:59,549 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:50:59,551 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:50:59,875 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:50:59,879 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:51:12,892 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:51:12,894 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:51:13,571 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:51:13,575 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:52:07,799 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:52:07,801 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:52:08,151 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:52:08,155 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:52:56,245 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:52:56,247 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:52:56,462 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:52:56,467 [INFO] main.views - Главная страница успешно загружена
+2025-10-11 18:56:52,144 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 18:56:52,520 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 18:56:52,537 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 18:56:52,544 [DEBUG] matplotlib - interactive is False
+2025-10-11 18:56:52,544 [DEBUG] matplotlib - platform is linux
+2025-10-11 18:56:52,634 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 18:56:52,638 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 18:57:07,191 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-11 18:57:07,652 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-11 18:57:07,671 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-11 18:57:07,678 [DEBUG] matplotlib - interactive is False
+2025-10-11 18:57:07,679 [DEBUG] matplotlib - platform is linux
+2025-10-11 18:57:07,771 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-11 18:57:07,774 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-11 18:59:29,746 [DEBUG] main.views - Загрузка главной страницы
+2025-10-11 18:59:29,751 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-11 18:59:30,019 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-11 18:59:30,024 [INFO] main.views - Главная страница успешно загружена

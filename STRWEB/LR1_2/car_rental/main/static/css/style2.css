@@ -4,12 +4,6 @@
     --font-mono: monospace;
 }
 
-body {
-    line-height: 1.6;
-    word-spacing: 0.05em;
-    letter-spacing: 0.01em;
-    background: #f5f5f5;
-}
 
 p {
     text-align: justify;
@@ -26,6 +20,11 @@ h1, h2, h3 {
     padding: 0 1em;
     font-variant: small-caps;
     word-break: break-all;
+}
+
+.company-name {
+    letter-spacing: 2px; 
+    font-weight: 700; 
 }
 
 .break-word {
@@ -46,32 +45,6 @@ h1, h2, h3 {
     margin-left: 2em;
     border:grey solid;
 }
-
-
-@media (max-width: 835px) {
-    body {
-        display: block;
-        flex-direction: column;
-    }
-    
-    .mainNav, aside {
-        width: 100%;
-        margin: 5px -5px;
-    }
-} 
-
-@media (max-width: 1235px){
-    
-    .text-block-left {
-        float:none;
-        width: auto;
-    }
-    
-    .text-block-right {
-        float:none;
-        width: auto;
-    }
-} 
 
 [src$=".png"] {
 	max-width: 100%; 
@@ -101,35 +74,61 @@ a:active {
     transform: scale(0.95);
 }
 
-aside{
-	 width: 100px; 
-	 margin-left: 20px;
-	 border: 2px solid gray;
-	 order: 3;
-     
-    text-align:center;
-}
 
 [href^='#']{
     padding-left: 6px;
 }
 
-.mainNav{
-	order: 1;
-	width: 150px; 
- 	margin-right: 20px;
-	border: 2px solid gray;
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 2px solid gray;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
 
-    text-align:center;
+.mainNav {
+    border: 2px solid gray;
+    padding: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0px 10px;
+    flex-wrap: wrap; /* ← ПЕРЕНОС НА НОВУЮ СТРОКУ */
+    margin-bottom: 10px; /* ← Отступ для aside */
+}
+
+.aside-nav {
+    border: 2px solid gray;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.mainNav a, .aside-nav a {
+    display: inline-block;
+    white-space: nowrap;
 }
 
 body {
-  display: flex; 
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    background: #f5f5f5;
+    margin: 0;
+    padding-top: 80px; /* для фиксированного хедера */
 }
 
 .mainContainer {
-	flex: 1;
-  order: 2;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 p.smalltext {
@@ -245,11 +244,341 @@ input[type="radio"]:checked {
    background-color: #ff6b6b; 
 }
 
-
 button {
     cursor: pointer;
 }
 
 input:disabled{
     cursor: not-allowed;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.car-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+}
+
+.car-license {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+#partners article {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    border: 2px solid #ccc;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+#partners article:hover {
+    transform: scale(1.1);
+}
+
+#partners img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#partners article:hover img {
+    transform: scale(1.2);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.news-grid article {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.news-excerpt {
+    height: 50px;
+    overflow: hidden;
+    margin: 10px 10px;
+}
+.read-more {
+    display: inline-block;
+    background: #ccc7c7;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.news-multi-column {
+    column-count: 2;
+    column-gap: 30px;
+    text-align: justify;
+}
+
+.news-full {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 1235px){
+    .text-block-left {
+        float:none;
+        width: auto;
+    }
+    
+    .text-block-right {
+        float:none;
+        width: auto;
+    }
+}
+
+.logo {
+    transform: skewX(-30deg);
+}
+/* История - разбить текст на список */
+.history-list {
+    list-style-type: decimal;
+    padding-left: 30px;
+}
+
+.history-list li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.certificate {
+    border: 20px solid transparent;
+    border-image: url('/static/logos/ramka.png') 100 stretch;
+    -webkit-border-image: url('/static/logos/ramka.png') 100 stretch;
+    -moz-border-image: url('/static/logos/ramka.png') 100 stretch;
+    padding: 20px;
+    width:20%;
+    display: inline-block; /* ← Не растягивается на всю ширину */
+
+     background: 
+        linear-gradient(135deg, rgba(255,255,255,0.9), rgba(127, 127, 127, 0.9)); /* Фон + градиент */
+    z-index: 10; /* Поднимаем над другими элементами */
+}
+
+/* Реквизиты */
+.contacts p {
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+/* Видео/аудио */
+video, audio {
+    border: 10px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Логотип */
+.logo img {
+    transform: rotate(-5deg);
+}
+
+.employees-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.employee-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    max-width: 300px;
+    text-align: center;
+}
+
+.employee-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.employee-position {
+    font-weight: bold;
+    color: #666;
+    margin: 10px 0;
+}
+
+.employee-contact {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.vacancy-float {
+    float: left;
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.review-item {
+    font-family: serif; /* Классический шрифт для отзывов */
+}
+
+.review-text {
+    font-style: italic; /* Курсив для текста отзыва */
+    line-height: 1.4;
+}
+
+.review-date {
+    font-size: small; /* Мелкий шрифт для даты */
+    color: #666;
+}
+
+.review-form textarea {
+    font-family: monospace; /* Моноширинный для текстовых полей */
+    width: 100%;
+    height: 100px;
+}
+
+.review-form select {
+    font-family: sans-serif; /* Без засечек для селектов */
+    font-size: medium;
+}
+
+.review-form button {
+    font-family: cursive; /* Красивый шрифт для кнопок */
+    font-weight: bold;
+}
+
+/* Псевдоклассы */
+.review-form textarea:focus {
+    background-color: #f0f8ff;
+}
+
+.review-form select:hover {
+    border-color: #007bff;
+}
+
+.review-form button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+td, th {
+    text-align: center; /* Горизонтальное выравнивание */
+    vertical-align: middle; /* Вертикальное выравнивание */
+}
+
+/* Фон пустых ячеек */
+td:empty {
+    background-color: #000000;
+}
+/* Анимация для главной страницы */
+@keyframes person-enters {
+    0% { transform: translateX(-100px); opacity: 0; }
+    50% { transform: translateX(0); opacity: 1; }
+    80% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(0); opacity: 0; } /* ← Пропадает в конце */
+}
+
+@keyframes car-drives {
+    0% { transform: translateX(0px) scale(0.8); opacity: 0; }
+    30% { transform: translateX(-100px) scale(1); opacity: 1; }
+    70% { transform: translateX(-100px) scale(1); opacity: 1; }
+    100% { transform: translateX(-100px) scale(1); opacity: 1; }
+}
+
+@keyframes company-name {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.animation-container {
+    position: relative;
+    height: 200px;
+    margin: 50px 0;
+    overflow: hidden;
+}
+
+.person {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    font-size: 40px;
+    animation: person-enters 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.car {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 50px;
+    animation: car-drives 4s ease-in-out 2.5s; /* ← Начинается раньше */
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.company-name-animated {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 50px;
+    animation: company-name 1s ease-out 6.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* Прелоадер внизу страницы */
+.preloader {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.preloader img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

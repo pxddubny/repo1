@@ -29,6 +29,10 @@ logger = logging.getLogger(__name__)
 DEFAULT_CAT_FACT = "Стандартный факт: Коты любят спать до 16 часов в день."
 
 
+def news_detail(request, news_id):
+    news = get_object_or_404(News, pk=news_id)
+    return render(request, 'main/news_detail.html', {'news': news})
+
 def company_info(request):
     company = Company.objects.first()
     return render(request, 'main/about.html', {'company': company})

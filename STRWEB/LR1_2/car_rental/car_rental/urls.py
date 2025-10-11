@@ -39,4 +39,6 @@ urlpatterns = [
     
     #path('about-us/', views.about, name='about'),
     path('about-us/', views.company_info, name='company_info'),
+
+    path('news/<int:news_id>/', views.news_detail, name='news_detail')
 ]

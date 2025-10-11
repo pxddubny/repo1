@@ -11,44 +11,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="header-nav">
+        {% block navigation %}
+        <nav class="mainNav" itemprop="mainEntity" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="/" itemprop="url">main page</a><br>
+            <a href="/about-us" itemprop="url">about us</a><br>
+            <a href="/news" itemprop="url">news</a><br>
+            <a href="/faq" itemprop="url">faq</a><br>
+            <a href="/employees/" itemprop="url">our team</a><br>
+            <a href="/vacancies/" itemprop="url">vacancies</a><br>
+            <a href="/reviews/" itemprop="url">reviews</a><br>
+            <a href="/promocodes/" itemprop="url">promo codes</a><br>
+            <a href="/privacy/" itemprop="url">privacy policy</a><br>
+            <a href="/profile/" itemprop="url">profile</a><br>
+            <a href="/cars/" itemprop="url">cars list</a><br>
+            
+            {% if not user.is_authenticated %}
+            <a href="/register/" itemprop="url">register</a><br>
+            {% endif %}
+            
+            {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
+            <a href="/rentals-by-car/" itemprop="url">rents by car</a><br>
+            {% if user.role in 'MANAGER,SUPERUSER' %}
+            <a href="{% url 'clients_with_rentals' %}" itemprop="url">clients with rents</a><br>
+            {% endif %}
+            {% endif %}
+            
+            {% if user.role in 'MANAGER,SUPERUSER' %}
+            <a href="{% url 'rental_profit' %}" itemprop="url">rental profit</a><br>
+            {% endif %}
+            
+            {% if user.is_authenticated and user.role in 'SUPERUSER' %}
+            <a href="/admin/" itemprop="url">panel</a><br>
+            {% endif %}
+        </nav>
+        {% endblock %}
+        <aside class="aside-nav">
+        {% block aside %}
+        {% endblock %}
+        </aside>
+    </div>
 
-    {% block navigation %}
-    <nav class="mainNav" itemprop="mainEntity" itemscope itemtype="https://schema.org/SiteNavigationElement"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-        <a href="/" itemprop="url">main page</a><br>
-        <a href="/about-us" itemprop="url">about us</a><br>
-        <a href="/news" itemprop="url">news</a><br>
-        <a href="/faq" itemprop="url">faq</a><br>
-        <a href="/employees/" itemprop="url">our team</a><br>
-        <a href="/vacancies/" itemprop="url">vacancies</a><br>
-        <a href="/reviews/" itemprop="url">reviews</a><br>
-        <a href="/promocodes/" itemprop="url">promo codes</a><br>
-        <a href="/privacy/" itemprop="url">privacy policy</a><br>
-        <a href="/profile/" itemprop="url">profile</a><br>
-        <a href="/cars/" itemprop="url">cars list</a><br>
-        
-        {% if not user.is_authenticated %}
-        <a href="/register/" itemprop="url">register</a><br>
-        {% endif %}
-        
-        {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
-        <a href="/rentals-by-car/" itemprop="url">rents by car</a><br>
-        {% if user.role in 'MANAGER,SUPERUSER' %}
-        <a href="{% url 'clients_with_rentals' %}" itemprop="url">clients with rents</a><br>
-        {% endif %}
-        {% endif %}
-        
-        {% if user.role in 'MANAGER,SUPERUSER' %}
-        <a href="{% url 'rental_profit' %}" itemprop="url">rental profit</a><br>
-        {% endif %}
-        
-        {% if user.is_authenticated and user.role in 'SUPERUSER' %}
-        <a href="/admin/" itemprop="url">panel</a><br>
-        {% endif %}
-    </nav>
-    {% endblock %}
-    <div class ="mainContainer">
+    <div class="mainContainer">
         <main>
             <header>
                 <h1 itemprop="name">{% block header %}Welcome to Car Rental{% endblock %}</h1>
@@ -67,23 +71,15 @@
             </section>
             {% endblock %}
 
-            {% block content %}
-
-            {% endblock %}
+            {% block content %}{% endblock %}
         </main>
 
-
-
         <footer>
-        {% block footer %}
-
-        {% endblock %}
+            {% block footer %}{% endblock %}
         </footer>
     </div>
-    <aside>
-    {% block aside %}
-
-    {% endblock %}
-    </aside>
+    <div class="preloader">
+        <img src="/static/logos/badge.png" alt="Loading...">
+    </div>
 </body>
 </html>

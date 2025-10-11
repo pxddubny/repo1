@@ -8,6 +8,12 @@
 
 {% block content %}
 <!-- Микроданные для организации -->
+ <div class="animation-container">
+    <div class="person">🚶</div>
+    <div class="car">🚗</div>
+</div>
+
+<h1 class="company-name-animated">ООО Тмыв денег</h1>
 <section itemscope itemtype="https://schema.org/AutoRental">
     <figure id='logos'>
         <img src="/static/logos/banner.png" 
@@ -61,13 +67,18 @@
 
 <section id='news'>
     <h2>Some news</h2>
-    {% for el in news %}
-    <article itemscope itemtype="https://schema.org/NewsArticle">
-        <h3 itemprop="headline">{{ el.title }}</h3>
-        <p class='news context-start context-end' itemprop="articleBody">{{ el.content }}</p>
-        <img src="{{ el.img_path }}" alt="{{ el.title }}" itemprop="image" style='width: 800px; height: auto;'>
-    </article>
-    {% endfor %}
+    <div class="news-grid">
+        {% for el in news %}
+        <article itemscope itemtype="https://schema.org/NewsArticle">
+            <h3 itemprop="headline">{{ el.title }}</h3>
+            <div class="news-excerpt" itemprop="articleBody">
+                {{ el.content }}
+            </div>
+            <img src="{{ el.img_path }}" alt="{{ el.title }}" itemprop="image">
+            <a href="{% url 'news_detail' news_id=el.pk %}" class="read-more">Читать далее</a>
+        </article>
+        {% endfor %}
+    </div>
 </section>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uHhPD_-IpSE?si=EZ6c0ltINCvaBROX" 
@@ -79,18 +90,19 @@
 <section id='partners'>
     <h2>Our partners</h2>
     {% for el in partners %}
-    <article itemscope itemtype="https://schema.org/Organization">
-        <h3 itemprop="name">{{ el.name }}</h3><br>
-        <a href="{{ el.website }}" itemprop="url">Web-site</a><br>
-        <img src="{{ el.logo.url }}" alt="{{ el.name }}" width="560" height="315" itemprop="logo">
-    </article>
+    <a href="{{ el.website }}" itemprop="url">
+        <article itemscope itemtype="https://schema.org/Organization">
+            <h3 itemprop="name">{{ el.name }}</h3>
+            <img src="{{ el.logo.url }}" alt="{{ el.name }}" width="560" height="315" itemprop="logo">
+        </article>
+    </a>
     {% endfor %}
 </section>
 {% endblock %}
 
 {% block aside %}
-    <a href='#logos'>Логотип</a><br>
-    <a href='#catalogue'>Каталог</a><br>
-    <a href='#news'>Новости</a><br>
-    <a href='#partners'>Партнеры</a><br>
+    <a href='#logos'>Логотип</a>
+    <a href='#catalogue'>Каталог</a>
+    <a href='#news'>Новости</a>
+    <a href='#partners'>Партнеры</a>
 {% endblock %}

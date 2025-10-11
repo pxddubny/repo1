@@ -6,25 +6,25 @@
 
 {% block content %}
 {% for review in reviews %}
-<div>
+<div class="review-item">
     <h3>{{ review.name }} - {{ review.get_rating_display }}</h3>
-    <p>{{ review.text }}</p>
-
-    <p><em>Posted on: 
-    <time datetime="{{ review.created_at|date:'Y-m-d\TH:i:sO' }}">
-        {{ review.created_at }}
-    </time>
-    </em></p>
-
+    <p class="review-text">{{ review.text }}</p>
+    <p class="review-date">
+        <em>Posted on: 
+        <time datetime="{{ review.created_at|date:'Y-m-d\TH:i:sO' }}">
+            {{ review.created_at }}
+        </time>
+        </em>
+    </p>
 </div>
 <hr>
 {% endfor %}
 
 {% if user.is_authenticated %}
 <h2>Add Your Review</h2>
-<form method="post">
+<form method="post" class="review-form">
     {% csrf_token %}
-    <textarea name="text" required></textarea><br>
+    <textarea name="text" required placeholder="Write your review here..."></textarea><br>
     <select name="rating">
         <option value="5">5 - Excellent</option>
         <option value="4">4 - Good</option>
