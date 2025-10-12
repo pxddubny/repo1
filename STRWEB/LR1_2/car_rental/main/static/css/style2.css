@@ -514,21 +514,27 @@ td:empty {
 }
 /* Анимация для главной страницы */
 @keyframes person-enters {
-    0% { transform: translateX(-100px); opacity: 0; }
+    0% { transform: translateX(-100px); opacity: 1; }
     50% { transform: translateX(0); opacity: 1; }
     80% { transform: translateX(0); opacity: 1; }
     100% { transform: translateX(0); opacity: 0; } /* ← Пропадает в конце */
 }
 
 @keyframes car-drives {
-    0% { transform: translateX(0px) scale(0.8); opacity: 0; }
+    0% { transform: translateX(0px) scale(1); opacity: 1; }
     30% { transform: translateX(-100px) scale(1); opacity: 1; }
     70% { transform: translateX(-100px) scale(1); opacity: 1; }
     100% { transform: translateX(-100px) scale(1); opacity: 1; }
 }
 
 @keyframes company-name {
-    0% { opacity: 0; transform: scale(0.5); }
+    0% { opacity: 0; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+@keyframes garage-stays {
+    0% { opacity: 0; transform: scale(1); }
     100% { opacity: 1; transform: scale(1); }
 }
 
@@ -544,7 +550,7 @@ td:empty {
     bottom: 20px;
     left: 50%;
     font-size: 40px;
-    animation: person-enters 3s ease-in-out;
+    animation: person-enters 1.5s ease-in-out 2s;
     animation-fill-mode: forwards;
 }
 
@@ -553,7 +559,17 @@ td:empty {
     bottom: 10px;
     left: 50%;
     font-size: 50px;
-    animation: car-drives 4s ease-in-out 2.5s; /* ← Начинается раньше */
+    animation: car-drives 4s ease-in-out 3.5s; /* ← Начинается раньше */
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.garage {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 50px;
+    animation: garage-stays 0.5s ease-in-out 1s; /* ← Начинается раньше */
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -562,23 +578,65 @@ td:empty {
     text-align: center;
     font-size: 2.5em;
     margin-top: 50px;
-    animation: company-name 1s ease-out 6.5s;
+    animation: company-name 1s ease-out 7.5s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-/* Прелоадер внизу страницы */
-.preloader {
+.simple-loader {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
-    z-index: 1000;
-}
-
-.preloader img {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.infinity-clear {
+    width: 80px;
+    height: 40px;
+    position: relative;
+}
+
+.infinity-clear .circle {
+    width: 40px;
+    height: 40px;
+    border: 3px solid;
+    border-color: #ff0080 transparent transparent transparent;
+    border-radius: 50%;
+    position: absolute;
+    animation: spin 0.5s linear infinite;
+}
+
+.infinity-clear .circle-left {
+    left: 0;
+}
+
+.infinity-clear .circle-right {
+    right: 0;
+    animation-delay: -0.75s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: #ff0080;
+    }
+    25% {
+        border-top-color: #ff8c00;
+    }
+    50% {
+        border-top-color: #40e0d0;
+    }
+    75% {
+        border-top-color: #da70d6;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top-color: #ff0080;
+    }
 }

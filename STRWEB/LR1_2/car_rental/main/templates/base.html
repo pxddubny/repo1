@@ -78,8 +78,18 @@
             {% block footer %}{% endblock %}
         </footer>
     </div>
-    <div class="preloader">
-        <img src="/static/logos/badge.png" alt="Loading...">
+    <div class="simple-loader" id="simpleLoader">
+        <div class="infinity-clear">
+            <div class="circle circle-left"></div>
+            <div class="circle circle-right"></div>
+        </div>
     </div>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('simpleLoader').style.display = 'none';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

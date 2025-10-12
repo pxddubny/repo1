@@ -11669,3 +11669,192 @@ django.template.exceptions.TemplateDoesNotExist: news_detail.html
 2025-10-11 18:59:29,751 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-10-11 18:59:30,019 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
 2025-10-11 18:59:30,024 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 14:51:05,347 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-12 14:51:06,175 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-12 14:51:06,210 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-12 14:51:06,221 [DEBUG] matplotlib - interactive is False
+2025-10-12 14:51:06,222 [DEBUG] matplotlib - platform is linux
+2025-10-12 14:51:06,419 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-12 14:51:06,428 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-12 14:51:09,163 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 14:51:09,168 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 14:51:14,539 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 14:51:14,544 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 14:55:00,604 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 14:55:00,607 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 14:55:00,856 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 14:55:00,860 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 14:57:18,076 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 14:57:18,079 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 14:57:18,306 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 14:57:18,310 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:00:11,202 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:00:11,204 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:00:11,610 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:00:11,614 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:01:13,179 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:01:13,181 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:01:14,540 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:01:14,544 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:01:47,347 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:01:47,349 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:01:47,679 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:01:47,683 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:02:04,002 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:02:04,003 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:02:04,299 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:02:04,303 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:02:25,071 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:02:25,074 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:02:26,800 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:02:26,805 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:02:27,193 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:02:27,195 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:02:27,408 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:02:27,411 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:42:07,239 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:42:07,241 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:42:07,502 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:42:07,506 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:43:08,423 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:43:08,425 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:43:08,634 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:43:08,639 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:44:25,799 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:44:25,801 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:44:26,066 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:44:26,071 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:44:56,309 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:44:56,311 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:44:56,570 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:44:56,575 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:45:00,838 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:45:00,840 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:45:01,073 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:45:01,078 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:45:11,651 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:45:11,653 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:45:11,924 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:45:11,929 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:45:15,693 [DEBUG] main.views - Загрузка новостей
+2025-10-12 15:45:44,408 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:45:44,409 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:45:44,788 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:45:44,792 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:45:48,222 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:45:48,224 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:45:48,595 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:45:48,599 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:51:17,526 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:51:17,528 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:51:18,108 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:51:18,113 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:53:01,791 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:53:01,793 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:53:01,993 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:53:01,997 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:56:07,724 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:56:07,726 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:56:07,924 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 429 44
+2025-10-12 15:56:07,926 [ERROR] main.views - CatFact API error: 429 Client Error: Too Many Requests for url: https://catfact.ninja/fact
+2025-10-12 15:56:07,929 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:57:51,351 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:57:51,353 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:57:51,651 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:57:51,655 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:58:01,462 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:58:01,463 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:58:01,789 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:58:01,791 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:58:10,487 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:58:10,489 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:58:10,697 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:58:10,701 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:58:25,233 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:58:25,235 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:58:25,650 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:58:25,655 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:59:03,664 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:59:03,667 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:59:03,950 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:59:03,955 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:59:40,855 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:59:40,857 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:59:41,096 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:59:41,100 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 15:59:44,069 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 15:59:44,071 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 15:59:44,266 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 15:59:44,271 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:00:10,785 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:00:10,787 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:00:11,358 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:00:11,362 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:00:18,128 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:00:18,130 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:00:18,525 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:00:18,529 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:00:33,837 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:00:33,839 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:00:34,183 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:00:34,187 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:00:45,572 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:00:45,575 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:00:45,949 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:00:45,953 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:00:52,221 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:00:52,223 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:00:52,492 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:00:52,496 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:06:36,702 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:06:36,706 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:06:41,903 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:06:41,907 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:06:47,246 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:06:47,249 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:06:47,514 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:06:47,518 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:06:52,194 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:06:52,196 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:06:52,533 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:06:52,537 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:07:41,259 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:07:41,260 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:07:41,615 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:07:41,619 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:08:11,913 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:08:11,915 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:08:12,200 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:08:12,204 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:08:22,555 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:08:22,556 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:08:22,846 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:08:22,849 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:08:44,765 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:08:44,767 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:08:45,071 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:08:45,077 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:08:54,683 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:08:54,685 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:08:54,901 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:08:54,905 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:09:06,062 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:09:06,064 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:09:06,372 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:09:06,376 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:09:13,649 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:09:13,651 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:09:13,884 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:09:13,888 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:09:30,883 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:09:30,885 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:09:31,151 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:09:31,155 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:10:08,487 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:10:08,489 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:10:08,736 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:10:08,740 [INFO] main.views - Главная страница успешно загружена
+2025-10-12 16:10:18,998 [DEBUG] main.views - Загрузка главной страницы
+2025-10-12 16:10:19,001 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-12 16:10:19,382 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-12 16:10:19,388 [INFO] main.views - Главная страница успешно загружена
