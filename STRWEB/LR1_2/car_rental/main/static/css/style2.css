@@ -98,8 +98,8 @@ a:active {
     display: flex;
     flex-direction: row;
     gap: 0px 10px;
-    flex-wrap: wrap; /* ← ПЕРЕНОС НА НОВУЮ СТРОКУ */
-    margin-bottom: 10px; /* ← Отступ для aside */
+    flex-wrap: wrap; 
+    margin-bottom: 10px; 
 }
 
 .aside-nav {
@@ -122,7 +122,7 @@ body {
     letter-spacing: 0.01em;
     background: #f5f5f5;
     margin: 0;
-    padding-top: 80px; /* для фиксированного хедера */
+    padding-top: 80px; 
 }
 
 .mainContainer {
@@ -240,6 +240,10 @@ input[type="radio"]:checked {
     content: "★";
 }
 
+li{
+    list-style-type: square;
+}
+
 ::selection {
    background-color: #ff6b6b; 
 }
@@ -322,9 +326,14 @@ input:disabled{
 
 .news-excerpt {
     height: 50px;
-    overflow: hidden;
     margin: 10px 10px;
+
+
+    white-space: nowrap;     
+    overflow: hidden;         
+    text-overflow: ellipsis;  
 }
+
 .read-more {
     display: inline-block;
     background: #ccc7c7;
@@ -373,17 +382,39 @@ input:disabled{
 }
 
 .certificate {
-    border: 20px solid transparent;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    width: 20%;
+}
+
+.certificate img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0; 
+}
+
+.certificate::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 25px solid transparent;
     border-image: url('/static/logos/ramka.png') 100 stretch;
     -webkit-border-image: url('/static/logos/ramka.png') 100 stretch;
     -moz-border-image: url('/static/logos/ramka.png') 100 stretch;
-    padding: 20px;
-    width:20%;
-    display: inline-block; /* ← Не растягивается на всю ширину */
+    z-index: 2;
+}
 
-     background: 
-        linear-gradient(135deg, rgba(255,255,255,0.9), rgba(127, 127, 127, 0.9)); /* Фон + градиент */
-    z-index: 10; /* Поднимаем над другими элементами */
+
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+details[open] summary {
+  color: red;
 }
 
 /* Реквизиты */
@@ -523,7 +554,9 @@ td:empty {
 @keyframes car-drives {
     0% { transform: translateX(0px) scale(1); opacity: 1; }
     30% { transform: translateX(-100px) scale(1); opacity: 1; }
-    70% { transform: translateX(-100px) scale(1); opacity: 1; }
+    70% { transform: translateX(-100px) scale(1); opacity: 0; }
+    80% { transform: translateX(-100px) scale(1); opacity: 1; }
+    90% { transform: translateX(-100px) scale(1); opacity: 0; }
     100% { transform: translateX(-100px) scale(1); opacity: 1; }
 }
 

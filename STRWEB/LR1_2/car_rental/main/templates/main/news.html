@@ -10,7 +10,7 @@
     <article itemscope itemtype="https://schema.org/NewsArticle">
         <h3 itemprop="headline">{{ el.title }}</h3>
         <div class="news-excerpt" itemprop="articleBody">
-            {{ el.content }}
+            {{ el.content }}...
         </div>
         {% if el.img_path %}
         <img src="{{ el.img_path }}" alt="{{ el.title }}" itemprop="image">
