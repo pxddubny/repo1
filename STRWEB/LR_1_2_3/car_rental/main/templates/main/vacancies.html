@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Vacancies - Car Rental{% endblock %}
+
+{% block header %}Job Openings{% endblock %}
+
+{% block content %}
+{% for vacancy in vacancies %}
+<div class="vacancy-float">
+    <h3>{{ vacancy.title }}</h3>
+    <p><strong>Description:</strong> {{ vacancy.description }}</p>
+    <p><strong>Requirements:</strong> {{ vacancy.requirements }}</p>
+    {% if vacancy.salary %}
+    <p><strong>Salary:</strong> {{ vacancy.salary }}</p>
+    {% endif %}
+    <p><em>Posted on: {{ vacancy.created_at }}</em></p>
+</div>
+{% endfor %}
+<div class="clearfix"></div>
+{% endblock %}
+
+{% block cat_fact %}{% endblock %}
+{% block news %}{% endblock %}

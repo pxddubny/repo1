@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Our Team - Car Rental{% endblock %}
+
+{% block header %}Our Team{% endblock %}
+
+{% block content %}
+<div class="employees-grid">
+    {% for employee in employees %}
+    <div class="employee-card">
+        {% if employee.photo_path %}
+        <img src="{{ employee.photo_path }}" alt="{{ employee.name }}" class="employee-photo">
+        {% endif %}
+        <h3>{{ employee.name }}</h3>
+        <p class="employee-position">{{ employee.position }}</p>
+        <p class="employee-description">{{ employee.description }}</p>
+        <p class="employee-contact"><strong>Phone:</strong> {{ employee.phone }}</p>
+        <p class="employee-contact"><strong>Email:</strong> {{ employee.email }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block cat_fact %}{% endblock %}
+{% block news %}{% endblock %}
