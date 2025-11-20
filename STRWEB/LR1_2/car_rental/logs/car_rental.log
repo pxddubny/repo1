@@ -12000,3 +12000,41 @@ django.template.exceptions.TemplateDoesNotExist: news_detail.html
 2025-10-13 15:19:17,287 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-10-13 15:19:20,335 [ERROR] main.views - CatFact API error: HTTPSConnectionPool(host='catfact.ninja', port=443): Read timed out. (read timeout=3)
 2025-10-13 15:19:20,336 [INFO] main.views - Главная страница успешно загружена
+2025-10-14 19:56:55,337 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-14 19:56:55,733 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-14 19:56:55,743 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-14 19:56:55,746 [DEBUG] matplotlib - interactive is False
+2025-10-14 19:56:55,746 [DEBUG] matplotlib - platform is linux
+2025-10-14 19:56:55,791 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-14 19:56:55,793 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-14 19:58:38,656 [DEBUG] main.views - Загрузка главной страницы
+2025-10-14 19:58:38,658 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-14 19:58:38,904 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-14 19:58:38,906 [INFO] main.views - Главная страница успешно загружена
+2025-10-14 19:58:45,025 [DEBUG] main.views - Загрузка главной страницы
+2025-10-14 19:58:45,026 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-14 19:58:45,191 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-14 19:58:45,192 [INFO] main.views - Главная страница успешно загружена
+2025-10-14 19:59:12,006 [DEBUG] main.views - Загрузка главной страницы
+2025-10-14 19:59:12,007 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-14 19:59:12,173 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-14 19:59:12,175 [INFO] main.views - Главная страница успешно загружена
+2025-10-22 07:42:42,886 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-10-22 07:42:43,263 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR1_2/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-10-22 07:42:43,272 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-10-22 07:42:43,275 [DEBUG] matplotlib - interactive is False
+2025-10-22 07:42:43,275 [DEBUG] matplotlib - platform is linux
+2025-10-22 07:42:43,319 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-10-22 07:42:43,321 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-10-22 07:43:15,676 [DEBUG] main.views - Загрузка главной страницы
+2025-10-22 07:43:15,678 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-22 07:43:21,026 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-22 07:43:21,027 [INFO] main.views - Главная страница успешно загружена
+2025-10-22 07:43:26,165 [DEBUG] main.views - Загрузка главной страницы
+2025-10-22 07:43:26,165 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-22 07:43:26,421 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-22 07:43:26,422 [INFO] main.views - Главная страница успешно загружена
+2025-10-22 07:44:22,498 [DEBUG] main.views - Загрузка главной страницы
+2025-10-22 07:44:22,499 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-10-22 07:44:22,697 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-10-22 07:44:22,699 [INFO] main.views - Главная страница успешно загружена
