@@ -1,20 +1,110 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Car Rental - Home{% endblock %}
 
 {% block navigation %}
-{{ block.super }}  <!-- Это покажет навигацию из base.html -->
+{{ block.super }}
 {% endblock %}
 
 {% block content %}
+
 <!-- Микроданные для организации -->
- <div class="animation-container">
+<div class="animation-container">
     <div class="person">🚶</div>
     <div class="car">🚗</div>
     <div class="garage">🏬</div>
 </div>
 
 <h1 class="company-name-animated">ООО Тмыв денег</h1>
+
+<!-- Слайдер изображений -->
+<section class="photo-slider">
+    <div class="slider-container">
+        <div class="pagination"></div>
+
+        <div class="slider">
+            {% with newss|length as news_length %}
+                {% if news_length > 0 %}
+                <!-- Слайд 1 - последний элемент -->
+                <div class="slide active" data-url="{% url 'news_detail' news_id=newss.0.pk %}">
+                    <img src="{{ newss.0.img_path }}" alt="{{ newss.0.title }}" />
+                    <div class="caption">{{ newss.0.title }}</div>
+                </div>
+                {% endif %}
+
+                {% if news_length > 1 %}
+                <!-- Слайд 2 - предпоследний элемент -->
+                <div class="slide" data-url="{% url 'news_detail' news_id=newss.1.pk %}">
+                    <img src="{{ newss.1.img_path }}" alt="{{ newss.1.title }}" />
+                    <div class="caption">{{ newss.1.title }}</div>
+                </div>
+                {% endif %}
+
+                {% if news_length > 2 %}
+                <!-- Слайд 3 - предпредпоследний элемент -->
+                <div class="slide" data-url="{% url 'news_detail' news_id=newss.2.pk %}">
+                    <img src="{{ newss.2.img_path }}" alt="{{ newss.2.title }}" />
+                    <div class="caption">{{ newss.2.title }}</div>
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Кнопки навигации -->
+            <div class="clickable-zone prev-zone">
+                <span class="arrow left-arrow">&lt;</span>
+            </div>
+            <div class="clickable-zone next-zone">
+                <span class="arrow right-arrow">&gt;</span>
+            </div>
+
+            <!-- Счетчик слайдов -->
+            <div class="slide-counter">1 / 3</div>
+        </div>
+
+        <!-- Форма настройки интервала -->
+        {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
+        <form id="slider-admin-form" class="slider-admin-form">
+            <h4>Настройки слайдера (Админ)</h4>
+            
+            <div class="admin-config-group">
+                <label for="admin-loop">Loop (переход по кругу):</label>
+                <input type="checkbox" id="admin-loop" name="loop" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-navs">Стрелки навигации:</label>
+                <input type="checkbox" id="admin-navs" name="navs" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-pags">Пагинация (точки):</label>
+                <input type="checkbox" id="admin-pags" name="pags" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-auto">Автопрокрутка:</label>
+                <input type="checkbox" id="admin-auto" name="auto" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-delay">Интервал (мс):</label>
+                <input type="number" id="admin-delay" name="delay" value="1000" min="1000">
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-hover">Останавливать при наведении:</label>
+                <input type="checkbox" id="admin-hover" name="stopMouseHover" checked>
+            </div>
+            
+            <button type="button" onclick="updateSliderConfig()">Применить настройки</button>
+            <button type="button" onclick="resetSliderConfig()">Сбросить к начальным</button>
+        </form>
+        {% endif %}
+    </div>
+</section>
+
+
 <section itemscope itemtype="https://schema.org/AutoRental">
     <figure id='logos'>
         <img src="/static/logos/banner.png" 
@@ -85,6 +175,8 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uHhPD_-IpSE?si=EZ6c0ltINCvaBROX" 
         title="YouTube video player" frameborder="0">
 </iframe>
+<link rel="stylesheet" href="static/css/slider.css">
+<script src="static/js/slider.js"></script>
 {% endblock %}
 
 {% block footer %}

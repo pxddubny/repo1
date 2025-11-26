@@ -1,0 +1,94 @@
+/* Стили для модального окна */
+.modal {
+  display: none; /* Добавь эту строку! */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.modal-close:hover {
+  color: black;
+}
+/* Стили для блока премирования */
+.award-text {
+  display: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-left: 5px solid #ffd700;
+}
+
+.award-text.active {
+  display: block;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.award-text h3 {
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.award-text p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.award-text strong {
+  color: #ffd700;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Стили для чекбоксов */
+.select-checkbox {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.select-checkbox:checked {
+  accent-color: #4CAF50;
+}

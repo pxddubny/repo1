@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Список сотрудников{% endblock %}
+
+{% block content %}
+<script src="{% static 'js/employee_list.js' %}?v=2.1"></script>
+<link rel="stylesheet" href="{% static 'css/employee-list.css' %}">
+<div class="employee-list-section">
+  <h2>Список сотрудников</h2>
+
+  <script>
+    window.employeesData = {{ employees_data|safe }};
+    console.log('Employees data loaded:', window.employeesData);
+  </script>
+
+  <!-- Кнопка для открытия формы добавления сотрудника -->
+  <button id="add-employee-btn" class="btn">Добавить сотрудника</button>
+
+  <!-- Форма добавления сотрудника -->
+  <div id="add-employee-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <h3>Добавить нового сотрудника</h3>
+      <form id="add-employee-form" method="POST" action="{% url 'add_employee' %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="full_name">ФИО</label>
+          <input type="text" id="full_name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="photo_url">фото</label>
+          <input type="text" id="photo_url" name="photo_path" />
+        </div>
+        <div class="form-group">
+          <label for="job_description">Описание работ</label>
+          <input type="text" id="job_description" name="description" required />
+        </div>
+        <div class="form-group">
+          <label for="position">Должность</label>
+          <input type="text" id="position" name="position" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input type="text" id="phone" name="phone" required />
+          <small class="input-error" id="phone_error"></small>
+        </div>
+        <div class="form-group">
+          <label for="email">Почта</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="link_url">Ссылка</label>
+          <input type="url" id="link_url" name="link" required/>
+          <small class="input-error" id="link_url_error"></small>
+        </div>
+        <button type="submit" class="btn" id="submit-employee-btn" disabled>Добавить</button>
+        <div id="form-result" class="form-result"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Фильтрация -->
+  <div class="filter-section">
+    <input type="text" id="filter-input" placeholder="Введите для фильтрации..." />
+    <button id="filter-btn" class="btn">Найти</button>
+  </div>
+
+  <!-- Таблица сотрудников -->
+  <table id="employee-table">
+    <thead>
+      <tr>
+        <th data-column="name">
+          ФИО
+          <span class="sort-indicator"></span>
+        </th>
+        <th data-column="photo_path">
+          Фото
+          <span class="sort-indicator"></span>
+        </th>
+        <th data-column="description">
+          Описание работ
+          <span class="sort-indicator"></span>
+        </th>
+        <th data-column="position">
+          Должность
+          <span class="sort-indicator"></span>
+        </th>
+        <th data-column="phone">
+          Телефон
+          <span class="sort-indicator"></span>
+        </th>
+        <th data-column="email">
+          Почта
+          <span class="sort-indicator"></span>
+        </th>
+        <th data-column="link">
+          link
+          <span class="sort-indicator"></span>
+        </th>
+        <th>Выбрать</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Данные будут загружены через JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- Пагинация -->
+  <div class="pagination">
+    <button id="prev-page" class="btn">Предыдущая</button>
+    <span id="current-page">1</span>
+    /
+    <span id="total-pages">1</span>
+    <button id="next-page" class="btn">Следующая</button>
+  </div>
+
+  <!-- Дополнительный блок для отображения деталей выбранного сотрудника -->
+  <div id="employee-details" class="employee-details">
+    <!-- Детали будут отображаться здесь -->
+  </div>
+
+  <!-- Кнопка для премирования выбранных сотрудников -->
+  <button id="award-btn" class="btn">Премировать</button>
+
+  <!-- Блок для отображения текста премирования -->
+  <div id="award-text" class="award-text">
+    <!-- Текст премирования будет отображаться здесь -->
+  </div>
+</div>
+{% endblock %}

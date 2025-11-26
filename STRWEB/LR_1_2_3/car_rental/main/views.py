@@ -54,10 +54,11 @@ def index(request):
     logger.debug("Загрузка главной страницы")
     cat_fact = get_cat_fact_with_fallback()
     news = News.objects.order_by('-id')[:1]
+    news_for_slider = News.objects.all().order_by('-id')
     cars = Car.objects.all()
     partners = Partner.objects.all()
     logger.info("Главная страница успешно загружена")
-    return render(request, 'main/index.html', {'news': news, 'cat_fact': cat_fact, 'api_works': cat_fact != DEFAULT_CAT_FACT, 'cars': cars, 'partners': partners})
+    return render(request, 'main/index.html', {'news': news, 'cat_fact': cat_fact, 'api_works': cat_fact != DEFAULT_CAT_FACT, 'cars': cars, 'partners': partners,'newss':news_for_slider})
 
 def rental_sums_by_date(request):
     end_date = timezone.now().date()
@@ -463,6 +464,42 @@ def employees_view(request):
     logger.debug("Загрузка страницы сотрудников")
     employees = Employee.objects.all()
     return render(request, 'main/employees.html', {'employees': employees})
+
+def employee_list(request):
+    employees = Employee.objects.all()
+    
+    employees_data = []
+    for employee in employees:
+        employees_data.append({
+            'id': employee.id,
+            'name': employee.name,
+            'photo_path': employee.photo_path,
+            'description': employee.description,
+            'position': employee.position,
+            'phone': employee.phone,
+            'email': employee.email,
+            'link': employee.link,
+        })
+    
+    return render(request, "main/employee_list.html", {
+        "employees": employees,
+        "employees_data": employees_data
+    })
+
+
+def add_employee(request):
+    if request.method == 'POST':
+        Employee.objects.create(
+            name=request.POST.get('name'),
+            photo_path=request.POST.get('photo_path', ''),
+            description=request.POST.get('description'),
+            position=request.POST.get('position'),
+            phone=request.POST.get('phone'),
+            email=request.POST.get('email'),
+            link=request.POST.get('link'),
+        )
+        return redirect('employee_list')
+    return redirect('employee_list')
 
 def vacancies_view(request):
     logger.debug("Загрузка вакансий")

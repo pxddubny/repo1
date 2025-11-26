@@ -12,6 +12,9 @@ urlpatterns = [
     path('news/', views.news, name='news'),
     path('faq/', views.faq, name='faq'),
     path('employees/', views.employees_view, name='employees'),
+	path('employee_list/', views.employee_list, name='employee_list'),
+    path('add_employee/', views.add_employee, name='add_employee'),  # если нужно добавлять сотрудников
+
     path('vacancies/', views.vacancies_view, name='vacancies'),
     path('reviews/', views.reviews_view, name='reviews'),
     path('promocodes/', views.promocodes_view, name='promocodes'),
