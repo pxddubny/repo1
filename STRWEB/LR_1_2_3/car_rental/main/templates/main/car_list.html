@@ -6,7 +6,9 @@
 {% block header %}Car List{% endblock %}
 
 {% block content %}
+<!-- Подключаем стили для 3D эффекта -->
 <link rel="stylesheet" href="{% static 'css/car_list_pagination.css' %}">
+<link rel="stylesheet" href="{% static 'css/car_3d_effect.css' %}">
 
 <form method="get" id="car-search-form" class="search-form">
     <input type="text" name="search" placeholder="Search by license plate" value="{{ search_query }}">
@@ -35,6 +37,7 @@
 <div class="cars-grid">
     {% if cars %}
         {% for car in cars %}
+        <!-- Каждая карточка теперь будет обернута для 3D эффекта -->
         <div class="car-card">
             <div class="car-license">{{ car.license_plate }}</div>
             <div class="car-model">{{ car.model }}</div>
@@ -126,7 +129,10 @@
 </div>
 {% endif %}
 
+<!-- Подключаем скрипты -->
 <script src="{% static 'js/car_list_pagination.js' %}"></script>
+<script src="{% static 'js/car_3d_effect.js' %}"></script>
+
 {% endblock %}
 
 {% block cat_fact %}{% endblock %}

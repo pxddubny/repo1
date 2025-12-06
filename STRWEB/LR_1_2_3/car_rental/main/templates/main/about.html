@@ -5,6 +5,7 @@
 {% block header %}About Us{% endblock %}
 
 {% block content %}
+
 		<h2>We are amazing</h2>
 		<h1 class='company-name'><abbr title="Общество с ограниченной ответственностью">ООО</abbr> {{ company.name }}</h1>
     
@@ -337,7 +338,9 @@
         <label><input type="radio" name="gender" value="male" required> Мужской</label>
         <label><input type="radio" name="gender" value="female"> Женский</label>
         <br>
-        <label><input type="checkbox" name="agree" checked required> Согласен с условиями</label>
+        <label>
+            <input type="checkbox" name="agree" checked required> Согласен с условиями
+        </label>
         <br>
         <label><input type="checkbox" name="newsletter"> Получать рассылку</label>
     </div>

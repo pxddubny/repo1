@@ -13908,3 +13908,64 @@ NameError: name 'Paginator' is not defined
 2025-12-06 19:06:50,594 [DEBUG] main.views - Загрузка списка автомобилей
 2025-12-06 19:07:54,940 [DEBUG] main.views - Загрузка списка автомобилей
 2025-12-06 19:07:57,158 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:41:50,232 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-06 19:41:50,364 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-06 19:41:50,374 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-06 19:41:50,377 [DEBUG] matplotlib - interactive is False
+2025-12-06 19:41:50,377 [DEBUG] matplotlib - platform is linux
+2025-12-06 19:41:50,393 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-06 19:41:50,395 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 19:43:52,799 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:44:05,514 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:44:07,906 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:46:07,394 [DEBUG] main.views - Загрузка главной страницы
+2025-12-06 19:46:07,395 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-06 19:46:11,064 [ERROR] main.views - CatFact API error: HTTPSConnectionPool(host='catfact.ninja', port=443): Read timed out. (read timeout=3)
+2025-12-06 19:46:11,064 [INFO] main.views - Главная страница успешно загружена
+2025-12-06 19:47:25,287 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:48:53,690 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:48:56,969 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:49:16,913 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:50:17,541 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:50:38,936 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:01:29,079 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:01:40,404 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:08:17,543 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:08:23,096 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:08:34,973 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:09:08,084 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:09:37,649 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:09:43,906 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:10:59,233 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:11:05,774 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:11:37,547 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:11:46,518 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:11:51,806 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:11:55,749 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:16:42,256 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:18:07,893 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:18:13,079 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:25:30,590 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:30:32,496 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:34:04,411 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:34:14,733 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:34:22,668 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:34:35,873 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:34:47,950 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:34:54,726 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:35:07,305 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:35:14,819 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:37:18,400 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:37:21,777 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:37:26,438 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:37:34,185 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:37:41,779 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:37:58,476 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:38:09,767 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:38:13,901 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:38:19,539 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:38:23,131 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 20:39:42,813 [DEBUG] main.views - Загрузка главной страницы
+2025-12-06 20:39:42,813 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-06 20:39:43,292 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-06 20:39:43,293 [INFO] main.views - Главная страница успешно загружена
