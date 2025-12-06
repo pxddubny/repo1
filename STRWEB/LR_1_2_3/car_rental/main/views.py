@@ -530,14 +530,56 @@ def privacy_view(request):
     logger.debug("Загрузка политики конфиденциальности")
     return render(request, 'main/privacy.html')
 
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 def car_list(request):
     logger.debug("Загрузка списка автомобилей")
     search_query = request.GET.get('search', '')
+    
     if search_query:
         cars = Car.objects.filter(license_plate__icontains=search_query)
     else:
         cars = Car.objects.all()
-    return render(request, 'main/car_list.html', {'cars': cars})
+    
+    # Получаем количество элементов на страницу из GET-параметра
+    items_per_page_str = request.GET.get('items_per_page', '3')
+    
+    # Преобразуем в int, проверяем на валидность
+    try:
+        items_per_page = int(items_per_page_str)
+        if items_per_page <= 0:
+            items_per_page = 3
+    except (ValueError, TypeError):
+        items_per_page = 3
+    
+    # Создаем пагинатор
+    paginator = Paginator(cars, items_per_page)
+    page_number = request.GET.get('page', 1)
+    
+    try:
+        page_obj = paginator.page(page_number)
+    except PageNotAnInteger:
+        page_obj = paginator.page(1)
+    except EmptyPage:
+        page_obj = paginator.page(paginator.num_pages)
+    
+    # Получаем доступные значения для количества элементов на странице
+    # Убедимся, что выбранное значение есть в списке
+    items_per_page_options = [3, 6, 12, 24]
+    if items_per_page not in items_per_page_options:
+        items_per_page_options.append(items_per_page)
+        items_per_page_options.sort()
+    
+    context = {
+        'cars': page_obj.object_list,
+        'page_obj': page_obj,
+        'paginator': paginator,
+        'items_per_page': str(items_per_page),  # Преобразуем в строку для сравнения в шаблоне
+        'items_per_page_options': items_per_page_options,
+        'search_query': search_query,
+    }
+    
+    return render(request, 'main/car_list.html', context)
 
 @login_required
 @user_passes_test(lambda u: u.role in ['MANAGER', 'SUPERUSER'])

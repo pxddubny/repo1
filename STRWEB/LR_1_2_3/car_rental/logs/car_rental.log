@@ -13793,3 +13793,118 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'add_employee' not found. 'ad
 2025-12-06 17:06:20,534 [DEBUG] matplotlib - platform is linux
 2025-12-06 17:06:20,562 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
 2025-12-06 17:06:20,564 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 17:44:22,949 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-06 17:44:23,080 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-06 17:44:23,089 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-06 17:44:23,090 [DEBUG] matplotlib - interactive is False
+2025-12-06 17:44:23,090 [DEBUG] matplotlib - platform is linux
+2025-12-06 17:44:23,108 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-06 17:44:23,109 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 17:44:24,739 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:44:47,126 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:44:52,671 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:45:01,364 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:45:04,003 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:45:05,971 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:45:08,273 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:46:14,410 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:46:21,749 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:46:28,502 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:46:32,819 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:46:36,510 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:47:14,723 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:47:33,463 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:47:50,993 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:47:53,497 [WARNING] django.request - Not Found: /favicon.ico
+2025-12-06 17:47:58,086 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-12-06 17:48:01,489 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:04,264 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:09,408 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:12,294 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:16,917 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:24,269 [DEBUG] main.views - Загрузка страницы сотрудников
+2025-12-06 17:48:36,894 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:41,595 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 17:48:49,817 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:52:21,947 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:53:25,221 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/car_rental/main/views.py changed, reloading.
+2025-12-06 18:53:25,530 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-06 18:53:25,671 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-06 18:53:25,680 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-06 18:53:25,680 [DEBUG] matplotlib - interactive is False
+2025-12-06 18:53:25,681 [DEBUG] matplotlib - platform is linux
+2025-12-06 18:53:25,709 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-06 18:53:25,710 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 18:53:26,230 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:53:26,251 [ERROR] django.request - Internal Server Error: /cars/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/car_rental/main/views.py", line 554, in car_list
+    paginator = Paginator(cars, items_per_page)
+                ^^^^^^^^^
+NameError: name 'Paginator' is not defined
+2025-12-06 18:53:56,115 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/car_rental/main/views.py changed, reloading.
+2025-12-06 18:53:56,417 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-06 18:53:56,593 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-06 18:53:56,599 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-06 18:53:56,602 [DEBUG] matplotlib - interactive is False
+2025-12-06 18:53:56,602 [DEBUG] matplotlib - platform is linux
+2025-12-06 18:53:56,617 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-06 18:53:56,618 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 18:53:58,334 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:15,752 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:17,648 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:21,242 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:24,777 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:28,108 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:31,165 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:34,659 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:39,408 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:42,848 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:46,646 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:50,380 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:57:53,352 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:58:17,233 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:58:20,871 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:58:25,094 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:58:38,045 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:58:41,751 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:59:09,312 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:59:13,695 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 18:59:24,812 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:00:00,381 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:00:25,366 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:00:33,193 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:00:36,043 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:00:38,344 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:02:38,951 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:02:42,266 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:02:48,589 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:03:06,084 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:03:11,454 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:03:31,011 [INFO] django.utils.autoreload - /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/car_rental/main/views.py changed, reloading.
+2025-12-06 19:03:31,342 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-06 19:03:31,479 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-06 19:03:31,488 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-06 19:03:31,492 [DEBUG] matplotlib - interactive is False
+2025-12-06 19:03:31,492 [DEBUG] matplotlib - platform is linux
+2025-12-06 19:03:31,510 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-06 19:03:31,511 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 19:03:32,934 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:03:37,327 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:03:41,369 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:05:48,236 [DEBUG] main.views - Загрузка главной страницы
+2025-12-06 19:05:48,237 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-06 19:05:48,865 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-06 19:05:48,867 [INFO] main.views - Главная страница успешно загружена
+2025-12-06 19:06:27,969 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:06:34,305 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:06:37,466 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:06:40,791 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:06:46,631 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:06:50,594 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:07:54,940 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-06 19:07:57,158 [DEBUG] main.views - Загрузка списка автомобилей
