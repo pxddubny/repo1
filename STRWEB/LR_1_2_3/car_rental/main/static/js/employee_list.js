@@ -274,41 +274,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Валидация телефона
   // Валидация телефона
+  // Валидация телефона - ОБНОВЛЕННАЯ ВЕРСИЯ с отладкой
   phoneInput.addEventListener("input", () => {
     const phone = phoneInput.value;
+    console.log("=== PHONE VALIDATION START ===");
+    console.log("Input value:", phone);
     
     // Убираем все пробелы, дефисы и скобки для проверки длины
     const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
+    console.log("Clean phone (no spaces):", cleanPhone);
+    console.log("Clean phone length:", cleanPhone.length);
     
     // Проверяем различные форматы
     const patterns = [
-      /^\+375\s?\(\d{2}\)\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/, // +375 (29) 111-22-33
-      /^\+375\s?\d{2}\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,     // +375 29 111-22-33
-      /^8\s?\(\d{3}\)\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,     // 8 (029) 111-22-33
-      /^8\s?\d{3}\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,         // 8 029 111-22-33
-      /^80\d{9}$/,                                           // 80291112233
-      /^\+375\d{9}$/                                         // +375291112233
+      /^\+375\s?\(\d{2}\)\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,      // +375 (29) 111-22-33 или +375 (29) 111 22 33
+      /^\+375\s?\d{2}\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,          // +375 29 111-22-33 или +375 29 111 22 33
+      /^8\s?\(\d{3}\)\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,          // 8 (029) 111-22-33 или 8 (029) 111 22 33
+      /^8\s?\d{3}\s?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,              // 8 029 111-22-33 или 8 029 111 22 33
+      /^80\d{9}$/,                                                // 80291112233 (11 цифр)
+      /^\+375\d{9}$/,                                             // +375291112233 (12 цифр + знак + = 13 символов)
+      /^\+375\s?\(\d{2}\)\s?\d{3}\s\d{2}\s\d{2}$/,                // +375 (29) 111 22 33 (специально для вашего формата)
+      /^\+375\s?\d{2}\s?\d{3}\s\d{2}\s\d{2}$/,                    // +375 29 111 22 33
+      /^8\s?\(\d{3}\)\s?\d{3}\s\d{2}\s\d{2}$/,                    // 8 (029) 111 22 33
+      /^8\s?\d{3}\s?\d{3}\s\d{2}\s\d{2}$/                         // 8 029 111 22 33
     ];
 
-    const isValid = patterns.some(pattern => pattern.test(phone)) && 
-                  (cleanPhone.length === 12 || cleanPhone.length === 11);
+    console.log("Testing patterns:");
+    let patternMatch = false;
+    patterns.forEach((pattern, index) => {
+      const matches = pattern.test(phone);
+      console.log(`Pattern ${index}: ${pattern.source} => ${matches}`);
+      if (matches) patternMatch = true;
+    });
+
+    // ИСПРАВЛЕННАЯ ПРОВЕРКА ДЛИНЫ:
+    // +375291112233 = 13 символов (+ + 12 цифр)
+    // 80291112233 = 11 цифр
+    const isValid = patternMatch && (cleanPhone.length === 13 || cleanPhone.length === 11 || cleanPhone.length === 12);
+    
+    // ИЛИ более простое решение - проверять только паттерны:
+    // const isValid = patternMatch; // Убрать проверку длины вообще
+
+    console.log("Pattern match:", patternMatch);
+    console.log("Clean phone length:", cleanPhone.length);
+    console.log("Final isValid result:", isValid);
 
     if (isValid) {
+      console.log("Phone number is VALID");
+      phoneError.textContent = "";
       phoneError.classList.remove("active");
       phoneInput.style.borderColor = "";
       phoneInput.style.backgroundColor = "";
-      console.log("Phone number valid");
-      phoneError.textContent = "";
     } else {
-      phoneError.textContent = "Некорректный номер телефона. Примеры: +375 (29) 111-22-33, 8 (029) 1112233";
+      console.log("Phone number is INVALID");
+      phoneError.textContent = "Некорректный номер телефона. Примеры: +375 (29) 111-22-33, +375 (29) 111 22 33, 8 (029) 1112233";
       phoneError.classList.add("active");
       phoneInput.style.borderColor = "#c40000";
       phoneInput.style.backgroundColor = "#ff4fce";
-      console.log("Phone number invalid");
     }
+    
+    console.log("=== PHONE VALIDATION END ===");
     validateForm();
   });
-
   // Устанавливаем начальное состояние кнопки (неактивная)
   submitEmployeeBtn.disabled = true;
   submitEmployeeBtn.classList.add("inactive-btn");

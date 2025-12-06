@@ -63,6 +63,193 @@
 		<a href="{{ company.certificate.url }}" download>
             скачать сертификат
         </a>
+
+        <div class="form-generator-section">
+            <h2>Генератор элементов формы</h2>
+            
+            <!-- Флажок для включения генератора -->
+            <div class="checkbox-container">
+                <label>
+                    <input type="checkbox" id="enable-generator"> 
+                    Включить генератор элементов date input
+                </label>
+            </div>
+
+            <!-- Панель управления генератором -->
+            <div id="generator-controls" class="generator-controls" style="display: none;">
+                <h3>Настройки элемента date input</h3>
+                
+                <div class="control-group">
+                    <label for="attr-name">Name:</label>
+                    <input type="text" id="attr-name" placeholder="Введите name">
+                </div>
+
+                <div class="control-group">
+                    <label for="attr-min">Min date:</label>
+                    <input type="date" id="attr-min">
+                </div>
+
+                <div class="control-group">
+                    <label for="attr-max">Max date:</label>
+                    <input type="date" id="attr-max">
+                </div>
+
+                <div class="control-group">
+                    <label for="attr-value">Value:</label>
+                    <input type="date" id="attr-value">
+                </div>
+
+                <div class="control-group checkbox-control">
+                    <label>
+                        <input type="checkbox" id="attr-required"> Required
+                    </label>
+                </div>
+
+                <div class="control-group checkbox-control">
+                    <label>
+                        <input type="checkbox" id="attr-readonly"> Readonly
+                    </label>
+                </div>
+
+                <button id="generate-element" class="btn">Сгенерировать элемент</button>
+            </div>
+
+            <!-- Контейнер для сгенерированных элементов -->
+            <div id="generated-elements" class="generated-elements">
+                <h3>Сгенерированные элементы:</h3>
+            </div>
+            <script>// Генератор элементов формы
+                document.addEventListener('DOMContentLoaded', function() {
+                    const enableGenerator = document.getElementById('enable-generator');
+                    const generatorControls = document.getElementById('generator-controls');
+                    const generateBtn = document.getElementById('generate-element');
+                    const generatedElements = document.getElementById('generated-elements');
+                    
+                    // Загрузка сохраненных элементов из localStorage
+                    loadSavedElements();
+
+                    // Обработчик флажка
+                    enableGenerator.addEventListener('change', function() {
+                        generatorControls.style.display = this.checked ? 'block' : 'none';
+                        if (!this.checked) {
+                            // Можно добавить очистку при отключении, если нужно
+                        }
+                    });
+
+                    // Обработчик кнопки генерации
+                    generateBtn.addEventListener('click', function() {
+                        generateDateElement();
+                    });
+
+                    function generateDateElement() {
+                        // Получаем значения атрибутов
+                        const name = document.getElementById('attr-name').value || `date_${Date.now()}`;
+                        const min = document.getElementById('attr-min').value;
+                        const max = document.getElementById('attr-max').value;
+                        const value = document.getElementById('attr-value').value;
+                        const required = document.getElementById('attr-required').checked;
+                        const readonly = document.getElementById('attr-readonly').checked;
+
+                        // Создаем элемент
+                        const elementContainer = document.createElement('div');
+                        elementContainer.className = 'generated-element';
+                        elementContainer.dataset.name = name;
+                        elementContainer.dataset.min = min;
+                        elementContainer.dataset.max = max;
+                        elementContainer.dataset.value = value;
+                        elementContainer.dataset.required = required;
+                        elementContainer.dataset.readonly = readonly;
+
+                        // Создаем input date
+                        const dateInput = document.createElement('input');
+                        dateInput.type = 'date';
+                        dateInput.name = name;
+                        
+                        if (min) dateInput.min = min;
+                        if (max) dateInput.max = max;
+                        if (value) dateInput.value = value;
+                        if (required) dateInput.required = true;
+                        if (readonly) dateInput.readOnly = true;
+
+                        // Создаем информацию об элементе
+                        const elementInfo = document.createElement('div');
+                        elementInfo.className = 'element-info';
+                        elementInfo.textContent = `name="${name}" ${min ? `min="${min}"` : ''} ${max ? `max="${max}"` : ''} ${required ? 'required' : ''} ${readonly ? 'readonly' : ''}`;
+
+                        // Создаем кнопку удаления
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.className = 'delete-element';
+                        deleteBtn.textContent = 'Удалить';
+                        deleteBtn.onclick = function() {
+                            elementContainer.remove();
+                            saveElementsToStorage();
+                            checkEmptyState();
+                        };
+
+                        // Собираем элемент
+                        elementContainer.appendChild(dateInput);
+                        elementContainer.appendChild(elementInfo);
+                        elementContainer.appendChild(deleteBtn);
+
+                        // Добавляем в контейнер
+                        const emptyMessage = generatedElements.querySelector('.empty-message');
+                        if (emptyMessage) {
+                            emptyMessage.remove();
+                        }
+                        generatedElements.appendChild(elementContainer);
+
+                        // Сохраняем в localStorage
+                        saveElementsToStorage();
+                        
+                        // Очищаем форму (опционально)
+                        clearGeneratorForm();
+                    }
+
+                    function clearGeneratorForm() {
+                        document.getElementById('attr-name').value = '';
+                        document.getElementById('attr-min').value = '';
+                        document.getElementById('attr-max').value = '';
+                        document.getElementById('attr-value').value = '';
+                        document.getElementById('attr-required').checked = false;
+                        document.getElementById('attr-readonly').checked = false;
+                    }
+
+                    function saveElementsToStorage() {
+                        const elements = [];
+                        document.querySelectorAll('.generated-element').forEach(element => {
+                            elements.push({
+                                name: element.dataset.name,
+                                min: element.dataset.min,
+                                max: element.dataset.max,
+                                value: element.dataset.value,
+                                required: element.dataset.required === 'true',
+                                readonly: element.dataset.readonly === 'true'
+                            });
+                        });
+                        localStorage.setItem('generatedDateElements', JSON.stringify(elements));
+                    }
+
+                    function loadSavedElements() {
+                        const saved = localStorage.getItem('generatedDateElements');
+                        if (saved) {
+                            const elements = JSON.parse(saved);
+                            elements.forEach(elementData => {
+                                // Восстанавливаем значения в форме
+                                document.getElementById('attr-name').value = elementData.name;
+                                document.getElementById('attr-min').value = elementData.min;
+                                document.getElementById('attr-max').value = elementData.max;
+                                document.getElementById('attr-value').value = elementData.value;
+                                document.getElementById('attr-required').checked = elementData.required;
+                                document.getElementById('attr-readonly').checked = elementData.readonly;
+                                
+                                // Генерируем элемент
+                                generateDateElement();
+                            });
+                            clearGeneratorForm(); // Очищаем форму после восстановления
+                        }
+                    }
+                });</script>
+        </div>
 		</p>
 		<p><i>установите наше приложение на федора</i></p>
 		<p><code>sudo dnf install tmyvdeneg</code></p>
