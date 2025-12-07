@@ -13969,3 +13969,62 @@ NameError: name 'Paginator' is not defined
 2025-12-06 20:39:42,813 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-12-06 20:39:43,292 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
 2025-12-06 20:39:43,293 [INFO] main.views - Главная страница успешно загружена
+2025-12-06 21:18:45,731 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-06 21:18:45,871 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-06 21:18:45,881 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-06 21:18:45,885 [DEBUG] matplotlib - interactive is False
+2025-12-06 21:18:45,885 [DEBUG] matplotlib - platform is linux
+2025-12-06 21:18:45,900 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-06 21:18:45,901 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-06 21:18:47,959 [WARNING] django.request - Not Found: /about-us/verification-styles.css
+2025-12-06 21:18:47,959 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-06 21:18:48,010 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-06 21:20:06,772 [WARNING] django.request - Not Found: /about-us/verification-styles.css
+2025-12-06 21:20:06,776 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-06 21:25:32,499 [WARNING] django.request - Not Found: /about-us/verification-styles.css
+2025-12-06 21:25:32,507 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-06 21:25:32,552 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-06 21:25:34,175 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-06 21:25:34,179 [WARNING] django.request - Not Found: /about-us/verification-styles.css
+2025-12-06 21:25:34,434 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-07 00:05:11,406 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-07 00:05:11,540 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-07 00:05:11,550 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-07 00:05:11,554 [DEBUG] matplotlib - interactive is False
+2025-12-07 00:05:11,554 [DEBUG] matplotlib - platform is linux
+2025-12-07 00:05:11,570 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-07 00:05:11,571 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-07 00:05:20,545 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-07 00:05:24,666 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-07 00:05:29,858 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-07 00:05:42,710 [WARNING] django.request - Not Found: /about-us/verification-styles.css
+2025-12-07 00:05:42,727 [WARNING] django.request - Not Found: /about-us/verification-script.js
+2025-12-07 00:09:38,577 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 00:09:38,581 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 00:09:38,627 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 00:09:42,543 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 00:09:42,547 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 00:09:42,651 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 00:11:54,488 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 00:11:54,490 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 00:11:54,548 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:11:10,585 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-07 15:11:11,263 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-07 15:11:11,293 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-07 15:11:11,302 [DEBUG] matplotlib - interactive is False
+2025-12-07 15:11:11,303 [DEBUG] matplotlib - platform is linux
+2025-12-07 15:11:11,372 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-07 15:11:11,376 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-07 15:11:15,845 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 15:11:15,846 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:11:15,930 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:11:16,608 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 15:11:16,618 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:11:16,796 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:18:47,770 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 15:18:47,780 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:18:48,039 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:19:30,791 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 15:19:30,806 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 15:19:30,844 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
+2025-12-07 15:19:30,993 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
