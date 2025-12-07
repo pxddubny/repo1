@@ -14028,3 +14028,17 @@ NameError: name 'Paginator' is not defined
 2025-12-07 15:19:30,806 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
 2025-12-07 15:19:30,844 [WARNING] django.request - Not Found: /about-us/static/css/verification-styles.css
 2025-12-07 15:19:30,993 [WARNING] django.request - Not Found: /about-us/static/js/verification-script.js
+2025-12-07 16:31:55,242 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-07 16:31:55,372 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-07 16:31:55,381 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-07 16:31:55,383 [DEBUG] matplotlib - interactive is False
+2025-12-07 16:31:55,383 [DEBUG] matplotlib - platform is linux
+2025-12-07 16:31:55,401 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-07 16:31:55,402 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-07 16:45:25,892 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-07 16:45:26,020 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-07 16:45:26,030 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-07 16:45:26,031 [DEBUG] matplotlib - interactive is False
+2025-12-07 16:45:26,032 [DEBUG] matplotlib - platform is linux
+2025-12-07 16:45:26,050 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-07 16:45:26,051 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
