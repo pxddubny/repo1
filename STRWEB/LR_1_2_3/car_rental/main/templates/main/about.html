@@ -6,7 +6,8 @@
 {% block header %}About Us{% endblock %}
 
 {% block content %}
-    <!-- ИСПОЛЬЗУЙТЕ ТЕГ static ДЛЯ ПУТЕЙ -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/verification-styles.css' %}">
     
     <h2>We are amazing</h2>
@@ -267,8 +268,6 @@
         <button class="close-btn" onclick="hideAlert()">Закрыть</button>
     </div>
     
-    <!-- ... предыдущий код проверки возраста ... -->
-
     <!-- УПРАВЛЕНИЕ СОТРУДНИКАМИ -->
     <link rel="stylesheet" href="{% static 'css/employee-styles.css' %}">
 
@@ -312,7 +311,6 @@
             <div id="classEmployees"></div>
         </div>
         
-        <!-- ЭТА ЖЕЛТАЯ РАМКА ДЛЯ РЕЗУЛЬТАТОВ -->
         <div class="result-section" id="combinedResult">
             <h3>🔍 Результаты поиска</h3>
             <p>Нажмите кнопку "Найти самых молодых" для отображения результатов</p>
@@ -323,8 +321,384 @@
     <script src="{% static 'js/prototype-employee.js' %}"></script>
     <script src="{% static 'js/class-employee.js' %}"></script>
     <script src="{% static 'js/employee-manager.js' %}"></script>
+    <!-- ГРАФИК Chart.js -->
+    <div class="chart-section" style="margin: 40px 0; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+        <h2>📈 Графики функции из ЛРЗ по ИГИ</h2>
+        <p>Сравнение разложения функции в ряд с вычислением через math модуль</p>
+        
+        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <canvas id="functionChart"></canvas>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+                <div style="margin-top: 20px;">
+                    <button id="animateBtn" class="btn" style="background: #2ecc71; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                        🎬 Анимировать построение
+                    </button>
+                    <button id="saveBtn" class="btn" style="background: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                        💾 Сохранить график
+                    </button>
+                </div>
+                <h3>Таблица данных</h3>
+                <div style="overflow-x: auto;">
+                    <table id="dataTable" style="width: 100%; border-collapse: collapse;">
+                        <thead style="background: #3498db; color: white;">
+                            <tr>
+                                <th style="padding: 10px; border: 1px solid #ddd;">x</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">n</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">F(x) ряд</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">Math F(x)</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">eps</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Данные будут заполнены через JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- ... остальной ваш код ... -->
+    <style>
+    .chart-section {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #functionChart {
+        background: white;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+    }
+    </style>
+    <script>
+    // Функция для вычисления ряда
+    function calculateSeries(x, n) {
+        let sum = 0;
+        for (let k = 0; k <= n; k++) {
+            sum += Math.pow(x, k); // сумма x^k
+        }
+        return sum;
+    }
+
+    // Функция math вычисления
+    function mathFunction(x) {
+        return 1 / (1 - x); // аналитическое выражение для |x| < 1
+    }
+
+    // Генерация тестовых данных
+    function generateData() {
+        const data = [];
+        const xValues = [];
+        const seriesValues = [];
+        const mathValues = [];
+        const tableData = [];
+        
+        // Генерируем точки от -0.9 до 0.9 с шагом 0.1
+        for (let x = -0.9; x <= 0.9; x += 0.1) {
+            const n = 10; // Количество членов ряда
+            const seriesValue = calculateSeries(x, n);
+            const mathValue = mathFunction(x);
+            const eps = Math.abs(seriesValue - mathValue);
+            
+            xValues.push(x.toFixed(2));
+            seriesValues.push(seriesValue);
+            mathValues.push(mathValue);
+            
+            tableData.push({
+                x: x.toFixed(2),
+                n: n,
+                fx: seriesValue.toFixed(6),
+                mathFx: mathValue.toFixed(6),
+                eps: eps.toFixed(6)
+            });
+        }
+        
+        return { xValues, seriesValues, mathValues, tableData };
+    }
+
+    // Глобальная переменная для графика
+    let chart = null;
+
+    // Анимация добавления точек
+    function animateData(chart, seriesData, mathData, index) {
+        if (index < seriesData.length) {
+            chart.data.datasets[0].data.push(seriesData[index]);
+            chart.data.datasets[1].data.push(mathData[index]);
+            chart.update();
+            
+            setTimeout(() => {
+                animateData(chart, seriesData, mathData, index + 1);
+            }, 100);
+        }
+    }
+
+    // Функция перезапуска анимации
+    function restartAnimation() {
+        if (chart) {
+            // Очищаем данные
+            chart.data.datasets[0].data = [];
+            chart.data.datasets[1].data = [];
+            chart.update();
+            
+            // Генерируем новые данные
+            const data = generateData();
+            
+            // Заполняем таблицу
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+            data.tableData.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.x}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.n}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.fx}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.mathFx}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.eps}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+            
+            // Запускаем анимацию с задержкой
+            setTimeout(() => {
+                animateData(chart, data.seriesValues, data.mathValues, 0);
+            }, 300);
+        }
+    }
+
+    // Сохранение графика как изображение
+    function saveChart() {
+        const link = document.createElement('a');
+        link.download = 'chart-IGI-LRZ.png';
+        link.href = document.getElementById('functionChart').toDataURL('image/png');
+        link.click();
+    }
+
+    // Инициализация при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        // Генерируем данные
+        const data = generateData();
+        
+        // Заполняем таблицу
+        const tableBody = document.getElementById('tableBody');
+        tableBody.innerHTML = '';
+        data.tableData.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.x}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.n}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.fx}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.mathFx}</td>
+                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">${row.eps}</td>
+            `;
+            tableBody.appendChild(tr);
+        });
+        
+        // Создаем график
+        const ctx = document.getElementById('functionChart').getContext('2d');
+        
+        chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.xValues,
+                datasets: [
+                    {
+                        label: 'F(x) - разложение в ряд',
+                        data: [],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        borderWidth: 3,
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#e74c3c'
+                    },
+                    {
+                        label: 'Math F(x) - модуль math',
+                        data: [],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        borderWidth: 3,
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#3498db',
+                        borderDash: [5, 5]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeInOutQuart'
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Сравнение разложения в ряд и аналитической функции',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                xMin: 0,
+                                xMax: 0,
+                                borderColor: '#2c3e50',
+                                borderWidth: 2,
+                                label: {
+                                    display: true,
+                                    content: 'Y ось',
+                                    position: 'center'
+                                }
+                            },
+                            line2: {
+                                type: 'line',
+                                yMin: 0,
+                                yMax: 0,
+                                borderColor: '#2c3e50',
+                                borderWidth: 2,
+                                label: {
+                                    display: true,
+                                    content: 'X ось',
+                                    position: 'center'
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Значение аргумента x',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Значение функции F(x)',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Запускаем начальную анимацию
+        setTimeout(() => {
+            animateData(chart, data.seriesValues, data.mathValues, 0);
+        }, 500);
+        
+        // Кнопка анимации
+        document.getElementById('animateBtn').addEventListener('click', restartAnimation);
+        
+        // Кнопка сохранения
+        document.getElementById('saveBtn').addEventListener('click', saveChart);
+    });
+    </script>
+    <script>function carScrollAnimation() {
+                const car = document.querySelector('.car-scroll');
+                const sign = document.querySelector('.sign-scroll');
+                const road = document.querySelector('.scroll-drive');
+                
+                if (!car || !sign || !road) return;
+                
+                function updateScroll() {
+                    const rect = road.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    // Когда блок появляется в поле зрения
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        // Прогресс скролла от 0 до 1
+                        const progress = Math.min(Math.max((windowHeight - rect.top) / windowHeight, 0), 1);
+                        
+                        // Двигаем машинку от -100px до 60% ширины
+                        const carPosition = -100 + (road.offsetWidth * 0.6 + 100) * progress;
+                        car.style.left = carPosition + 'px';
+                        
+                        // Показываем знак когда машинка близко
+                        if (progress > 0.7) {
+                            sign.classList.add('active');
+                        } else {
+                            sign.classList.remove('active');
+                        }
+                        
+                        // Если скроллим вверх - возвращаем анимацию
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        if (scrollTop < rect.top + windowHeight/2) {
+                            sign.classList.remove('active');
+                        }
+                    } else {
+                        // Сбрасываем если блок не виден
+                        car.style.left = '-100px';
+                        sign.classList.remove('active');
+                    }
+                }
+                
+                // Оптимизация скролла
+                let ticking = false;
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            updateScroll();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+                
+                // Инициализация
+                updateScroll();
+            }
+
+            // Запуск
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', carScrollAnimation);
+            } else {
+                carScrollAnimation();
+            }</script>
+            <div class="scroll-drive">
+                <div class="road-line"></div>
+                <div class="car-scroll">🚗</div>
+                <div class="sign-scroll">Car Rental</div>
+            </div>
     <p><i>установите наше приложение на федора</i></p>
     <p><code>sudo dnf install tmyvdeneg</code></p>
     

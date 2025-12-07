@@ -156,6 +156,32 @@
     </section>
 </section>
 
+
+
+   
+
+    <script>
+    function speakText(text) {
+        // Проверяем поддержку API
+        if (!('speechSynthesis' in window)) {
+            alert('Ваш браузер не поддерживает синтез речи');
+            return;
+        }
+
+        // Создаем объект для озвучки
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        // Настройки для русского языка
+        utterance.lang = 'ru-RU';
+        utterance.rate = 1.0;    // Скорость (0.1 - 10)
+        utterance.pitch = 1.0;   // Тон (0 - 2)
+        utterance.volume = 1.0;  // Громкость (0 - 1)
+
+        // Озвучиваем текст
+        window.speechSynthesis.speak(utterance);
+    }
+    </script>
+
 <section id='news'>
     <h2>Some news</h2>
     <div class="news-grid">
@@ -165,6 +191,9 @@
             <div class="news-excerpt" itemprop="articleBody">
                 {{ el.content }}
             </div>
+                <button onclick="speakText('{{ el.content | escapejs }}')" class="speak-btn">
+                    🔊 Озвучить
+                </button>
             <img src="{{ el.img_path }}" alt="{{ el.title }}" itemprop="image">
             <a href="{% url 'news_detail' news_id=el.pk %}" class="read-more">Читать далее</a>
         </article>
