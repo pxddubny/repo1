@@ -1,0 +1,185 @@
+/* Пагинация */
+.pagination-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ВСЕ кнопки пагинации в одной строке */
+.pagination-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Основной стиль для ВСЕХ кнопок пагинации */
+.pagination-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.2s;
+    min-width: 36px; /* Фиксированная ширина для одинаковых кнопок */
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Предотвращаем перенос текста */
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #f0f0f0;
+    border-color: #007bff;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Номера страниц - ВСЕ В ОДНОЙ СТРОКЕ */
+.page-numbers {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0 10px;
+}
+
+/* Троеточие в пагинации */
+.pagination-dots {
+    padding: 8px 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Настройка количества элементов */
+.items-per-page-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.items-per-page-selector label {
+    font-size: 14px;
+    color: #666;
+}
+
+.items-per-page-selector select {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+}
+
+.items-per-page-info {
+    font-size: 12px;
+    color: #888;
+    margin-left: 10px;
+}
+
+/* Форма поиска с пагинацией */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background: #0056b3;
+}
+
+/* Сообщение о пустом результате */
+.empty-result {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Информация для одной страницы */
+.pagination-info.single-page {
+    margin: 20px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .pagination-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .pagination-buttons, .page-numbers {
+        justify-content: center;
+    }
+    
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-form input[type="text"] {
+        max-width: 100%;
+    }
+    
+    .items-per-page-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+

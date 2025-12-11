@@ -1,0 +1,132 @@
+.employee-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.employee-form input {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+}
+
+.employee-form button {
+    margin: 5px;
+    padding: 8px 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.employee-form button:hover {
+    background: #45a049;
+}
+
+.employee-card {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border-left: 4px solid #4CAF50;
+}
+
+.employee-card.young {
+    border-left-color: #ff9800;
+    background: #fff3e0;
+}
+
+.result-section {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+/* Стили для управления сотрудниками */
+.employee-section {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+.employee-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.employee-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.employee-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.employee-form button:hover {
+    background: #2980b9;
+}
+
+.employee-form button:nth-child(7) { background: #e74c3c; } /* Прототип */
+.employee-form button:nth-child(8) { background: #2ecc71; } /* Класс */
+.employee-form button:nth-child(9) { background: #9b59b6; } /* Найти */
+.employee-form button:nth-child(10) { background: #f39c12; } /* Очистить */
+
+.employee-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 5px solid #3498db;
+}
+
+.employee-card.young {
+    border-left-color: #2ecc71;
+    background: #e8f6f3;
+}
+
+.result-section {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.result-section {
+    background: #fff3cd;
+    border: 2px solid #ffeaa7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #856404;
+}
+
+.result-section h3 {
+    color: #856404;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffeaa7;
+    padding-bottom: 10px;
+}
+
+.employee-card.young {
+    border-left-color: #ff9800;
+    background: #fff3e0;
+    margin: 10px 0;
+}

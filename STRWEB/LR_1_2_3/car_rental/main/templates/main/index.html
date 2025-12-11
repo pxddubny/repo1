@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Car Rental - Home{% endblock %}
+
+{% block navigation %}
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+<!-- Микроданные для организации -->
+<div class="animation-container">
+    <div class="person">🚶</div>
+    <div class="car">🚗</div>
+    <div class="garage">🏬</div>
+</div>
+
+<h1 class="company-name-animated">ООО Тмыв денег</h1>
+
+<!-- Слайдер изображений -->
+<section class="photo-slider">
+    <div class="slider-container">
+        <div class="pagination"></div>
+
+        <div class="slider">
+            {% with newss|length as news_length %}
+                {% if news_length > 0 %}
+                <!-- Слайд 1 - последний элемент -->
+                <div class="slide active" data-url="{% url 'news_detail' news_id=newss.0.pk %}">
+                    <img src="{{ newss.0.img_path }}" alt="{{ newss.0.title }}" />
+                    <div class="caption">{{ newss.0.title }}</div>
+                </div>
+                {% endif %}
+
+                {% if news_length > 1 %}
+                <!-- Слайд 2 - предпоследний элемент -->
+                <div class="slide" data-url="{% url 'news_detail' news_id=newss.1.pk %}">
+                    <img src="{{ newss.1.img_path }}" alt="{{ newss.1.title }}" />
+                    <div class="caption">{{ newss.1.title }}</div>
+                </div>
+                {% endif %}
+
+                {% if news_length > 2 %}
+                <!-- Слайд 3 - предпредпоследний элемент -->
+                <div class="slide" data-url="{% url 'news_detail' news_id=newss.2.pk %}">
+                    <img src="{{ newss.2.img_path }}" alt="{{ newss.2.title }}" />
+                    <div class="caption">{{ newss.2.title }}</div>
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Кнопки навигации -->
+            <div class="clickable-zone prev-zone">
+                <span class="arrow left-arrow">&lt;</span>
+            </div>
+            <div class="clickable-zone next-zone">
+                <span class="arrow right-arrow">&gt;</span>
+            </div>
+
+            <!-- Счетчик слайдов -->
+            <div class="slide-counter">1 / 3</div>
+        </div>
+
+        <!-- Форма настройки интервала -->
+        {% if user.is_authenticated and user.role in 'MANAGER,SUPERUSER' %}
+        <form id="slider-admin-form" class="slider-admin-form">
+            <h4>Настройки слайдера (Админ)</h4>
+            
+            <div class="admin-config-group">
+                <label for="admin-loop">Loop (переход по кругу):</label>
+                <input type="checkbox" id="admin-loop" name="loop" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-navs">Стрелки навигации:</label>
+                <input type="checkbox" id="admin-navs" name="navs" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-pags">Пагинация (точки):</label>
+                <input type="checkbox" id="admin-pags" name="pags" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-auto">Автопрокрутка:</label>
+                <input type="checkbox" id="admin-auto" name="auto" checked>
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-delay">Интервал (мс):</label>
+                <input type="number" id="admin-delay" name="delay" value="1000" min="1000">
+            </div>
+            
+            <div class="admin-config-group">
+                <label for="admin-hover">Останавливать при наведении:</label>
+                <input type="checkbox" id="admin-hover" name="stopMouseHover" checked>
+            </div>
+            
+            <button type="button" onclick="updateSliderConfig()">Применить настройки</button>
+            <button type="button" onclick="resetSliderConfig()">Сбросить к начальным</button>
+        </form>
+        {% endif %}
+    </div>
+</section>
+
+
+<section itemscope itemtype="https://schema.org/AutoRental">
+    <figure id='logos'>
+        <img src="/static/logos/banner.png" 
+             alt="banner"
+             itemprop="logo">
+        <img src="/static/logos/badge.png" 
+             alt="badge"
+             itemprop="image">
+        <figcaption itemprop="description">Our company banner and logo</figcaption>
+    </figure>
+
+    <section id='catalogue' class='text-block-right'>
+        <h2 itemprop="makesOffer">You can order one of these cars:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th id="license_plate">License plate</th>
+                    <th id="model" colspan="2">Model</th>
+                    <th id="price">Price</th>
+                    <th id="info">Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in cars %}
+                <tr itemscope itemtype="https://schema.org/Car">
+                    <td headers="license_plate" itemprop="vehicleIdentificationNumber">{{el.license_plate}}</td>
+                    <td headers="model"><b itemprop="model">{{el.model}}</b></td>
+                    <td headers="model" itemprop="modelDate">{{el.year}}</td>
+                    <td headers="price"><i itemprop="price" content="{{el.price}}">{{el.price}}</i> руб.</td>
+                    <td headers="info">
+                        {% if el.pk %}
+                        <a href="{% url 'car_detail' car_id=el.pk %}" title="View car details" itemprop="url">
+                            <span class='highlight'>View details </span>
+                        </a>
+                        {% else %}
+                        N/A
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if user.is_authenticated %}
+        <nav>
+            <a href="/create_rental">New Rental</a>
+            <p class='smalltext'>Не несем ответственности за вещи, оставленные в автомобиле</p>
+        </nav>
+        {% endif %}
+    </section>
+</section>
+
+
+
+   
+
+    <script>
+    function speakText(text) {
+        // Проверяем поддержку API
+        if (!('speechSynthesis' in window)) {
+            alert('Ваш браузер не поддерживает синтез речи');
+            return;
+        }
+
+        // Создаем объект для озвучки
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        // Настройки для русского языка
+        utterance.lang = 'ru-RU';
+        utterance.rate = 1.0;    // Скорость (0.1 - 10)
+        utterance.pitch = 1.0;   // Тон (0 - 2)
+        utterance.volume = 1.0;  // Громкость (0 - 1)
+
+        // Озвучиваем текст
+        window.speechSynthesis.speak(utterance);
+    }
+    </script>
+
+<section id='news'>
+    <h2>Some news</h2>
+    <div class="news-grid">
+        {% for el in news %}
+        <article itemscope itemtype="https://schema.org/NewsArticle">
+            <h3 itemprop="headline">{{ el.title }}</h3>
+            <div class="news-excerpt" itemprop="articleBody">
+                {{ el.content }}
+            </div>
+                <button onclick="speakText('{{ el.content | escapejs }}')" class="speak-btn">
+                    🔊 Озвучить
+                </button>
+            <img src="{{ el.img_path }}" alt="{{ el.title }}" itemprop="image">
+            <a href="{% url 'news_detail' news_id=el.pk %}" class="read-more">Читать далее</a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uHhPD_-IpSE?si=EZ6c0ltINCvaBROX" 
+        title="YouTube video player" frameborder="0">
+</iframe>
+<link rel="stylesheet" href="static/css/slider.css">
+<script src="static/js/slider.js"></script>
+{% endblock %}
+
+{% block footer %}
+<section id='partners'>
+    <h2>Our partners</h2>
+    {% for el in partners %}
+    <a href="{{ el.website }}" itemprop="url">
+        <article itemscope itemtype="https://schema.org/Organization">
+            <h3 itemprop="name">{{ el.name }}</h3>
+            <img src="{{ el.logo.url }}" alt="{{ el.name }}" width="560" height="315" itemprop="logo">
+        </article>
+    </a>
+    {% endfor %}
+</section>
+{% endblock %}
+
+{% block aside %}
+    <a href='#logos'>Логотип</a>
+    <a href='#catalogue'>Каталог</a>
+    <a href='#news'>Новости</a>
+    <a href='#partners'>Партнеры</a>
+{% endblock %}
