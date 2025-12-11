@@ -98,10 +98,7 @@ class Car3DEffect {
         });
     }
     
-    // Вспомогательная функция для получения обработчиков событий
     getEventListeners(element) {
-        // Это упрощенная версия, в реальности нужно использовать getEventListeners из devtools
-        // или сохранять обработчики до перезаписи HTML
         return [];
     }
     
@@ -211,7 +208,6 @@ class Car3DEffect {
     }
 }
 
-// Более простой и надежный вариант - без перезаписи HTML
 function initSimple3DEffect() {
     console.log("Initializing simple 3D effect");
     
@@ -309,12 +305,8 @@ function add3DListeners(wrapper, card) {
     });
 }
 
-// Инициализация
 document.addEventListener('DOMContentLoaded', () => {
-    // Используем простую версию, чтобы не ломать ссылки
     setTimeout(() => {
         initSimple3DEffect();
-        // Или, если нужен продвинутый эффект:
-        // new Car3DEffect();
     }, 100);
 });

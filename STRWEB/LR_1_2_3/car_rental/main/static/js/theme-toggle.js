@@ -1,6 +1,3 @@
-// static/js/theme-toggle.js
-
-// Функция для применения темы
 function applyTheme(theme) {
     console.log('Applying theme:', theme);
     document.documentElement.setAttribute('data-theme', theme);

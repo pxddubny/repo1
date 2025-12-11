@@ -14117,3 +14117,149 @@ NameError: name 'Paginator' is not defined
 2025-12-07 20:30:53,429 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
 2025-12-07 20:30:56,810 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
 2025-12-07 20:30:56,814 [INFO] main.views - Главная страница успешно загружена
+2025-12-08 15:05:33,284 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-08 15:05:33,782 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-08 15:05:33,791 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-08 15:05:33,796 [DEBUG] matplotlib - interactive is False
+2025-12-08 15:05:33,796 [DEBUG] matplotlib - platform is linux
+2025-12-08 15:05:33,829 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-08 15:05:33,831 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-08 15:05:43,789 [DEBUG] main.views - Загрузка главной страницы
+2025-12-08 15:05:43,790 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-08 15:05:44,007 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-08 15:05:44,008 [INFO] main.views - Главная страница успешно загружена
+2025-12-08 15:05:58,316 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-08 15:06:23,768 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-08 15:06:32,082 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-08 15:06:38,645 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-08 15:06:40,408 [DEBUG] main.views - Загрузка главной страницы
+2025-12-08 15:06:40,409 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-08 15:06:40,591 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-08 15:06:40,592 [INFO] main.views - Главная страница успешно загружена
+2025-12-09 15:00:56,606 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-09 15:00:57,351 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-09 15:00:57,380 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-09 15:00:57,389 [DEBUG] matplotlib - interactive is False
+2025-12-09 15:00:57,390 [DEBUG] matplotlib - platform is linux
+2025-12-09 15:00:57,467 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-09 15:00:57,472 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-09 15:01:07,939 [DEBUG] main.views - Загрузка главной страницы
+2025-12-09 15:01:07,944 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-09 15:01:08,439 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-09 15:01:08,443 [INFO] main.views - Главная страница успешно загружена
+2025-12-09 15:22:44,129 [DEBUG] main.views - Загрузка главной страницы
+2025-12-09 15:22:44,132 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-09 15:22:44,468 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-09 15:22:44,473 [INFO] main.views - Главная страница успешно загружена
+2025-12-10 03:55:37,756 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-10 03:55:38,668 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-10 03:55:38,690 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-10 03:55:38,697 [DEBUG] matplotlib - interactive is False
+2025-12-10 03:55:38,697 [DEBUG] matplotlib - platform is linux
+2025-12-10 03:55:39,000 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-10 03:55:39,006 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-10 03:55:42,508 [DEBUG] main.views - Загрузка главной страницы
+2025-12-10 03:55:42,512 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-10 03:55:46,205 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-10 03:55:46,209 [INFO] main.views - Главная страница успешно загружена
+2025-12-10 04:06:08,272 [ERROR] django.request - Internal Server Error: /employee_list/
+Traceback (most recent call last):
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/car_rental/main/views.py", line 484, in employee_list
+    return render(request, "main/employee_list.html", {
+        "employees": employees,
+        "employees_data": employees_data
+    })
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/django/template/base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+2025-12-10 05:10:34,409 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:10:40,435 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:10:50,714 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:10:54,249 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:10:56,456 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:12:34,897 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:14:56,557 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:01,096 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:02,944 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:06,909 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:09,097 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:12,491 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:14,294 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:15:19,551 [INFO] main.views - Просмотр прибыли от аренды пользователем Ivan: 102549.00
+2025-12-10 05:15:21,947 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:16:03,649 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:16:06,973 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:16:10,963 [INFO] main.views - Просмотр прибыли от аренды пользователем Ivan: 102549.00
+2025-12-10 05:16:13,943 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:16:27,210 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:19:47,922 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:19:51,554 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:20:01,354 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 05:20:06,657 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 14:21:39,737 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2025-12-10 14:21:40,362 [DEBUG] matplotlib - matplotlib data path: /home/ivan/!Projects/STRWEB/repo1/STRWEB/LR_1_2_3/myenv/lib64/python3.13/site-packages/matplotlib/mpl-data
+2025-12-10 14:21:40,383 [DEBUG] matplotlib - CONFIGDIR=/home/ivan/.config/matplotlib
+2025-12-10 14:21:40,390 [DEBUG] matplotlib - interactive is False
+2025-12-10 14:21:40,391 [DEBUG] matplotlib - platform is linux
+2025-12-10 14:21:40,469 [DEBUG] matplotlib - CACHEDIR=/home/ivan/.cache/matplotlib
+2025-12-10 14:21:40,473 [DEBUG] matplotlib.font_manager - Using fontManager instance from /home/ivan/.cache/matplotlib/fontlist-v390.json
+2025-12-10 15:26:02,729 [DEBUG] main.views - Загрузка главной страницы
+2025-12-10 15:26:02,743 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-10 15:26:02,989 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-10 15:26:02,993 [INFO] main.views - Главная страница успешно загружена
+2025-12-10 15:27:11,680 [DEBUG] main.views - Загрузка списка автомобилей
+2025-12-10 15:27:23,178 [DEBUG] main.views - Загрузка главной страницы
+2025-12-10 15:27:23,179 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-10 15:27:23,378 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-10 15:27:23,381 [INFO] main.views - Главная страница успешно загружена
+2025-12-10 15:29:02,727 [DEBUG] main.views - Загрузка главной страницы
+2025-12-10 15:29:02,728 [DEBUG] urllib3.connectionpool - Starting new HTTPS connection (1): catfact.ninja:443
+2025-12-10 15:29:02,916 [DEBUG] urllib3.connectionpool - https://catfact.ninja:443 "GET /fact HTTP/1.1" 200 None
+2025-12-10 15:29:02,919 [INFO] main.views - Главная страница успешно загружена

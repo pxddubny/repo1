@@ -1,14 +1,13 @@
-// static/js/slider.js
+
 class Slider {
   constructor(sliderSelector) {
-    // Начальные настройки слайдера
     this.config = {
-      loop: true,           // возможность листать слайдер по кругу
-      navs: true,           // вывод стрелочек
-      pags: true,           // вывод пагинации
-      auto: true,           // авто переключение
-      delay: 1000,          // время в миллисекундах
-      stopMouseHover: true  // остановка при наведении мыши
+      loop: true,          
+      navs: true,        
+      pags: true,          
+      auto: true,          
+      delay: 1000,         
+      stopMouseHover: true 
     };
     
     this.currentSlide = 0;
@@ -31,7 +30,6 @@ class Slider {
   initSlider(sliderSelector) {
     this.showSlide(this.currentSlide);
 
-    // Обработчики кнопок навигации (если navs = true)
     if (this.config.navs) {
       const prevZone = document.querySelector(`${sliderSelector} .prev-zone`);
       const nextZone = document.querySelector(`${sliderSelector} .next-zone`);
@@ -43,14 +41,12 @@ class Slider {
         nextZone.addEventListener("click", () => this.nextSlide());
       }
     } else {
-      // Скрываем стрелки если navs = false
       const prevZone = document.querySelector(`${sliderSelector} .prev-zone`);
       const nextZone = document.querySelector(`${sliderSelector} .next-zone`);
       if (prevZone) prevZone.style.display = 'none';
       if (nextZone) nextZone.style.display = 'none';
     }
 
-    // Создаем пагинацию (если pags = true)
     if (this.config.pags) {
       this.createPagination();
     } else {
@@ -61,7 +57,6 @@ class Slider {
 
     this.updateCounter();
 
-    // Обработчик hover для остановки автопрокрутки (если auto = true и stopMouseHover = true)
     if (this.config.auto && this.config.stopMouseHover && this.sliderElement) {
       this.sliderElement.addEventListener('mouseenter', () => this.stopRotation());
       this.sliderElement.addEventListener('mouseleave', () => {
@@ -69,7 +64,7 @@ class Slider {
       });
     }
 
-    // Клик по слайду для перехода по ссылке
+     
     this.slides.forEach((slide) => {
       slide.addEventListener("click", () => {
         const url = slide.getAttribute("data-url");
@@ -81,13 +76,13 @@ class Slider {
   }
 
   showSlide(index) {
-    // Скрыть все слайды
+     
     this.slides.forEach((slide, i) => {
       slide.classList.remove('active');
       slide.style.display = 'none';
     });
     
-    // Показать текущий слайд
+     
     if (this.slides[index]) {
       this.slides[index].style.display = 'block';
       setTimeout(() => {
@@ -101,14 +96,11 @@ class Slider {
 
   nextSlide() {
     if (this.config.loop) {
-      // Режим loop - переходим по кругу
       this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
     } else {
-      // Режим без loop - останавливаемся на последнем слайде
       if (this.currentSlide < this.totalSlides - 1) {
         this.currentSlide++;
       } else if (this.config.auto) {
-        // Если достигли конца и включен auto, останавливаем автопрокрутку
         this.stopRotation();
         return;
       }
@@ -118,10 +110,10 @@ class Slider {
 
   prevSlide() {
     if (this.config.loop) {
-      // Режим loop - переходим по кругу
+       
       this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
     } else {
-      // Режим без loop - останавливаемся на первом слайде
+       
       if (this.currentSlide > 0) {
         this.currentSlide--;
       }
@@ -182,7 +174,7 @@ class Slider {
     
     const newInterval = parseInt(intervalInput.value);
     if (newInterval >= 1000) {
-      this.config.delay = newInterval;  // обновляем config.delay
+      this.config.delay = newInterval;   
       this.rotationInterval = newInterval;
       this.startRotation();
     } else {
@@ -190,19 +182,19 @@ class Slider {
     }
   }
 
-  // Метод для обновления всех настроек (для админской формы)
+   
   updateConfig(newConfig) {
     Object.assign(this.config, newConfig);
     
-    // Обновляем интервал если изменился delay
+     
     if (newConfig.delay !== undefined) {
       this.rotationInterval = newConfig.delay;
     }
     
-    // Переинициализируем слайдер с новыми настройками
+     
     this.reinitSlider();
     
-    // Перезапускаем автопрокрутку если нужно
+     
     if (this.config.auto) {
       this.startRotation();
     } else {
@@ -210,9 +202,9 @@ class Slider {
     }
   }
 
-  // Переинициализация слайдера
+   
   reinitSlider() {
-  // Просто обновляем видимость элементов
+   
     const prevZone = document.querySelector('.prev-zone');
     const nextZone = document.querySelector('.next-zone');
     
@@ -225,11 +217,11 @@ class Slider {
       this.paginationContainer.style.display = this.config.pags ? 'flex' : 'none';
     }
     
-    // Обновляем отображение текущего слайда
+     
     this.showSlide(this.currentSlide);
   }
 
-  // Сброс к начальным настройкам
+   
   resetConfig() {
     const initialConfig = {
       loop: true,
@@ -242,7 +234,7 @@ class Slider {
     
     this.updateConfig(initialConfig);
     
-    // Сбрасываем значения в админской форме
+     
     if (document.getElementById('admin-loop')) {
       document.getElementById('admin-loop').checked = true;
       document.getElementById('admin-navs').checked = true;
@@ -252,12 +244,11 @@ class Slider {
       document.getElementById('admin-hover').checked = true;
     }
     
-    // Сбрасываем значение в обычной форме
+     
     document.getElementById('rotation-interval').value = 1000;
   }
 }
 
-// Функции для работы с формами
 function updateSliderConfig() {
   const form = document.getElementById('slider-admin-form');
   if (!form) return;
@@ -280,7 +271,7 @@ function resetSliderConfig() {
   }
 }
 
-// Инициализация слайдера при загрузке страницы
+ 
 document.addEventListener("DOMContentLoaded", () => {
   window.slider = new Slider(".photo-slider");
 });

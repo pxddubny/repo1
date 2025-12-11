@@ -112,17 +112,14 @@ function findYoungestEmployees() {
         return;
     }
     
-    // 2. Находим минимальный возраст
     const minAge = Math.min(...experiencedEmployees.map(emp => {
         return emp.age || emp.getAge();
     }));
     
-    // 3. Находим всех с минимальным возрастом
     const youngestEmployees = experiencedEmployees.filter(emp => {
         return (emp.age || emp.getAge()) === minAge;
     });
     
-    // 4. Выводим результат В ЖЕЛТОЙ РАМКЕ (#combinedResult)
     const resultDiv = document.getElementById('combinedResult');
     resultDiv.innerHTML = `
         <h3>🎯 Самые молодые сотрудники со стажем ≥3 лет:</h3>
@@ -157,7 +154,6 @@ function findYoungestEmployees() {
     updateStats();
 }
 
-// === ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ===
 function clearForm() {
     document.getElementById('lastName').value = '';
     document.getElementById('firstName').value = '';

@@ -110,7 +110,6 @@
         </div>
         
         <script>
-            // Генератор элементов формы (оставьте как есть)
             document.addEventListener('DOMContentLoaded', function() {
                 const enableGenerator = document.getElementById('enable-generator');
                 const generatorControls = document.getElementById('generator-controls');
@@ -238,17 +237,15 @@
                             document.getElementById('attr-required').checked = elementData.required;
                             document.getElementById('attr-readonly').checked = elementData.readonly;
                             
-                            // Генерируем элемент
                             generateDateElement();
                         });
-                        clearGeneratorForm(); // Очищаем форму после восстановления
+                        clearGeneratorForm(); 
                     }
                 }
             });
         </script>
     </div>
     
-    <!-- ПРОВЕРКА ВОЗРАСТА -->
     <div class="age-verifier">
         <h2 class="verification-title">Подтверждение возраста</h2>
         
@@ -323,7 +320,7 @@
     <script src="{% static 'js/employee-manager.js' %}"></script>
     <!-- ГРАФИК Chart.js -->
     <div class="chart-section" style="margin: 40px 0; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-        <h2>📈 Графики функции из ЛРЗ по ИГИ</h2>
+        <h2>📈 Графики функции</h2>
         <p>Сравнение разложения функции в ряд с вычислением через math модуль</p>
         
         <div style="display: flex; gap: 30px; flex-wrap: wrap;">

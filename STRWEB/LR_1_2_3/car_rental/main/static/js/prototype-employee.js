@@ -1,6 +1,4 @@
 // === ПРОТОТИПНОЕ НАСЛЕДОВАНИЕ ===
-
-// Базовый конструктор
 function BaseEmployeePrototype(lastName, firstName, age, experience) {
     this._lastName = lastName;
     this._firstName = firstName;
@@ -8,19 +6,15 @@ function BaseEmployeePrototype(lastName, firstName, age, experience) {
     this._experience = experience;
 }
 
-// 5 МЕТОДОВ БАЗОВОГО КЛАССА:
 BaseEmployeePrototype.prototype = {
-    // 1. ГЕТТЕР - получение полного имени
     getFullName: function() {
         return `${this._lastName} ${this._firstName}`;
     },
     
-    // 2. ГЕТТЕР - получение возраста
     getAge: function() {
         return this._age;
     },
     
-    // 3. СЕТТЕР - установка возраста
     setAge: function(newAge) {
         if (newAge >= 18 && newAge <= 70) {
             this._age = newAge;
@@ -29,12 +23,10 @@ BaseEmployeePrototype.prototype = {
         return false;
     },
     
-    // 4. Метод вывода информации о сотруднике
     displayInfo: function() {
         return `${this.getFullName()}, ${this._age} лет, стаж: ${this._experience} лет`;
     },
     
-    // 5. Метод проверки стажа
     hasRequiredExperience: function() {
         return this._experience >= 3;
     }
@@ -50,7 +42,6 @@ function EmployeePrototype(lastName, firstName, age, experience, department) {
 EmployeePrototype.prototype = Object.create(BaseEmployeePrototype.prototype);
 EmployeePrototype.prototype.constructor = EmployeePrototype;
 
-// 5 МЕТОДОВ КЛАССА-НАСЛЕДНИКА:
 EmployeePrototype.prototype.getDepartment = function() {
     return this._department;
 };
@@ -72,7 +63,6 @@ EmployeePrototype.prototype.setSalary = function(salary) {
     return false;
 };
 
-// Переопределение метода displayInfo
 EmployeePrototype.prototype.displayInfo = function() {
     const baseInfo = BaseEmployeePrototype.prototype.displayInfo.call(this);
     return `${baseInfo}, отдел: ${this._department}`;

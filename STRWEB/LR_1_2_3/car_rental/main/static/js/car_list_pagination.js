@@ -4,20 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработчик для селектора количества элементов
     const itemsPerPageSelect = document.getElementById('items-per-page-select');
     
-    // Функция загрузки из cookie
-    function loadItemsPerPageFromCookie() {
-        if (!itemsPerPageSelect) return;
-        
-        const cookies = document.cookie.split(';');
-        for (let cookie of cookies) {
-            const [name, value] = cookie.trim().split('=');
-            if (name === 'car_items_per_page') {
-                itemsPerPageSelect.value = value;
-                console.log('Loaded items per page from cookie:', value);
-                break;
-            }
-        }
-    }
+    
     
     if (itemsPerPageSelect) {
         itemsPerPageSelect.addEventListener('change', function() {
@@ -26,9 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Показываем прелоадер
             showLoader();
-            
-            // Сохраняем в cookie
-            document.cookie = `car_items_per_page=${selectedValue}; path=/; max-age=2592000`;
             
             // Обновляем URL
             const url = new URL(window.location.href);
@@ -41,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         });
         
-        loadItemsPerPageFromCookie();
     }
     
     // Обработчики для кнопок пагинации
@@ -93,19 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Функция для показа прелоадера
     function showLoader() {
-        let loader = document.getElementById('simpleLoader');
-        if (!loader) {
-            loader = document.createElement('div');
-            loader.id = 'simpleLoader';
-            loader.className = 'simple-loader';
-            loader.innerHTML = `
-                <div class="infinity-clear">
-                    <div class="circle circle-left"></div>
-                    <div class="circle circle-right"></div>
-                </div>
-            `;
-            document.body.appendChild(loader);
-        }
+        let loader = document.getElementById('simpleLoader');   
         loader.style.display = 'flex';
         
         setTimeout(() => {
